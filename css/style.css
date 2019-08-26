@@ -589,7 +589,8 @@ a:hover {
 
 /* Backgroud image */
 #bg {
-  background-image: url("images/body.jpg");
+  /* background-image: url("images/body.jpg"); */
+  background-image: url("https://w.wallhaven.cc/full/j5/wallhaven-j5vmlm.jpg");
   background-color: #050a10;
   background-attachment: fixed;
   background-repeat: no-repeat;
