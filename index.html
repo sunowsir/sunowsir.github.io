@@ -1,512 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   
-
   
-  
-  
-  
-  
-  
-  <title>Sunowsir&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sunowsir&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Sunowsir&#39;s blog">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sunowsir&#39;s blog">
+  <title>
+    
+    Hexo</title>
   
-  
-    <link rel="icon" href="/css/images/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
   
-
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
   
-  <!-- baidu webmaster push -->
-  <script src="//push.zhanzhang.baidu.com/push.js"></script>
-</head></html>
-<body class="home blog custom-background custom-font-enabled single-author">
-  <div id="page" class="hfeed site">
-      <header id="masthead" class="site-header" role="banner">
-    <hgroup>
-      <h1 class="site-title">
-        <a href="/" title="Sunowsir&#39;s blog" rel="home">Sunowsir&#39;s blog</a>
-      </h1>
-      
-        <h2 class="site-description hitokoto"></h2>
-        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
-      
-    </hgroup>
-
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle">菜单</button>
-            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
-            <div class="menu-main-container">
-                <ul id="menu-main" class="nav-menu">
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
-                
-                </ul>
-            </div>
-    </nav>
-</header>
-
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
-  
-    <article id="post-deepinOS-使用笔记" class="post-deepinOS-使用笔记 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2019/08/26/deepinOS-使用笔记/">deepinOS 使用笔记</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/08/26/deepinOS-使用笔记/" data-id="cjzs7vak90000z4vbzryaclzi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h1 id="deepin-OS-使用笔记"><a href="#deepin-OS-使用笔记" class="headerlink" title="deepin OS 使用笔记"></a>deepin OS 使用笔记</h1><blockquote>
-<ol>
-<li>如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。</li>
-<li>图形界面相关的东西自行探索。</li>
-</ol>
-</blockquote>
-<p>@[toc]</p>
-<h2 id="deepin系统安装后推荐配置"><a href="#deepin系统安装后推荐配置" class="headerlink" title="deepin系统安装后推荐配置"></a>deepin系统安装后推荐配置</h2><p><code>sudo apt-get install -y git wget curl openssh-server manpages-* graphviz</code></p>
-<h2 id="zsh配置（linux高级用户推荐）"><a href="#zsh配置（linux高级用户推荐）" class="headerlink" title="zsh配置（linux高级用户推荐）"></a>zsh配置（linux高级用户推荐）</h2><ol>
-<li><p>安装：<code>sudo apt-get install zsh</code></p>
-</li>
-<li><p>设置为默认SHELL(不要加sudo)：<code>chsh -s /bin/zsh</code></p>
-</li>
-<li><p>安装oh-my-zsh</p>
-<p><code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
-</li>
-<li><p>手动配置oh-my-zsh</p>
-<pre><code>1. 安装自动跳转插件：
-      1.` sudo apt-get install autojump`
-      2. 打开~/.zshrc，在文件末尾，另起一行添加：`source   /usr/share/autojump/autojump.sh`</code></pre><ol start="2">
-<li>安装zsh-syntax-highlighting语法高亮插件：<pre><code>1. `cd ~/ &amp;&amp; git clone https://github.com/zsh-users/zsh-syntax-highlighting.git`
-  2. `cd ~/ &amp;&amp;echo &quot;source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&quot; &gt;&gt; ${ZDOTDIR:-$HOME}/.zshrc`</code></pre></li>
-<li>安装zsh-autosuggestions语法历史记录插件:<ol>
-<li><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></li>
-<li>打开~/.zshrc，在文件末尾，另起一行添加：<code>source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</code></li>
-</ol>
-</li>
-<li>打开~/.zshrc:<pre><code>1. 找到：plugins=(git)这个位置，在括号里面添加，每个单词单独一行，如果已经有了，就不用添加了：
-      <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git</span><br><span class="line">extract</span><br><span class="line">z</span><br><span class="line">web-search</span><br><span class="line">zsh-autosuggestions</span><br><span class="line">cp</span><br><span class="line">command-not-found</span><br></pre></td></tr></table></figure></code></pre></li>
-</ol>
-</li>
-</ol>
-<pre><code>  2. 在文件末尾，另起一行添加：
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export EDITOR=vim</span><br><span class="line">setopt HIST_IGNORE_DUPS</span><br><span class="line">setopt no_nomatch</span><br></pre></td></tr></table></figure></code></pre><ol start="5">
-<li>自动配置oh-my-zsh</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if [[ $&#123;?&#125; -eq 1 ]];</span><br><span class="line">then</span><br><span class="line">    exit 1;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sudo apt-get install autojump</span><br><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line">git clone git://github.com/zsh-users/zsh-autosuggestions  ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo '</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>########################################</span><br><span class="line"></span><br><span class="line">alias ls="ls --color=auto"</span><br><span class="line">alias dir="dir --color=auto"</span><br><span class="line">alias la="ls -a --color=auto"</span><br><span class="line">alias ll="ls -al --color=auto"</span><br><span class="line">alias vdir="vdir --color=auto"</span><br><span class="line"></span><br><span class="line">alias grep="grep --color=auto"</span><br><span class="line">alias egrep="egrep --color=auto"</span><br><span class="line">alias fgrep="fgrep --color=auto"</span><br><span class="line"></span><br><span class="line">alias cls="clear"</span><br><span class="line"></span><br><span class="line">export EDITOR=vim</span><br><span class="line">setopt no_nomatch</span><br><span class="line">setopt HIST_IGNORE_DUPS</span><br><span class="line"></span><br><span class="line">source /usr/share/autojump/autojump.sh</span><br><span class="line">source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line"></span><br><span class="line">' &gt;&gt;  ~/.zshrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sed -i 's/^plugins=(git)/plugin=\(extract \n  z \n web-search \n  zsh-autosuggestions \n cp \n command-no-found\)/g' ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><p>通过手动或自动配置，zsh就彻底配置完成。</p>
-<p>​     </p>
-<h2 id="常见文件"><a href="#常见文件" class="headerlink" title="常见文件"></a>常见文件</h2></li>
-</ol>
-<ul>
-<li><p>搜狗输入法皮肤所在路径：~/.config/sogou-qimpanel/skin</p>
-</li>
-<li><p>desktop软件图标路径集合：</p>
-<ul>
-<li>~/.local/share/applications : AppImage应用生成的图标。</li>
-<li>/usr/share/applications/ :  常用应用图标所在。</li>
-<li>/etc/xdg/autostart/ : 系统级别自启动应用图标。</li>
-<li>/opt/deepinwine/apps/ : deepin-wine应用图标。</li>
-<li>/var/lib/flatpak/app/ : flatpak应用图标。<br>以上所给路径仅为常见路径，并非所有。</li>
-</ul>
-</li>
-<li></li>
-<li><h2 id="常用命令（linux入门用户推荐）："><a href="#常用命令（linux入门用户推荐）：" class="headerlink" title="常用命令（linux入门用户推荐）："></a>常用命令（linux入门用户推荐）：</h2><ul>
-<li><p>ls : 列出当前路径文件。</p>
-</li>
-<li><p>pwd : 查看当前所在路径（绝对路径）。</p>
-</li>
-<li><p>cd : 路径跳转。</p>
-</li>
-<li><p>mv : 文件及目录移动以及更改名字。</p>
-</li>
-<li><p>cp : 拷贝。</p>
-</li>
-<li><p>mkdir : 创建目录。</p>
-</li>
-<li><p>touch : 创建空白文件。</p>
-</li>
-</ul>
-</li>
-<li><p>桌面设置壁纸的内置壁纸保存位置：<br>如图：</p>
-<p>这些壁纸保存在：/usr/share/wallpapers/deepin下。</p>
-</li>
-<li><p>vim 配置文件：~/.vimrc（用户级别配置文件，只针文件所在用户生效，其他用户不生效）</p>
-</li>
-<li><p>bash配置文件：~/.bashrc（用户级别配置文件，只针文件所在用户生效，其他用户不生效）</p>
-</li>
-</ul>
-<h2 id="vim-入门操作"><a href="#vim-入门操作" class="headerlink" title="vim 入门操作"></a>vim 入门操作</h2><ul>
-<li><p>vim配置:</p>
-<ol>
-<li>vim的配置我们选择ma6174的配置，<br>终端命令：wget -qO- <a href="https://raw.github.com/ma6174/vim/master/setup.sh" target="_blank" rel="noopener">https://raw.github.com/ma6174/vim/master/setup.sh</a> | sh -x<br> 配置完成后会重新回到终端命令行（建议在网络较好的环境下配置）</li>
-<li>配置完成后打开python文件会发现报错，解决方案：<br>点击这里下载python.zip文件，将压缩包下载到本地解压，得到一个名称为python的文件夹，将其复制（覆盖并替换）到～/.vim/ftplugin/路径下即可。</li>
-</ol>
-</li>
-<li><p>三种模式：</p>
-<ul>
-<li>插入模式：</li>
-</ul>
-<ol>
-<li>普通模式下按i直接进入插入模式。</li>
-<li>普通模式下按I光标前一个位置进入插入模式。</li>
-<li>普通模式下按O光标的下一行进入插入模式。</li>
-<li>普通模式下按o光标的上一行进入插入模式。</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li>普通模式：<ul>
-<li>在任何模式下按ESC进入普通模式。</li>
-<li>在普通模式下：<ul>
-<li>dd : 剪切当前行（可以当删除用）（只在普通模式和选择模式生效）。</li>
-<li>yy：复制当前行（只在普通模式和选择模式生效）。</li>
-<li>p ： 粘贴（只在普通模式生效）。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>选择模式：<ul>
-<li>c : 进入块选择模式。</li>
-<li>C:  进入行选择模式。</li>
-<li>CTRL + c : 进入列选择模式。</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2019/08/26/deepinOS-使用笔记/">
-    <time datetime="2019-08-26T09:44:57.000Z" class="entry-date">
-        2019-08-26
-    </time>
-</a>
+  <script src="/js/pace.min.js"></script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="jumbotron">
+  <div class="video">
     
-    
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
-
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-轻文本标记语言-markdown" class="post-轻文本标记语言-markdown post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2019/08/26/轻文本标记语言-markdown/">轻文本标记语言 Markdown</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/08/26/轻文本标记语言-markdown/" data-id="cjzs7vaki0001z4vbr41fb5pq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h1 id="轻文本标记语言-–-markdown"><a href="#轻文本标记语言-–-markdown" class="headerlink" title="轻文本标记语言 – markdown"></a>轻文本标记语言 – markdown</h1><blockquote>
-<p>  如果你并不需要word那么复杂的功能，没有极强的专业性需求，那么markdown是你很好的选择。</p>
-</blockquote>
-<blockquote>
-<p>  不同的markdown编辑器对markdown语法的支持与拓展会有一些出入，但是基础语法基本都会支持。</p>
-</blockquote>
-<blockquote>
-<p>  有的效果默认关闭，需要到设置里打开。</p>
-</blockquote>
-<blockquote>
-<p>  本文代码使用typora编辑器。推荐<a href="https://typora.io/" target="_blank" rel="noopener">typora</a>。</p>
-</blockquote>
-<blockquote>
-<p>  一般的markdown编辑器都是可以导出为各种格式的：pdf、html、word以及png等等。</p>
-</blockquote>
-<blockquote>
-<p>  粘贴下面代码框中的代码到你的markdown编辑器中看看效果！</p>
-</blockquote>
-<blockquote>
-<p>部分高级用法内容资源来自网络其他博客和wiki。</p>
-</blockquote>
-<ul>
-<li><p>标题</p>
-<p>在文字的开头加上若干<code>#</code>最后跟上空格，这段文字就变成了相应等级的标题。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>引用</p>
-<p>当我们需要加上一段引用文字或者一些声明的时候可以选择使用引用语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这是引用</span></span><br><span class="line">&gt;&gt; 这也是引用</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>列表</p>
-<p>当我们需要列举若干项的时候可以选择使用有序、无序列表和任务列表</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>无序列表1</span><br><span class="line"><span class="bullet">* </span>无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>无序列表1</span><br><span class="line"><span class="bullet">- </span>无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>有序列表1</span><br><span class="line"><span class="bullet">2. </span>有序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>[ ] 任务列表，未完成项</span><br><span class="line"><span class="bullet">- </span>[x] 任务列表，已完成项</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>代码块</p>
-<p>当我们需要插入一段代码的时候可以使用代码块语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C语言中使用<span class="code">`#include&lt;&gt;`</span>引入头文件</span><br><span class="line"></span><br><span class="line">​<span class="code">```c</span></span><br><span class="line"><span class="code">	#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code">	int main () &#123;</span></span><br><span class="line"><span class="code">		return 0;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line"><span class="code">​</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">*   数学公式</span><br><span class="line"></span><br><span class="line">    当我们需要插入数学公式，并且想要漂亮一些，可以使用数学公式的语法，更多的markdown数学转义符号请自行搜索，很容易搜到的。</span><br><span class="line"></span><br><span class="line">    ```markdown</span><br><span class="line">    在数学中$\sum$ 是求和符号。</span><br><span class="line">    例如：</span><br><span class="line">    $$</span><br><span class="line">    $\sum^&#123;k&#125;_&#123;i = 1&#125;&#123;x / i&#125;$</span><br><span class="line">    $$</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>文字显示控制</p>
-<p>我们可能有时候需要对文本加粗、高亮等，这里markdown也提供了支持。</p>
-<p>每种效果可以叠加使用。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**加粗**</span></span><br><span class="line">==高亮==</span><br><span class="line">~~删除~~</span><br><span class="line"><span class="strong">***斜体并加粗**</span>*</span><br><span class="line">==<span class="emphasis">*斜体并高亮*</span>==</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>表格</p>
-<p>当然了， 常用的表格markdown也是支持的。</p>
-<p>通过冒号可以控制对齐方式</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|first head|second head|third head|</span><br><span class="line">|:--|:--:|--:|</span><br><span class="line">|左对齐列|中心对齐列|右侧对齐列|</span><br><span class="line">|asd|fgh|jkl|</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>脚注</p>
-<p>markdown也是支持脚注的。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可以这样使用脚注[^1]</span><br><span class="line">[<span class="symbol">^1</span>]:<span class="link">脚注1的内容</span></span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<ul>
-<li><p>分割线</p>
-<p>当我们想要分割两段内容的时候可以用分割线</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上面的内容</span><br><span class="line">---</span><br><span class="line">下面的内容</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>引入图像与链接</p>
-<p>引入图像和链接是必不可少的功能。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Linux引入图片</span>](<span class="link">/home/UserName/1.jpg</span>)</span><br><span class="line">![<span class="string">windows引入图片</span>](<span class="link">C:\Users\UserName\Downloads\2.png</span>)</span><br><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)</span><br><span class="line">[<span class="symbol">参考链接</span>]: <span class="link">www.baidu.com</span></span><br><span class="line">&lt;www.baidu.com&gt;</span><br><span class="line">[<span class="string">页内链接</span>](<span class="link">#一级标题</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>目录树</p>
-<p>当文本过长，需要加上目录树。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">文本1</span><br><span class="line"></span><br><span class="line">[TOC]</span><br><span class="line"></span><br><span class="line">文本2</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>emoji表情</p>
-<p>有些markdown编辑器是支持emoji表情插入的。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile:</span><br></pre></td></tr></table></figure>
-
-<p>效果:</p>
-<p>:smile:</p>
-</li>
-<li><p>文本折叠</p>
-<p>当我们的某个段落太长需要折叠起来，markdown貌似没有原生语法支持折叠，</p>
-<p>但是有些markdown编辑器是支持HTML语法的，这里可以使用HTML实现。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   <span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">summary</span>&gt;</span>测试标题<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">   测试文本</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注释</p>
-<p>markdown当然也有像C语言中<code>//</code>一样的注释</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--这是注释--&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>流程图</p>
-<p>markdown当然也可以画流程图</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt; !<span class="attr">--</span> 代码语言：<span class="attr">flow</span> <span class="attr">--</span> &gt;</span></span></span><br><span class="line">flowchat</span><br><span class="line">flow</span><br><span class="line">st=&gt;start: Start</span><br><span class="line">op=&gt;operation: Your Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<ul>
-<li><p>时序图</p>
-<p>既然支持流程图，当然也支持时序图</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt; !<span class="attr">--</span> 代码语言：<span class="attr">mermaid</span> <span class="attr">--</span> &gt;</span></span></span><br><span class="line"> sequenceDiagram</span><br><span class="line"><span class="code">    X-&gt;&gt;Y: 一起去电影院怎么样？</span></span><br><span class="line"><span class="code">    Note right of Y: 去不去</span></span><br><span class="line"><span class="code">    Y-&gt;&gt;X: 好的，我等你！</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>特殊字符需要使用Unicode编码</p>
-</li>
-<li><p>甘特图</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt; !<span class="attr">--</span> 代码语言：<span class="attr">mermaid</span> <span class="attr">--</span> &gt;</span></span></span><br><span class="line"><span class="code">	gantt</span></span><br><span class="line"><span class="code">    	dateFormat  YYYY-MM-DD</span></span><br><span class="line"><span class="code">        title 软件开发甘特图</span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">        section 设计</span></span><br><span class="line"><span class="code">        	需求                      :done,    des1, 2014-01-06,2014-01-08</span></span><br><span class="line"><span class="code">        	原型                      :active,  des2, 2014-01-09, 3d</span></span><br><span class="line"><span class="code">        	UI设计                    :         des3, after des2, 5d</span></span><br><span class="line"><span class="code">    		未来任务                   :         des4, after des3, 5d</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    	section 开发</span></span><br><span class="line"><span class="code">            学习准备理解需求                      :crit, done, 2014-01-06,24h</span></span><br><span class="line"><span class="code">            设计框架                             :crit, done, after des2, 2d</span></span><br><span class="line"><span class="code">            开发                                 :crit, active, 3d</span></span><br><span class="line"><span class="code">            未来任务                              :crit, 5d</span></span><br><span class="line"><span class="code">            耍                                   :2d</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">        section 测试</span></span><br><span class="line"><span class="code">            功能测试                              :active, a1, after des3, 3d</span></span><br><span class="line"><span class="code">            压力测试                               :after a1  , 20h</span></span><br><span class="line"><span class="code">            测试报告                               : 48h</span></span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2019/08/26/轻文本标记语言-markdown/">
-    <time datetime="2019-08-26T09:23:49.000Z" class="entry-date">
-        2019-08-26
-    </time>
-</a>
-    
-    
-  <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
-
-    </footer>
-</article>
-
-
-
-
-
-
-  
-  
-
-</div></div>
-        <div id="secondary" class="widget-area" role="complementary">
-  
-    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
-    <div>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="搜索" />
-    </div>
-</form></aside>
-  
-    
-  
-    
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget-content">
-      <ul>
-        
-          <li>
-            <a href="/2019/08/26/deepinOS-使用笔记/">deepinOS 使用笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/26/轻文本标记语言-markdown/">轻文本标记语言 Markdown</a>
-          </li>
-        
-      </ul>
-    </div>
-  </aside>
-
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">2</span></li></ul>
-    </div>
-  </aside>
-
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget-content tagcloud">
-      <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/tool/" style="font-size: 20px;">tool</a>
-    </div>
-  </aside>
-
-  
-</div>
+      <div class="video-frame">
+        <img src="/images/ocean/overlay-hero.png" alt="Decorative image frame">
       </div>
-      <footer id="colophon" role="contentinfo">
-    <p>&copy; 2019 sunowsir
-    All rights reserved.</p>
-    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</footer>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+    
+    <div class="video-media">
+      <video playsinline="" autoplay="" loop="" muted="" data-autoplay=""
+             poster="/images/ocean/ocean.png" x5-video-player-type="h5">
+        <source src="/images/ocean/ocean.mp4" type="video/mp4">
+        <source src="/images/ocean/ocean.ogv" type="video/ogg">
+        <source src="/images/ocean/ocean.webm" type="video/webm">
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="video-inner text-center text-white">
+      <h1><a href="/">Hexo</a></h1>
+      <p></p>
+      <div><img src="/images/hexo-inverted.svg" class="brand" alt="Hexo"></div>
+    </div>
+    <div class="video-learn-more">
+      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
+    </div>
+  </div>
+</section>
 
-<script src="/js/jquery-3.3.1.min.js"></script>
+<div id="landingpage">
+  <section class="outer">
+  <article class="articles">
+    
+    <h1 class="page-type-title"></h1>
+
+    
+      
+        
+
+<article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2019/08/27/hello-world/">Hello World</a>
+    </h2>
+  
+  
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+      </header>
+    
 
-<script src="/js/navigation.js"></script>
+    
+      <div class="article-meta">
+        <a href="/2019/08/27/hello-world/" class="article-date">
+  <time datetime="2019-08-27T00:35:16.262Z" itemprop="datePublished">2019-08-27</time>
+</a>
+        
+      </div>
+    
 
-<div id="bg"></div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/27/hello-world/" data-id="cjzyy52nn0000fwz24agio2l1"
+         class="article-share-link">Share</a>
+      
+    </footer>
 
   </div>
+
+  
+
+  
+
+</article>
+
+
+
+      
+  </article>
+  
+
+  
+</section>
+</div>
+
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2019 Hexo</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+
+  <aside class="sidebar">
+    
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">About</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/ocean.js"></script>
+
 </body>
 </html>
