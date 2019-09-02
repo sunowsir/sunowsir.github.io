@@ -106,23 +106,365 @@
         
         
         <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/08/27/hello-world/">
-                <p class="h4 index-header">Hello World</p>
+            <a href="/2019/09/02/HDU-1276/">
+                <p class="h4 index-header">HDU-1276</p>
                 <div class="index-excerpt">
                     
-                        <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+                        <div class="index-text mb-1">
+题目描述
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开始进行一至二报数。。。，以后从头开始轮流进行一至二报数、一至三报数直到剩下的人数不超过三人为止。
+Input
+本题有多个测试数据组，第一行为组数N，接着为N行新兵人数，新兵人数不超过5000。
+Output
+共有N行，分别对应输入的新兵人数，每行输出剩下的新兵最初的编号，编号之间有一个空格。
 
-More info: Writing
-Run server1$ hexo server
+Sample Input
 
-More info: Server
-Generate static files1$ hexo generate
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
+2 20 40
+Sample Output
 
-More info: Deployment
+1 7 19 1 19 37
+代码如下：
+
+************************/
+
+#include&lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int main(){
+
+    int N,n,sol_num,cnt;
+
+    int sol[5005];
+
+    //输入数据的组数；
+
+    cin&gt;&gt;n;
+
+ </div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/oj">oj</a>&nbsp;
+                        
+                            <a href="/tags/HDU">HDU</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/CPU信息获取/">
+                <p class="h4 index-header">CPU信息获取</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+准备知识
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存中，但是由于它和其他目录一样把自己注册到虚拟文件系统层了，所以我们还是能看到这个目录相关信息，然而只有虚拟文件系统层调用它的时候，他才会建立相关文件和目录并与内核沟通获取相关信息。
+
+上面我们说道/proc 文件系统存储着内核控制相关信息的目录，该目录下的/proc/stat文件存储的是CPU相关信息，我们想要获取CPU相关信息最直接和最快速的方式就是读取该文件，其实Linux下很多的工具都是读取的这个文件。在这个文件中包含了所有的CPU活动信息，并且该文件中所有值都是从系统启动算起直到访问文件的这一刻的数据。如下就是某一刻/proc/stat文件中的数据：
+cpu  499312 1086 227835 10498412 3803 0 10904 0 0 0
+cpu0 125361 278 56675 2626355 450 0 2242 0 0 0
+c</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/script">script</a>&nbsp;
+                        
+                            <a href="/tags/shell">shell</a>&nbsp;
+                        
+                            <a href="/tags/linux">linux</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/POJ-1979/">
+                <p class="h4 index-header">POJ-1979</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A man is standing on a black tile. From a tile, he can move to one of four adjacent tiles. But he can’t move on red tiles, he can move only on black tiles.Write a program to count the number of black tiles which he can reach by repeating the moves described above.InputThe input consists of multiple data sets. A data set starts with a line containing two positive integers W and H; W a</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/oj">oj</a>&nbsp;
+                        
+                            <a href="/tags/POJ">POJ</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/Codeforces-787a/">
+                <p class="h4 index-header">Codeforces-787a</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+题目传送
+
+
+题目思路：拓展欧几里德：
+$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
+
+
+代码：
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define ll long long
+
+ll exgcd(ll a,ll b,ll &amp;x,ll &amp;y){
+    if(b==0){
+        x=1;
+        y=0;
+        return a;
+    }
+    ll d=exgcd(b,a%b,x,y);
+    ll tmp=x;
+    x=y;
+    y=tmp-a/b*y;
+    return d;
+}
+
+int main(){
+    ll a,b,C,D,x,y;
+    while(cin&gt;&gt;a&gt;&gt;b&gt;&gt;C&gt;&gt;D){
+        if(b&lt;D){//若b&lt;D,那么y&lt;0，
+            //原方程式等价于y=(a*x+b-d)/c,
+            //下</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/oj">oj</a>&nbsp;
+                        
+                            <a href="/tags/codeforces">codeforces</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/HDU-1072/">
+                <p class="h4 index-header">HDU-1072</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“OUT”（代表出队或出栈）若已经是空的了遇到“OUT”命令时输出“None”；
+
+题目思路：其实就是c++STL的队列和栈的简单应用；
+
+代码如下：
+
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main(){
+      int n;
+      cin&gt;&gt;n;
+      while(n--){
+          int com_num,typ_num;
+          cin&gt;&gt;com_num;
+          string com;
+          cin&gt;&gt;com;
+          if(com==&quot;FIFO&quot;){
+              queue&lt;int&gt; q;
+             </div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/oj">oj</a>&nbsp;
+                        
+                            <a href="/tags/HDU">HDU</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/BASH脚本实现素数线性筛/">
+                <p class="h4 index-header">BASH脚本实现素数线性筛</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+知识准备
+
+for循环
+for i in `seq 1 10`;
+do
+    echo ${i}
+done
+#执行结果
+---------
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+--------
+for ((i = 0; i &lt; 10; i++));
+do
+    echo ${i}
+done
+# 执行结果与上面代码相同
+# 双小括号中可以使用C语言一样的语法进行数学计算
+# echo 是回显
+# 美元符号用来取值：取变量值和数组值（用大括号括把变量或数组起来）、取命令的值（用小括号或&lt;Tab&gt;键上面的``符号括起来，如果用`符号扩起来就不用美元符号取值了）
+
+if分支语句
+num=0
+if [[ ${num} -eq 0 ]];then
+    echo &quot;YES&quot;
+elif [[ ${num} -eq 1 ]];then
+    echo &quot;NO&quot;
+else
+    echo &quot;???&quot;
+fi
+# 执行结果
+# 数值判断用-eq(==)、-ne（!=）、-gt(&gt;)、-ge(&gt;=)、-</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/script">script</a>&nbsp;
+                        
+                            <a href="/tags/shell">shell</a>&nbsp;
+                        
+                            <a href="/tags/linux">linux</a>&nbsp;
+                        
+                            <a href="/tags/algorithm">algorithm</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/磁盘信息获取/">
+                <p class="h4 index-header">磁盘信息获取</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+知识准备：
+
+df:该工具用来获取文件系统挂载信息。
+
+awk：该工具用来处理 df的数据。
+
+
+
+代码：
+   #!/bin/bash
+
+   df -m | grep &quot;^/dev/&quot; | awk -v ntime=$(date +&quot;%Y-%m-%d__%H:%M:%S&quot;) &#39;
+   BEGIN{
+       num = 0; 
+       unum = 0; 
+       hnum = 0;
+   } 
+   {
+       num += $2; 
+       unum += $3; 
+       hnum += $4;
+       printf(&quot;%s 1 %s %sM %sM %s\n&quot;, ntime, $6, $2, $4, $5);
+   } 
+   END{
+       printf(&quot;%s 0 disk %dM %dM %.2f%%\n&quot;, ntime, num, hnum, unum / num * 100);
+   }&#39;
+
+
+
 </div>
                     
                 </div>
@@ -130,9 +472,184 @@ More info: Deployment
 
             
                 <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-27
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
                     &nbsp;&nbsp;
                     
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/script">script</a>&nbsp;
+                        
+                            <a href="/tags/shell">shell</a>&nbsp;
+                        
+                            <a href="/tags/linux">linux</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/进程信息获取/">
+                <p class="h4 index-header">进程信息获取</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+知识准备：
+
+ps 该工具用来获取进程信息
+awk该工具用来处理数据
+
+
+代码
+#!/bin/bash
+
+ps -aux | awk -v last_all=$(ps -aux | awk &#39;
+BEGIN{
+    num = 0;
+} 
+{ 
+    if ($3 &gt; 50 || $4 &gt; 50) { 
+        if (num &gt; 0) {
+            printf(&quot;|&quot;);
+        } 
+        printf(&quot;%s&quot;, $2); 
+        num++;
+    } 
+}&#39; &amp;&amp; sleep 5) -v nowtime=$(date +&quot;%Y-%m-%d__%H:%M:%S&quot;) &#39;
+{ 
+    if ($2 ~ last_all &amp;&amp; ($3 &gt; 50 || $4 &gt; 50)) {
+        printf(&quot;%s %s %s %s %s %s\n&quot;, nowtim</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/script">script</a>&nbsp;
+                        
+                            <a href="/tags/shell">shell</a>&nbsp;
+                        
+                            <a href="/tags/linux">linux</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/内存信息获取/">
+                <p class="h4 index-header">内存信息获取</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+free：该工具用来获取内存信息
+
+grep：该工具用来筛选数据
+
+awk&#39;：该工具用来处理数据
+
+代码：
+#!/bin/bash
+
+free -m | grep &quot;^Mem&quot; | awk -v last_per=$1 -v nowdate=$(date +&quot;%Y-%m-%d_%H:%M:%S&quot;) &#39;
+{
+    printf(&quot;%s %sM %sM %.1f%% %.1f%%\n&quot;, nowdate, $2, $7, $3 / $2 * 100, 0.3 * last_per + 0.7 * ($3 / $2 * 100));
+}&#39;
+
+
+
+</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/script">script</a>&nbsp;
+                        
+                            <a href="/tags/shell">shell</a>&nbsp;
+                        
+                            <a href="/tags/linux">linux</a>&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/02/系统信息获取/">
+                <p class="h4 index-header">系统信息获取</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">
+欢迎大家转载，转载请注明出处，谢谢！
+
+
+知识准备
+
+date：获取当前时间
+/etc/issue：系统版本信息
+/proc/loadavg：负载信息
+df：获取磁盘信息
+free：内存信息
+/sys/class/thermal/thermal_zone0/temp：cpu温度
+hostname：主机名
+
+
+代码
+#!/bin/bash
+
+# 现在时间
+nowdate=`date +&quot;%Y-%m-%d__%H:%M:%S&quot;`
+# 系统版本
+os_v=`cat /etc/issue | awk &#39;{printf(&quot;%s_%s&quot;, $1, $2);}&#39;`
+# 内核版本
+ker_v=`uname -r`
+# 运行时间和负载信息
+run_and_load=`uptime -p | tr -s &quot; &quot; &quot;\n&quot; | awk &#39;{printf(&quot;_%s&quot;, $1)}&#39;``cat /proc/loadavg | awk &#39;{ printf(&quot; %s </div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
+                    &nbsp;&nbsp;
+                    
+                    
+                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
+                        
+                            <a href="/tags/script">script</a>&nbsp;
+                        
+                            <a href="/tags/shell">shell</a>&nbsp;
+                        
+                            <a href="/tags/linux">linux</a>&nbsp;
+                        
                     
                 </div>
             
@@ -140,6 +657,17 @@ More info: Deployment
     </div>
 
 
+
+<nav aria-label="index posts navigation">
+<ul class="pagination pg-blue justify-content-center mt-5">
+    
+    
+        <li class="page-item">
+        <a class="page-link" href="/page/2/">Next</a>
+        </li>
+    
+</ul>
+</nav>
 
                         </div>
                     </div>
@@ -155,7 +683,7 @@ More info: Deployment
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -163,7 +691,7 @@ More info: Deployment
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
