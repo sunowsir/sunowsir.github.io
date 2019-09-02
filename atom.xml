@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sunow&#39;s Club</title>
+  
+  <subtitle>This is Sunowsir&#39;s club.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-09-02T09:03:57.193Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HDU-1276</title>
+    <link href="http://yoursite.com/2019/09/02/HDU-1276/"/>
+    <id>http://yoursite.com/2019/09/02/HDU-1276/</id>
+    <published>2019-09-02T08:52:14.000Z</published>
+    <updated>2019-09-02T09:03:57.193Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;题目描述&lt;/p&gt;
+&lt;p&gt;某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开始进行一至
+        
+      
+    
+    </summary>
+    
+    
+      <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
+    
+      <category term="HDU" scheme="http://yoursite.com/tags/HDU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CPU信息获取</title>
+    <link href="http://yoursite.com/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/09/02/CPU信息获取/</id>
+    <published>2019-09-02T08:50:49.000Z</published>
+    <updated>2019-09-02T09:02:54.637Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;准备知识&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;/proc&lt;/code&gt;文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是&lt;code&gt;/proc&lt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="script" scheme="http://yoursite.com/tags/script/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POJ-1979</title>
+    <link href="http://yoursite.com/2019/09/02/POJ-1979/"/>
+    <id>http://yoursite.com/2019/09/02/POJ-1979/</id>
+    <published>2019-09-02T08:49:24.000Z</published>
+    <updated>2019-09-02T09:06:04.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;原题目：&lt;br&gt;Description&lt;br&gt;There is a rectangular room, covered with square tiles. Each tile is colored either red or black. A man
+        
+      
+    
+    </summary>
+    
+    
+      <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
+    
+      <category term="POJ" scheme="http://yoursite.com/tags/POJ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codeforces-787a</title>
+    <link href="http://yoursite.com/2019/09/02/Codeforces-787a/"/>
+    <id>http://yoursite.com/2019/09/02/Codeforces-787a/</id>
+    <published>2019-09-02T08:48:33.000Z</published>
+    <updated>2019-09-02T09:03:21.221Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://vjudge.net/problem/709847/origin&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
+    
+      <category term="codeforces" scheme="http://yoursite.com/tags/codeforces/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HDU-1072</title>
+    <link href="http://yoursite.com/2019/09/02/HDU-1072/"/>
+    <id>http://yoursite.com/2019/09/02/HDU-1072/</id>
+    <published>2019-09-02T08:46:45.000Z</published>
+    <updated>2019-09-02T09:03:34.649Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;题目描述：&lt;br&gt;首先输入一个N；代表测试数据的个数;&lt;br&gt;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&amp;lt;就是先进先出或先进后出&amp;gt;）&lt;br&gt;然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“
+        
+      
+    
+    </summary>
+    
+    
+      <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
+    
+      <category term="HDU" scheme="http://yoursite.com/tags/HDU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BASH脚本实现素数线性筛</title>
+    <link href="http://yoursite.com/2019/09/02/BASH%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E7%B4%A0%E6%95%B0%E7%BA%BF%E6%80%A7%E7%AD%9B/"/>
+    <id>http://yoursite.com/2019/09/02/BASH脚本实现素数线性筛/</id>
+    <published>2019-09-02T08:45:33.000Z</published>
+    <updated>2019-09-02T08:46:05.809Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;知识准备&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;for&lt;/code&gt;循环&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;for i in `seq 1 10`;
+do
+    echo
+        
+      
+    
+    </summary>
+    
+    
+      <category term="script" scheme="http://yoursite.com/tags/script/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>磁盘信息获取</title>
+    <link href="http://yoursite.com/2019/09/02/%E7%A3%81%E7%9B%98%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/09/02/磁盘信息获取/</id>
+    <published>2019-09-02T08:44:48.000Z</published>
+    <updated>2019-09-02T09:04:27.833Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;知识准备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;df&lt;/code&gt;:该工具用来获取文件系统挂载信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;awk&lt;/code&gt;：该工具用来处理
+        
+      
+    
+    </summary>
+    
+    
+      <category term="script" scheme="http://yoursite.com/tags/script/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进程信息获取</title>
+    <link href="http://yoursite.com/2019/09/02/%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/09/02/进程信息获取/</id>
+    <published>2019-09-02T08:44:03.000Z</published>
+    <updated>2019-09-02T09:04:42.261Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;知识准备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;ps&lt;/code&gt; 该工具用来获取进程信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;awk&lt;/code&gt;该工具用来处理数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="script" scheme="http://yoursite.com/tags/script/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内存信息获取</title>
+    <link href="http://yoursite.com/2019/09/02/%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/09/02/内存信息获取/</id>
+    <published>2019-09-02T08:43:25.000Z</published>
+    <updated>2019-09-02T09:04:52.329Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;free&lt;/code&gt;：该工具用来获取内存信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;grep&lt;/code&gt;：该工具用来筛选数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;awk&amp;#39;&lt;/code&gt;：该工具用来处理数据&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="script" scheme="http://yoursite.com/tags/script/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>系统信息获取</title>
+    <link href="http://yoursite.com/2019/09/02/%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/09/02/系统信息获取/</id>
+    <published>2019-09-02T08:42:44.000Z</published>
+    <updated>2019-09-02T09:05:03.813Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎大家转载，转载请注明出处，谢谢！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;知识准备&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;date&lt;/code&gt;：获取当前时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/issue&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="script" scheme="http://yoursite.com/tags/script/"/>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用户信息获取</title>
+    <link href="http://yoursite.com/2019/09/02/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/09/02/用户信息获取/</id>
+    <published>2019-09-02T08:41:40.000Z</published>
+    <updated>2019-09-02T09:05:16.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎大家转载，转载请注明出处，谢谢！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;知识准备&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt;：获取当前登录信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grep&lt;/code&gt;：对数据进行筛
+        
+      
+    
+    </summary>
+    
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="sscript" scheme="http://yoursite.com/tags/sscript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进程、线程及共享内存学习笔记</title>
+    <link href="http://yoursite.com/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/09/02/进程、线程及共享内存学习笔记/</id>
+    <published>2019-09-02T08:40:51.000Z</published>
+    <updated>2019-09-02T08:41:18.990Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;进程、线程及共享内存学习笔记&quot;&gt;&lt;a href=&quot;#进程、线程及共享内存学习笔记&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常见配置文件</title>
+    <link href="http://yoursite.com/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2019/09/02/Linux常见配置文件/</id>
+    <published>2019-09-02T08:40:04.000Z</published>
+    <updated>2019-09-02T09:06:21.248Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;转载自&lt;a href=&quot;https://www.cnblogs.com/zxj015/p/4457868.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CoderZhuang&lt;/a&gt;，对&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+      <category term="转载" scheme="http://yoursite.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>deepin系统使用笔记</title>
+    <link href="http://yoursite.com/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/09/02/deepin系统使用笔记/</id>
+    <published>2019-09-02T08:39:06.000Z</published>
+    <updated>2019-09-02T08:39:38.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。&lt;/li&gt;
+&lt;li&gt;图形界面相关的东西自行探索。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HDU-1222</title>
+    <link href="http://yoursite.com/2019/09/02/HDU-1222/"/>
+    <id>http://yoursite.com/2019/09/02/HDU-1222/</id>
+    <published>2019-09-02T08:38:28.000Z</published>
+    <updated>2019-09-02T09:03:46.201Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/status.php?first=&amp;pid=&amp;user=sunowsir&amp;lang=0&amp;status=0&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
+    
+      <category term="HDU" scheme="http://yoursite.com/tags/HDU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器健康监控</title>
+    <link href="http://yoursite.com/2019/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%81%A5%E5%BA%B7%E7%9B%91%E6%8E%A7/"/>
+    <id>http://yoursite.com/2019/09/02/服务器健康监控/</id>
+    <published>2019-09-02T08:36:30.000Z</published>
+    <updated>2019-09-02T08:38:00.624Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/sunowsir/SHMS&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Project" scheme="http://yoursite.com/tags/Project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux三剑客之awk的使用</title>
+    <link href="http://yoursite.com/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/09/02/Linux三剑客之awk的使用/</id>
+    <published>2019-09-02T08:35:47.000Z</published>
+    <updated>2019-09-02T08:36:04.449Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易&lt;br&gt; 内置变量与运算符数据来自&lt;a href=&quot;https://www.runoob.com/linux/linux-comm-awk.html&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux三剑客之grep的使用</title>
+    <link href="http://yoursite.com/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/09/02/linux三剑客之grep的使用/</id>
+    <published>2019-09-02T08:34:08.000Z</published>
+    <updated>2019-09-02T08:34:30.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;部分内容源自网络和grep帮助信息。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h2&gt;&lt;pre&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MYSQL-笔记1</title>
+    <link href="http://yoursite.com/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/"/>
+    <id>http://yoursite.com/2019/09/02/MYSQL-笔记1/</id>
+    <published>2019-09-02T08:32:55.000Z</published>
+    <updated>2019-09-02T08:33:42.791Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;  在MYSQL中查询操作涉及内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;function&quot;&gt;&lt;a href=&quot;#function&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HDU - 2072</title>
+    <link href="http://yoursite.com/2019/09/02/HDU-2072/"/>
+    <id>http://yoursite.com/2019/09/02/HDU-2072/</id>
+    <published>2019-09-02T08:31:16.000Z</published>
+    <updated>2019-09-02T09:04:08.201Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=2072&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
+    
+      <category term="HDU" scheme="http://yoursite.com/tags/HDU/"/>
+    
+  </entry>
+  
+</feed>
