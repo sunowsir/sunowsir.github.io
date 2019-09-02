@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content>
+    <title>Linux常见配置文件 ~ Sunow&#39;s Club</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+<header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/">&nbsp;<strong>Sunow&#39;s Club</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories/">Categories</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/tags/">Tags</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+            
+                <li class="nav-item" id="search-btn">
+                    <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2"
+         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <span class="h2" id="subtitle">
+                        
+                    </span>
+                    
+                        <br>
+                        <p>星期一, 九月 2日 2019, 4:40 下午</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    
+        
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-2"></div>
+            <div class="col-lg-8 nopadding-md">
+                <div class="py-5 z-depth-3 board">
+                    <div class="post-content mx-auto">
+                        <div class="markdown-body">
+                            <blockquote>
+<p>转载自<a href="https://www.cnblogs.com/zxj015/p/4457868.html" target="_blank" rel="noopener">CoderZhuang</a>，对<a href="https://www.cnblogs.com/zxj015/p/4457868.html" target="_blank" rel="noopener">CoderZhuang</a>先生的博客进行补充和整理。</p>
+</blockquote>
+<ol>
+<li><code>/etc</code> 配置文件<ul>
+<li><code>/etc/passwd</code> 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 <ul>
+<li><code>/etc/group</code> 类似<code>/etc/passwd</code> ，但说明的不是用户而是组。</li>
+<li><code>/etc/inittab</code> init 的配置文件</li>
+<li><code>/etc/issue</code> 在登录提示符前的输出信息。通常包括系统的一段短说明或欢迎信息。内容由系统管理员确定。</li>
+<li><code>/etc/motd</code> 成功登录后自动输出，内容由系统管理员确定，经常用于通告信息，如计划关时间的警告。</li>
+<li><code>/etc/mtab</code> 当前安装的文件系统列表。由<code>scripts</code> 初始化，并由<code>mount</code> 命令自动更新。需要一个当前<br>安装的文件系统的列表时使用，例如df 命令，当<code>df –a</code> 时，查看到的信息应和其一致。</li>
+<li><code>/etc/shadow</code> 在安装了影子口令软件的系统上的影子口令文件。影子口令文件将<code>/etc/passwd</code> 文件中的<br>加密口令移动到<code>/etc/shadow</code> 中，而后者只对<strong>root</strong> 可读。这使破译口令更困难。</li>
+</ul>
+</li>
+<li><code>/etc/login.defs</code> login 命令的配置文件<ul>
+<li><code>/etc/profile</code> , <code>/etc/csh.login</code> , <code>/etc/csh.cshrc</code> 登录或启动（cshell）时读取的文件（shell不同，文件名称不同，具体查看man手册）。</li>
+<li><code>/etc/printcap</code> 类似<code>/etc/termcap</code> ，但针对打印机。语法不同。</li>
+<li><code>/etc/securetty</code> 确认安全终端，即哪个终端允许<strong>root</strong>登录。一般只列出虚拟控制台，这样就不可能<br>(至少很困难)通过modem 或网络闯入系统并得到超级用户特权。</li>
+<li><code>/etc/shells</code> 列出可信任的shell。chsh命令允许用户在本文件指定范围内改变登录shell。提供一<br>台机器FTP 服务的服务进程ftpd 检查用户shell 是否列在 <code>/etc/shells</code><br>文件中，如果不是将不允许该用户登录。</li>
+<li><code>/etc/termcap</code>终端性能数据库。说明不同的终端用什么”转义序列”控制。写程序时不直接输出转义序列(这样<br>只能工作于特定品牌的终端)，而是从<code>/etc/termcap</code>中查找要做的工作的正确序列。这样，多数的<br>程序可以在多数终端上运行。</li>
+<li><code>/etc/inputrc</code> 输入设备配置文件</li>
+<li><code>/etc/default/useradd</code> 添加用户的默认信息的文件</li>
+<li><code>/etc/login.defs</code> 是用户密码信息的默认属性</li>
+<li><code>/etc/skel</code> 用户信息的骨架</li>
+<li><code>/sbin/nologin</code> 不能登陆的用户</li>
+<li><code>/var/log/message</code> 系统的日志文件</li>
+<li><code>/etc/profile</code>全局配置文件可以在添加一行<code>PATH=$PATH：/usr/local/mysql/bin</code>即可以软件的命令可以使用</li>
+<li><code>/root/bashrc</code> 命令的别名</li>
+<li><code>/etc/yum.repos.d</code> 配置本地yun源(红帽系)</li>
+<li><code>/etc/apt/sources.list.d</code> 配置本地apt源(debian系)</li>
+<li><code>/etc/httpd/conf/httpd.conf</code> 配置http服务的配置文件</li>
+<li><code>/etc/fstab</code> 系统启动时自动加载的设备，（用于配置自动挂载设备）</li>
+<li><code>/etc/selinux</code> 安全Linux设定</li>
+<li><code>/etc/sysconfig/network</code> 可以更改<code>hostname</code>（主机名）以及网卡工作状态</li>
+<li><code>/etc/hosts</code> 更改主机名和IP 地址的对应关系，请注意其格式为<code>hostname.domain</code> <code>hostname</code> <code>localhost</code><br><code>localhost.domian</code>，当修改主机名后必须修改该文件</li>
+<li><code>/etc/resolv.conf</code> 可配置DNS 地址，即第一DNS，第二DNS 以及DNS 的默认搜索路径</li>
+<li><code>/etc/sysconfig/networking/profiles/default</code> 内含数个文件，可配置hosts、网卡、DNS 地址及<br>DNS 搜索路径等</li>
+<li><code>/etc/sysconfig/network-scripts/ifcfg-eth0</code> 配置网卡eth0(具体名称请使用<code>ifconfig</code>查看)</li>
+<li><code>/etc/rc.d/init.d/network restart</code> 重启网络</li>
+<li><code>/etc/rc.d/init.d</code> 用于放置几乎所有服务的启动脚本</li>
+<li><code>/etc/sysctl.conf</code> 内核参数配置文件<br> <code>/etc/sysconfig/i18n</code>    设置系统语言和字符类型</li>
+<li><code>/etc/crontab</code> 系统定义的任务计划</li>
+<li><code>/etc/anacrontab</code> 实现检查过期和未完成的crontab的任务的配置文件</li>
+<li><code>/etc/rc.d/init.d/functions</code> 定义功能的配置文件</li>
+<li><code>/etc/rc.d/rc.sysinit</code> 系统启动设置配置文件</li>
+<li><code>/etc/sysconfig/system-config-firewall</code>配置防火墙的信任端口，以及防火墙的工作状态。图形化配置防火<br>墙的存档文件，具体讲只保存图形界面的otherport里面设置的项目，如果主配置<br>文件存在相应的配置条目，那么它里面的配置条目存在与否并不重要。</li>
+<li><code>/etc/sysconfig/iptables</code> 防火墙主配置文件</li>
+<li><code>/etc/sysconfig/system-config-securitylevel</code> 系统安全等级文件，在防火墙配置中不会涉及</li>
+<li><code>/etc/xinetd.conf xinetd</code> 的主配置文件</li>
+<li><code>/etc/hosts.allow</code> TCP的一个许可表</li>
+<li><code>/etc/host.deny</code> TCP的一个拒绝表</li>
+<li><code>/etc/squid/squid.conf</code> 代理服务器（SQUID）配置文件</li>
+<li><code>/etc/sysconfig/vncservers</code> VNC服务配置文件</li>
+<li><code>/etc/vsftpd/ftpusers</code> 用于保存不允许进行FTP 登录的本地用户账号（黑名单）</li>
+<li><code>/etc/vsftpd/user_list</code> 更灵活的用户访问控制，但需要在主配置文件中进行声明</li>
+<li><code>/etc/inetd.conf</code> swat 配置</li>
+<li><code>/etc/dhcpd.conf</code> DHCP 的配置文件</li>
+<li><code>/etc/rc.d/init.d/dhcpd stop</code> 停止DHCP</li>
+<li><code>/etc/access</code> 可以对sendmail 的邮件流进行控制</li>
+<li><code>/etc/udev/rules.d</code> 系统初始化时将硬件探测信息输出成设备配置文件，是一个程序。<br>让用户定义udev的规则，从而实现在创建设备文件使用不同的设备文件名</li>
+<li>注：<code>/etc/passwd</code> 存放用户的账号，存放形式 ：<br><code>root:x:0:0:root:/root:/bin/bash</code> :<br><code>用户名：密码位：UID：GID：CECOS(注释)：diectory（家目录）:shell</code></li>
+<li>注：<code>/etc/shadow</code> 存放用户的密码<br><code>slaceware:$1$12345678$0ME5N6oDyoEAwUp7b5UDM/:15355:0:99999:7:::</code><br>用户名：加密后的密码：时间1：时间2：时间3：时间4：时间5：时间6：预留段`<br>加密后的密码：以$分开，第一个$后是1，说明加密算法是md5，第二个$后是加的sail，第三个$后是加的密码。<br>时间1：从1970年1月1日起到最近的修改的天数<br>时间2：密码的最短使用期限<br>时间3：密码最长使用期限<br>时间4：在密码过期之前多少天开始警告<br>时间5：在密码过期多少天用户禁用<br>时间6：自1970年1月1日起多长时间用户被禁用</li>
+<li>注：<code>/etc/group</code> 存放组的账号，存放形式：<br><code>slackware:x:5000</code> : <code>Name：passwd位置：GID：附加组的用户列表</code>。</li>
+<li>注：</li>
+<li>交互式登陆的用户：<br><code>/etc/profile --&gt;/etc/profile.d/* --&gt;~/.bash_profile --&gt;~/.bashrc --&gt;/etc/bashrc</code></li>
+</ul>
+</li>
+<li>非交互式登录：<br>/.bashrc –&gt;/etc/bashrc –&gt;.etc/profile.d/*`    </li>
+</ul>
+</li>
+<li><code>/proc</code> 配置文件<ul>
+<li><code>/proc/dma</code> 显示当前使用的DMA 通道。<ul>
+<li><code>/proc/filesystems</code> 核心配置的文件系统。</li>
+<li><code>/proc/interrupts</code> 显示使用的中断，and how many of each there have been.</li>
+<li><code>/proc/ioports</code> 当前使用的I/O 端口。</li>
+<li><code>/proc/kcore</code> 系统物理内存映象。与物理内存大小完全一样，但不实际占用这么多内存；<br>it is generated on the fly as programs access it.<br>(记住：除非你把它拷贝到什么地方，<code>/proc</code> 下没有任何东西占用任何磁盘空间。）</li>
+<li><code>/proc/kmsg</code> 核心输出的消息。也被送到syslog</li>
+<li><code>/proc/ksyms</code> 核心符号表</li>
+<li><code>/proc/loadavg</code> 系统”平均负载”；3 个指示器指出系统当前的工作量。</li>
+<li><code>/proc/meminfo</code> 存储器使用信息，包括物理内存和swap。</li>
+<li><code>/proc/modules</code> 当前加载了哪些核心模块。</li>
+<li><code>/proc/net</code> 网络协议状态信息。</li>
+<li><code>/proc/self</code> 到查看<code>/proc</code> 的程序的进程目录的符号连接。当2 个进程查看<code>/proc</code><br>时，是不同的连接。这主要便于程序得到它自己的进程目录。 <ul>
+<li><code>/proc/stat</code> 系统的不同状态，such as the number of page faults since the system was booted.</li>
+</ul>
+</li>
+<li><code>/proc/uptime</code> 系统启动的时间长度。 </li>
+<li><code>/proc/cpuinfo</code> 处理器信息，如类型、制造商、型号和性能。</li>
+<li><code>/proc/devices</code> 当前运行的核心配置的设备驱动的列表。</li>
+<li><code>/proc/version</code> 核心版本。</li>
+<li><code>/proc/mdstat</code> RAID设备的信息</li>
+<li><code>/proc/cmdline</code> ro root=/dev/vol0/root rhgb quiet grub信息</li>
+<li><code>/proc/cpuinfo</code> 显示CPU的相关信息</li>
+<li><code>/proc/cpuset</code> cpu集合 用于显示当前进程可以应用到哪些cpu上</li>
+<li><code>/proc/filesystem</code>当前系统支持的文件系统种类</li>
+<li><code>/etc/245/vm</code> 系统进程ID号为245的进程的虚拟内存信息</li>
+<li><code>/etc/245/kernel</code> 系统进程ID号为245的进程的内核信息</li>
+<li><code>/proc/mounts</code> 挂载的所有文件系统</li>
+<li><code>/proc/swaps</code> 交换分区信息 </li>
+<li><code>/proc/uptime</code> 启动系统运行时长</li>
+<li><code>/proc/sys</code> (具有写权限)定义内核参数的值来定义内核的功能<br> <code>/proc/sys/kernel/hostname</code> 主机名的设定    </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>/usr</code> 配置文件<ul>
+<li><code>/usr/bin</code> 众多的应用程序<ul>
+<li><code>/usr/doc</code> linux 文档</li>
+<li><code>/usr/include</code> linux 下C 开发和编译应用程序所需要的头文件</li>
+<li><code>/usr/include/g++</code> C++编译器的头文</li>
+<li><code>/usr/lib</code> 常用的动态链接库和软件包的配置文件</li>
+<li><code>/usr/src</code> 系统软件的源代码</li>
+<li><code>/usr/src/linux</code> linux 内核的源代码</li>
+<li><code>/usr/local/bin</code> 本地增加的命令</li>
+<li><code>/usr/local/lib</code> 本地增加的库</li>
+<li><code>/usr/sbin</code> 为系统管理员保留的程序</li>
+<li><code>/usr/share/fonts</code> 字体文件</li>
+<li><code>/usr/share/doc</code> 各种文档文件</li>
+<li><code>/usr/share/man</code> 系统手册页</li>
+<li><code>/usr/local/apache/man</code> 定义man目录文集<br>其它目录配置文件    </li>
+<li><code>/dev/null</code> 没有用的文件所放的位置，相当于回收站，吞噬设备</li>
+<li><code>/dev/zero</code> 初始化磁盘（吐零） </li>
+<li><code>/dev/random</code> 随机数生成器，熵池</li>
+<li><code>/dev/urandom</code> 伪随机数生成器，熵池。（当熵池耗尽时，用软件生成随机数）</li>
+<li><code>/var/spool/mail/root</code> 定义mail设置发送用户为root</li>
+<li><code>/bin/bash</code> 系统内置脚本</li>
+<li><code>/home/USERNAME</code> 用户配额文件</li>
+<li><code>/var/spool/cron/USERNAME</code> 用户定义的任务计划</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目录结构：<ul>
+<li><code>/boot</code> 用于自举加载程序（LILO 或GRUB）的文件。当计算机启动时（如果有多个操作系统，<br>有可能允许你选择启动哪一个操作系统），这些文件首先被装载。这个目录也会包含LINUX 核（压缩文件<br>vmlinuz），但LINUX 核也可以存在别处，只要配置LILO 并且LILO 知道LINUX 核在哪儿。<ul>
+<li><code>/bin</code> 系统启动时需要的引导程序(二进制执行文件)，这些文件可以被普通用户使用</li>
+<li><code>/dev</code> 代表硬件组件的设备文件目录。LINUX 下设备被当成文件，这样一来硬件被抽象化，便<br>于读写、网络共享以及需要临时装载到文件系统中。正常情况下，设备会有一个独立的子目录。这些设备<br>的内容会出现在独立的子目录下。LINUX 没有所谓的驱动符。</li>
+<li><code>/etc</code> 存放各种配置文件</li>
+<li><code>/etc/rc.d</code> 启动的配置文件和脚本</li>
+<li><code>/home</code> 用户主目录，包含参数设置文件、个性化文件、文档、数据、EMAIL、缓存数据等</li>
+<li><code>/lib</code> 标准程序设计库，又叫动态链接共享库，作用类似windows 里的.dll 文件</li>
+<li><code>/sbin</code> 为系统管理员保留的用于系统启动时的引导程序(二进制执行文件)，这些文件不打算被<br>普通用户使用(普通用户仍然可以使用它们，但要指定目录)</li>
+<li><code>/tmp</code> 公用的临时文件存储点，该目录会被自动清理干净</li>
+<li><code>/root</code> 系统管理员的主目录</li>
+<li><code>/mnt</code> 系统提供这个目录是让用户临时挂载其他的文件系统。</li>
+<li><code>/lost+found</code>这个目录平时是空的，系统非正常关机而留下“无家可归”的文件。</li>
+<li><code>/proc</code> 虚拟的目录，是系统内存的映射，可直接访问这个目录来获取系统信息。目录整个包含<br>虚幻的文件。它们实际上并不存在磁盘上，也不占用任何空间。（用<code>ls –l</code> 可以显示它们的大小）当查看<br>这些文件时，实际上是在访问存在内存中的信息，这些信息用于访问系统</li>
+<li><code>/proc/1</code> 关于进程1 的信息目录。每个进程在<code>/proc</code> 下有一个名为其进程号的目录。</li>
+<li><code>/var</code> 某些大文件的溢出区，比方说各种服务的日志文件，包含在正常操作中被改变的文件：<br>假脱机文件、记录文件、加锁文件、临时文件和页格式化文件等</li>
+<li><code>/var/spool mail, news</code>, 打印队列和其他队列工作的目录。每个不同的spool 在<code>/var/spool</code> 下有自己的<br>子目录，例如，用户的邮箱在<code>/var/spool/mail</code> 中。</li>
+<li><code>/opt</code> 可选的应用程序，譬如，REDHAT 5.2 下的KDE （REDHAT 6.0 下，KDE 放在其它的<br>XWINDOWS 应用程序中，主执行程序在<code>/usr/bin</code> 目录下）</li>
+<li><code>/usr</code> 最庞大的目录，要用到的应用程序和文件几乎都在这个目录。</li>
+<li><code>/home /var /usr/local</code> 经常是单独分区，因为经常会操作，容易产生碎片</li>
+<li><code>/srv</code> 该目录存放一些服务启动之后需要提取的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+                            <hr>
+                        </div>
+                        <br>
+                        <div>
+                            
+                            <p>
+                                <i class="iconfont icon-tag"></i>
+                                
+                                    <a class="hover-with-bg" href="/tags/note">note</a>
+                                
+                                    <a class="hover-with-bg" href="/tags/%E8%BD%AC%E8%BD%BD">转载</a>
+                                
+                            </p>
+                            
+                                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="d-none d-lg-block col-lg-2 toc-container">
+            
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container comments mx-auto" id="comments">
+        
+    </div>
+</div>
+
+    
+</main>
+
+
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/lib/nprogress/nprogress.min.js?v=0.2.0"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "Linux常见配置文件&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      var el = "h1,h2,h3,h4,h5,h6".split(",")
+      var res = []
+      for (item of el) {
+        res.push(".markdown-body > " + item)
+      }
+      anchors.add(res.join(", "))
+    </script>
+  
+
+  
+    <script src="/js/local-search.js"></script>
+    <script>
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function(){ getSearchFile(path); this.onclick = null }
+    </script>
+  
+</body>
+</html>
