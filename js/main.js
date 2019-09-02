@@ -22,5 +22,3 @@ $(document).ready(function () {
 		NProgress.done();
 	};
 });
-
-
