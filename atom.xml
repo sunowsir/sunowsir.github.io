@@ -161,7 +161,7 @@
     <link href="http://yoursite.com/2019/09/02/BASH%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E7%B4%A0%E6%95%B0%E7%BA%BF%E6%80%A7%E7%AD%9B/"/>
     <id>http://yoursite.com/2019/09/02/BASH脚本实现素数线性筛/</id>
     <published>2019-09-02T08:45:33.000Z</published>
-    <updated>2019-09-02T08:46:05.809Z</updated>
+    <updated>2019-09-03T07:20:16.082Z</updated>
     
     <summary type="html">
     
@@ -173,13 +173,13 @@
 &lt;li&gt;&lt;p&gt;知识准备&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;for&lt;/code&gt;循环&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;for i in `seq 1 10`;
-do
-    echo
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
         
       
     
     </summary>
+    
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
     
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>

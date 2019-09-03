@@ -1,253 +1,475 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-
-
-
+<html class="html-loading">
+		
 
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content>
-    <meta name="author" content="sunowsir">
-    <meta name="keywords" content>
-    <title>Sunow&#39;s Club</title>
-    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
-    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
-    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
-    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
-    <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
     
-        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+      Sunow&#39;s Club
     
-    <link rel="stylesheet" href="/css/main.css">
+  </title>
+  <meta name="author" content="sunowsir">
+  <meta name="keywords" content>
+  <meta name="description" content="This is Sunowsir&#39;s club.">
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
 
-    
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/Annie.css">
+  
+  <!-- jquery -->
+	<script src="/js/jquery.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
 </head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
 
 
-<body>
-<header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-<div class="container">
-    <a class="navbar-brand" href="/">&nbsp;<strong>Sunow&#39;s Club</strong>&nbsp;</a>
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<!-- Logo and navigation -->
+		<div class="h-header">
+			<div id="logo">
+				<a href="/">
+						
+						<img src="/img/logo.png" alt="Logo">
+					
+				</a>
+			</div>
+			
+			<div id="navigation-show">
+				<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+			</div>				
+		</div>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto text-center">
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/archives/">Archives</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/categories/">Categories</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/tags/">Tags</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/about/">About</a>
-            </li>
-            
-            
-                <li class="nav-item" id="search-btn">
-                    <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-                </li>
-            
-        </ul>
-    </div>
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<p class="motto"></p>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			</a>
+
+			
+				<!-- 
+	This is only a demo, please go to "https://time.is" to set your city time! 
+-->
+<style type="text/css">
+	.header-date {
+		font-size: 1.6rem;
+		color: #fff;
+		position: absolute;
+		bottom: 5px;
+		right: 1rem;
+		writing-mode: tb-rl;
+	}	
+	
+	.header-date a {
+		border-bottom: none;
+	}
+
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			font-size: 1rem;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" ></a>
+	<span id="Beijing_z43d"></span>
 </div>
-
-
-</nav>
-    <div class="view intro-2"
-         style="background: url('/img/index.jpg')no-repeat center center;background-size: cover;">
-        <div class="full-bg-img">
-            <div class="mask rgba-black-light flex-center">
-                <div class="container text-center white-text wow fadeInUp">
-                    <span class="h2" id="subtitle">
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+			
+		</div>
+	</div>
 </header>
 
-<main>
-    
-        <div class="container nopadding-md">
-            <div class="py-5 z-depth-3 board">
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 m-auto">
-                            
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><h1>0.0%</h1></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			主页
+		
+	</p>
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	<div class="nav-footer">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			
 
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/HDU-1276/">
-                <p class="h4 index-header">HDU-1276</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+
+	<!--cart style-->
+	<div class="layout-cart">
+	<div id="layout-cart">
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/HDU-1276/" title=" HDU-1276 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/HDU-1276/" title="HDU-1276">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/HDU-1276/" itemprop="url">
+		HDU-1276
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开始进行一至二报数。。。，以后从头开始轮流进行一至二报数、一至三报数直到剩下的人数不超过三人为止。
-Input
-本题有多个测试数据组，第一行为组数N，接着为N行新兵人数，新兵人数不超过5000。
-Output
-共有N行，分别对应输入的新兵人数，每行输出剩下的新兵最初的编号，编号之间有一个空格。
-
-Sample Input
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠...
+					
+				</p>
+				<p class="post-meta">
+					
 
 
-2 20 40
-Sample Output
 
-1 7 19 1 19 37
-代码如下：
+					
 
-************************/
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
 
-#include&lt;bits/stdc++.h&gt;
 
-using namespace std;
+	
 
-int main(){
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/CPU信息获取/" title=" CPU信息获取 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
 
-    int N,n,sol_num,cnt;
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/CPU信息获取/" itemprop="url">
+		CPU信息获取
+	</a>
 
-    int sol[5005];
-
-    //输入数据的组数；
-
-    cin&gt;&gt;n;
-
- </div>
-                    
-                </div>
-            </a>
-
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/oj">oj</a>&nbsp;
-                        
-                            <a href="/tags/HDU">HDU</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
-
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/CPU信息获取/">
-                <p class="h4 index-header">CPU信息获取</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 准备知识
 
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存中，但是由于它和其他目录一样把自己注册到虚拟文件系统层了，所以我们还是能看到这个目录相关信息，然而只有虚拟文件系统层调用它的时候，他才会建立相关文件和目录并与内核沟通获取相关信息。
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的...
+					
+				</p>
+				<p class="post-meta">
+					
 
-上面我们说道/proc 文件系统存储着内核控制相关信息的目录，该目录下的/proc/stat文件存储的是CPU相关信息，我们想要获取CPU相关信息最直接和最快速的方式就是读取该文件，其实Linux下很多的工具都是读取的这个文件。在这个文件中包含了所有的CPU活动信息，并且该文件中所有值都是从系统启动算起直到访问文件的这一刻的数据。如下就是某一刻/proc/stat文件中的数据：
-cpu  499312 1086 227835 10498412 3803 0 10904 0 0 0
-cpu0 125361 278 56675 2626355 450 0 2242 0 0 0
-c</div>
-                    
-                </div>
-            </a>
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/script">script</a>&nbsp;
-                        
-                            <a href="/tags/shell">shell</a>&nbsp;
-                        
-                            <a href="/tags/linux">linux</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/POJ-1979/">
-                <p class="h4 index-header">POJ-1979</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A man is standing on a black tile. From a tile, he can move to one of four adjacent tiles. But he can’t move on red tiles, he can move only on black tiles.Write a program to count the number of black tiles which he can reach by repeating the moves described above.InputThe input consists of multiple data sets. A data set starts with a line containing two positive integers W and H; W a</div>
-                    
-                </div>
-            </a>
+					
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/oj">oj</a>&nbsp;
-                        
-                            <a href="/tags/POJ">POJ</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/Codeforces-787a/">
-                <p class="h4 index-header">Codeforces-787a</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/POJ-1979/" title=" POJ-1979 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/POJ-1979/" title="POJ-1979">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/POJ-1979/" itemprop="url">
+		POJ-1979
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
+原题目：DescriptionThere is a rectangular room, covered with square tiles. Each ...
+					
+				</p>
+				<p class="post-meta">
+					
+
+
+
+					
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/Codeforces-787a/" title=" Codeforces-787a ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/Codeforces-787a/" itemprop="url">
+		Codeforces-787a
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 题目传送
 
 
@@ -256,186 +478,186 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 
 
 代码：
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
+#include&lt;bi...
+					
+				</p>
+				<p class="post-meta">
+					
 
-#define ll long long
 
-ll exgcd(ll a,ll b,ll &amp;x,ll &amp;y){
-    if(b==0){
-        x=1;
-        y=0;
-        return a;
-    }
-    ll d=exgcd(b,a%b,x,y);
-    ll tmp=x;
-    x=y;
-    y=tmp-a/b*y;
-    return d;
-}
 
-int main(){
-    ll a,b,C,D,x,y;
-    while(cin&gt;&gt;a&gt;&gt;b&gt;&gt;C&gt;&gt;D){
-        if(b&lt;D){//若b&lt;D,那么y&lt;0，
-            //原方程式等价于y=(a*x+b-d)/c,
-            //下</div>
-                    
-                </div>
-            </a>
+					
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/oj">oj</a>&nbsp;
-                        
-                            <a href="/tags/codeforces">codeforces</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/HDU-1072/">
-                <p class="h4 index-header">HDU-1072</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“OUT”（代表出队或出栈）若已经是空的了遇到“OUT”命令时输出“None”；
 
-题目思路：其实就是c++STL的队列和栈的简单应用；
+	
 
-代码如下：
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/HDU-1072/" title=" HDU-1072 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
 
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main(){
-      int n;
-      cin&gt;&gt;n;
-      while(n--){
-          int com_num,typ_num;
-          cin&gt;&gt;com_num;
-          string com;
-          cin&gt;&gt;com;
-          if(com==&quot;FIFO&quot;){
-              queue&lt;int&gt; q;
-             </div>
-                    
-                </div>
-            </a>
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/HDU-1072/" title="HDU-1072">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/HDU-1072/" itemprop="url">
+		HDU-1072
+	</a>
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/oj">oj</a>&nbsp;
-                        
-                            <a href="/tags/HDU">HDU</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
+题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;...
+					
+				</p>
+				<p class="post-meta">
+					
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/BASH脚本实现素数线性筛/">
-                <p class="h4 index-header">BASH脚本实现素数线性筛</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+
+
+					
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/BASH脚本实现素数线性筛/" title=" BASH脚本实现素数线性筛 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-8396gk.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/BASH脚本实现素数线性筛/" title="BASH脚本实现素数线性筛">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/BASH脚本实现素数线性筛/" itemprop="url">
+		BASH脚本实现素数线性筛
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 知识准备
 
 for循环
-for i in `seq 1 10`;
-do
-    echo ${i}
-done
-#执行结果
----------
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
---------
-for ((i = 0; i &lt; 10; i++));
-do
-    echo ${i}
-done
-# 执行结果与上面代码相同
-# 双小括号中可以使用C语言一样的语法进行数学计算
-# echo 是回显
-# 美元符号用来取值：取变量值和数组值（用大括号括把变量或数组起来）、取命令的值（用小括号或&lt;Tab&gt;键上面的``符号括起来，如果用`符号扩起来就不用美元符号取值了）
+12345678910111213141516171819202122232425for i in `seq 1 10`;do	...
+					
+				</p>
+				<p class="post-meta">
+					
 
-if分支语句
-num=0
-if [[ ${num} -eq 0 ]];then
-    echo &quot;YES&quot;
-elif [[ ${num} -eq 1 ]];then
-    echo &quot;NO&quot;
-else
-    echo &quot;???&quot;
-fi
-# 执行结果
-# 数值判断用-eq(==)、-ne（!=）、-gt(&gt;)、-ge(&gt;=)、-</div>
-                    
-                </div>
-            </a>
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/script">script</a>&nbsp;
-                        
-                            <a href="/tags/shell">shell</a>&nbsp;
-                        
-                            <a href="/tags/linux">linux</a>&nbsp;
-                        
-                            <a href="/tags/algorithm">algorithm</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/磁盘信息获取/">
-                <p class="h4 index-header">磁盘信息获取</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+					
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/磁盘信息获取/" title=" 磁盘信息获取 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/磁盘信息获取/" itemprop="url">
+		磁盘信息获取
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 知识准备：
 
 df:该工具用来获取文件系统挂载信息。
@@ -447,58 +669,65 @@ awk：该工具用来处理 df的数据。
 代码：
    #!/bin/bash
 
-   df -m | grep &quot;^/dev/&quot; | awk -v ntime=$(date +&quot;%Y-%m-%d__%H:%M:%S&quot;) &#39;
-   BEGIN{
-       num = 0; 
-       unum = 0; 
-       hnum = 0;
-   } 
-   {
-       num += $2; 
-       unum += $3; 
-       hnum += $4;
-       printf(&quot;%s 1 %s %sM %sM %s\n&quot;, ntime, $6, $2, $4, $5);
-   } 
-   END{
-       printf(&quot;%s 0 disk %dM %dM %.2f%%\n&quot;, ntime, num, hnum, unum / num * 100);
-   }&#39;
+   df ...
+					
+				</p>
+				<p class="post-meta">
+					
 
 
 
-</div>
-                    
-                </div>
-            </a>
+					
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/script">script</a>&nbsp;
-                        
-                            <a href="/tags/shell">shell</a>&nbsp;
-                        
-                            <a href="/tags/linux">linux</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/进程信息获取/">
-                <p class="h4 index-header">进程信息获取</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/进程信息获取/" title=" 进程信息获取 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/进程信息获取/" title="进程信息获取">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/进程信息获取/" itemprop="url">
+		进程信息获取
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 知识准备：
 
 ps 该工具用来获取进程信息
@@ -508,55 +737,65 @@ awk该工具用来处理数据
 代码
 #!/bin/bash
 
-ps -aux | awk -v last_all=$(ps -aux | awk &#39;
-BEGIN{
-    num = 0;
-} 
-{ 
-    if ($3 &gt; 50 || $4 &gt; 50) { 
-        if (num &gt; 0) {
-            printf(&quot;|&quot;);
-        } 
-        printf(&quot;%s&quot;, $2); 
-        num++;
-    } 
-}&#39; &amp;&amp; sleep 5) -v nowtime=$(date +&quot;%Y-%m-%d__%H:%M:%S&quot;) &#39;
-{ 
-    if ($2 ~ last_all &amp;&amp; ($3 &gt; 50 || $4 &gt; 50)) {
-        printf(&quot;%s %s %s %s %s %s\n&quot;, nowtim</div>
-                    
-                </div>
-            </a>
+ps -aux | awk -v last_a...
+					
+				</p>
+				<p class="post-meta">
+					
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/script">script</a>&nbsp;
-                        
-                            <a href="/tags/shell">shell</a>&nbsp;
-                        
-                            <a href="/tags/linux">linux</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/内存信息获取/">
-                <p class="h4 index-header">内存信息获取</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+
+					
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/内存信息获取/" title=" 内存信息获取 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/内存信息获取/" title="内存信息获取">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/内存信息获取/" itemprop="url">
+		内存信息获取
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 free：该工具用来获取内存信息
 
 grep：该工具用来筛选数据
@@ -566,47 +805,65 @@ awk&#39;：该工具用来处理数据
 代码：
 #!/bin/bash
 
-free -m | grep &quot;^Mem&quot; | awk -v last_per=$1 -v nowdate=$(date +&quot;%Y-%m-%d_%H:%M:%S&quot;) &#39;
-{
-    printf(&quot;%s %sM %sM %.1f%% %.1f%%\n&quot;, nowdate, $2, $7, $3 / $2 * 100, 0.3 * last_per + 0.7 * ($3 / $2 * 100));
-}&#39;
+free ...
+					
+				</p>
+				<p class="post-meta">
+					
 
 
 
-</div>
-                    
-                </div>
-            </a>
+					
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/script">script</a>&nbsp;
-                        
-                            <a href="/tags/shell">shell</a>&nbsp;
-                        
-                            <a href="/tags/linux">linux</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/09/02/系统信息获取/">
-                <p class="h4 index-header">系统信息获取</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="post" id="post">
+			<a class="post-cover" href="/2019/09/02/系统信息获取/" title=" 系统信息获取 ">
+				
+				<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg"/>
+			</a>
+
+			<div class="post-text">
+				<p class="post-time">
+					九月 2日, 2019
+				</p>	
+				<h3 class="post-title" id="post-title-index">
+					<a href="/2019/09/02/系统信息获取/" title="系统信息获取">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+						
+	<a href="/2019/09/02/系统信息获取/" itemprop="url">
+		系统信息获取
+	</a>
+
+					</a>
+				</h3>
+				<p class="post-content">
+					
+						
 欢迎大家转载，转载请注明出处，谢谢！
 
 
@@ -615,164 +872,232 @@ free -m | grep &quot;^Mem&quot; | awk -v last_per=$1 -v nowdate=$(date +&quot;%Y
 date：获取当前时间
 /etc/issue：系统版本信息
 /proc/loadavg：负载信息
-df：获取磁盘信息
-free：内存信息
-/sys/class/thermal/thermal_zone0/temp：cpu温度
-hostname：主机名
-
-
-代码
-#!/bin/bash
-
-# 现在时间
-nowdate=`date +&quot;%Y-%m-%d__%H:%M:%S&quot;`
-# 系统版本
-os_v=`cat /etc/issue | awk &#39;{printf(&quot;%s_%s&quot;, $1, $2);}&#39;`
-# 内核版本
-ker_v=`uname -r`
-# 运行时间和负载信息
-run_and_load=`uptime -p | tr -s &quot; &quot; &quot;\n&quot; | awk &#39;{printf(&quot;_%s&quot;, $1)}&#39;``cat /proc/loadavg | awk &#39;{ printf(&quot; %s </div>
-                    
-                </div>
-            </a>
-
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-02
-                    &nbsp;&nbsp;
-                    
-                    
-                        |&nbsp;&nbsp;<i class="iconfont icon-tag"></i>
-                        
-                            <a href="/tags/script">script</a>&nbsp;
-                        
-                            <a href="/tags/shell">shell</a>&nbsp;
-                        
-                            <a href="/tags/linux">linux</a>&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
+...
+					
+				</p>
+				<p class="post-meta">
+					
 
 
 
-<nav aria-label="index posts navigation">
-<ul class="pagination pg-blue justify-content-center mt-5">
-    
-    
-        <li class="page-item">
-        <a class="page-link" href="/page/2/">下一页</a>
-        </li>
-    
+					
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+				</p>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<div id="pagination">
+		
+			<a href="/page/2/" data-title="加载更多" data-status="没有了">加载更多</a>
+		
+	</div>
+
+	
+
+</div>
+	
+
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
 </ul>
-</nav>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-</main>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by sunowsir. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_site_pv">
+	    	本站总访问量<span id="busuanzi_value_site_pv"></span>次
+		</span>
+
+		<span id="busuanzi_container_site_uv">
+	  		本站访客数<span id="busuanzi_value_site_uv"></span>人次
+		</span>
+		
+	
 
 
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- set '1' to show motto in all pages! -->
+
+	<script src="/plugin/motto/motto.js"></script>
+	
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
 </div>
 
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/plugin/search/search.js"></script>
 
-<footer class="mt-5">
-    <div class="text-center py-3">
-        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-        <i class="iconfont icon-love"></i>
-        <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
-        <br>
-        
-    </div>
-</footer>
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
 
-<!-- SCRIPTS -->
-<script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
-<script src="/lib/mdbootstrap/js/popper.min.js"></script>
-<script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
-<script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
-<script src="/lib/nprogress/nprogress.min.js?v=0.2.0"></script>
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+<!-- love effect -->
+
+	<script src="/plugin/love/love.js"></script>
+
+
+<!-- back to top -->
+
+	
+	<div id="totop">
+  		<a href="javascript:;"  name="TOTOP" class="fa fa-arrow-up" ></a>
+	</div>
+
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<script src="/plugin/vibrant/vibrant.js"></script>
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imgLazyLoader/yall.min.js"></script>
+<script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/js/resizediv.js"></script>
 <script src="/js/main.js"></script>
-
-
-    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
-    <script>
-        $(document).ready(function () {
-            $('pre').addClass('prettyprint linenums');
-            prettyPrint();
-        })
-    </script>
-
-
-    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
-    <script>
-        var typed = new Typed('#subtitle', {
-            strings: [
-                '  ',
-                "This is Sunowsir's club.&nbsp;",
-            ],
-            cursorChar: "_",
-            typeSpeed: 70,
-            loop: false,
-        });
-        typed.stop();
-        $(document).ready(function () {
-            $(".typed-cursor").addClass("h2");
-            typed.start();
-        });
-    </script>
-
-
-    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
-    <script>
-        anchors.options = {
-            placement: "right",
-            visible: "false",
-            
-        };
-        var el = "h1,h2,h3,h4,h5,h6".split(",")
-        var res = []
-        for (item of el) {
-            res.push(".markdown-body > " + item)
-        }
-        anchors.add(res.join(", "))
-    </script>
-
-
-
-    <script src="/js/local-search.js"></script>
-    <script>
-        var path = "/local-search.xml";
-        var inputArea = document.querySelector("#local-search-input");
-        inputArea.onclick = function () {
-            getSearchFile(path);
-            this.onclick = null
-        }
-    </script>
-
-</body>
+	</body>	
 </html>
