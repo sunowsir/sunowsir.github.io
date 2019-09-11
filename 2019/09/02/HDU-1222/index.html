@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/HDU-1222/" itemprop="url">
 		<time datetime="2019-09-02T08:38:28.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-03
 	  </time>
 	</a> 
 
@@ -355,20 +355,14 @@ YES</code></pre><ul>
 <li><p>题目思路：<br>只需要判断m和n的最大公约数是否等于1即可，不等于一则永远抓不到；</p>
 </li>
 <li><p>代码：</p>
-<pre><code class="c">/*************************************************************************
-  &gt; File Name: HDU-1222.cpp
-  &gt; Author: sunowsir
-************************************************************************/
-</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*************************************************************************</span></span><br><span class="line"><span class="comment">    &gt; File Name: HDU-1222.cpp</span></span><br><span class="line"><span class="comment">    &gt; Author: sunowsir</span></span><br><span class="line"><span class="comment"> ************************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b==<span class="number">0</span>? a:gcd(b , a%b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m,n,N;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;N;</span><br><span class="line">    <span class="keyword">while</span>(N--)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n;</span><br><span class="line">        <span class="keyword">if</span>(gcd(m,n)!=<span class="number">1</span>)  <span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span>  <span class="built_in">cout</span>&lt;&lt;<span class="string">"NO"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;</p>
-<p>int gcd(int a,int b){<br>    return b==0? a:gcd(b , a%b);<br>}</p>
-<p>int main(){<br>    int m,n,N;<br>    cin&gt;&gt;N;<br>    while(N–){<br>        cin&gt;&gt;m&gt;&gt;n;<br>        if(gcd(m,n)!=1)  cout&lt;&lt;”YES”&lt;&lt;endl;<br>        else  cout&lt;&lt;”NO”&lt;&lt;endl;<br>    }<br>    return 0;<br>}<br>```</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/zm/wallhaven-zm511j.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -426,7 +420,65 @@ YES</code></pre><ul>
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1276"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
+								HDU-1072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-2072/" title="HDU - 2072">
+								HDU - 2072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+Sample Input
+1you are my friend #
+
+Sample Output
+14
+
+思路：
+利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839xg2.jpg" alt="HDU - 2072"/>
 							</a>
 						</div>
 					</li>											
@@ -475,77 +527,14 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 
 
 代码：
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-
-#d...
+123456789101112131415161718192021222324252627282930313...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Codeforces-787a"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
-								HDU-1072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1072"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-2072/" title="HDU - 2072">
-								HDU - 2072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-Sample Input
-you are my friend #
-
-Sample Output
-4
-
-
-
-思路：
-利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU - 2072"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
@@ -571,7 +560,7 @@ Sample Output
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="CPU信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
 							</a>
 						</div>
 					</li>											

@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/Linux三剑客之awk的使用/" itemprop="url">
 		<time datetime="2019-09-02T08:35:47.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-03
 	  </time>
 	</a> 
 
@@ -337,25 +337,10 @@
 </blockquote>
 <ul>
 <li><p>简单用法</p>
-<pre><code class="bash">awk [参数] &#39;awk代码&#39;
-awk [参数] -f awk脚本文件 </code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">awk [参数] <span class="string">'awk代码'</span></span><br><span class="line">awk [参数] -f awk脚本文件</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>常用参数</p>
-<pre><code class="bash">cat xxx.txt | awk -F &#39;:&#39; &#39;BEGIN{}{printf(&quot;%s %s&quot;, $1, $2);}END{printf(&quot;OK!&quot;);}&#39;
-# -F 参数是指定对每行字符串以什么字符为分割，每个被分割的部分存储在变量：$1, $2, $3...中，整行字符串存储在$0中。
-# BEGIN{}中的代码将在文本处理前执行，同样，END{}会文本处理后执行，{}中的代码用来处理每行的文本。
-
-cat xxx.txt | awk -v var1=${tmp} &#39;{printf(&quot;%d\n&quot;, $3/var1);}&#39;
-# -v 参数是引入外部变量，把${tmp}赋值给var1，在awk内部代码中就可以使用var1了。
-# -v参数可以多次引用，也就是说可以引入多个变量。
-
-cat xxx | awk -v var1=${tmp} &#39;{
-    if ($1 ~ /eth/) {
-        print $0;
-    }
-}&#39;
-# 通过这种方式可以使用正则表达式进行字符串匹配。
-# awk支持print，使用print末尾自动加上\n。</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.txt | awk -F <span class="string">':'</span> <span class="string">'BEGIN&#123;&#125;&#123;printf("%s %s", $1, $2);&#125;END&#123;printf("OK!");&#125;'</span></span><br><span class="line"><span class="comment"># -F 参数是指定对每行字符串以什么字符为分割，每个被分割的部分存储在变量：$1, $2, $3...中，整行字符串存储在$0中。</span></span><br><span class="line"><span class="comment"># BEGIN&#123;&#125;中的代码将在文本处理前执行，同样，END&#123;&#125;会文本处理后执行，&#123;&#125;中的代码用来处理每行的文本。</span></span><br><span class="line"></span><br><span class="line">cat xxx.txt | awk -v var1=<span class="variable">$&#123;tmp&#125;</span> <span class="string">'&#123;printf("%d\n", $3/var1);&#125;'</span></span><br><span class="line"><span class="comment"># -v 参数是引入外部变量，把$&#123;tmp&#125;赋值给var1，在awk内部代码中就可以使用var1了。</span></span><br><span class="line"><span class="comment"># -v参数可以多次引用，也就是说可以引入多个变量。</span></span><br><span class="line"></span><br><span class="line">cat xxx | awk -v var1=<span class="variable">$&#123;tmp&#125;</span> <span class="string">'&#123;</span></span><br><span class="line"><span class="string">	if ($1 ~ /eth/) &#123;</span></span><br><span class="line"><span class="string">		print $0;</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">&#125;'</span></span><br><span class="line"><span class="comment"># 通过这种方式可以使用正则表达式进行字符串匹配。</span></span><br><span class="line"><span class="comment"># awk支持print，使用print末尾自动加上\n。</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>内置变量</p>
 </li>
@@ -522,7 +507,7 @@ cat xxx | awk -v var1=${tmp} &#39;{
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/g8/wallhaven-g8md6l.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -563,35 +548,6 @@ cat xxx | awk -v var1=${tmp} &#39;{
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">
-								进程、线程及共享内存学习笔记			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								进程、线程及共享内存学习笔记
-系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
-
-
-理论基础：
-
-进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程、线程及共享内存学习笔记"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/02/Linux常见配置文件/" title="Linux常见配置文件">
 								Linux常见配置文件			
 							</a>
@@ -613,7 +569,7 @@ cat xxx | awk -v var1=${tmp} &#39;{
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/Linux常见配置文件/" title="Linux常见配置文件">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Linux常见配置文件"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/2e/wallhaven-2eod59.jpg" alt="Linux常见配置文件"/>
 							</a>
 						</div>
 					</li>											
@@ -643,7 +599,36 @@ deepin系统安装后推荐配置sudo apt-get install -y git wget curl o...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/deepin系统使用笔记/" title="deepin系统使用笔记">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="deepin系统使用笔记"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5yerq.jpg" alt="deepin系统使用笔记"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">
+								进程、线程及共享内存学习笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								进程、线程及共享内存学习笔记
+系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
+
+
+理论基础：
+
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程、线程及共享内存学习笔记"/>
 							</a>
 						</div>
 					</li>											
@@ -735,7 +720,7 @@ more abo...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1276"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
 							</a>
 						</div>
 					</li>											
@@ -761,7 +746,7 @@ more abo...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="CPU信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -810,17 +795,14 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 
 
 代码：
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-
-#d...
+123456789101112131415161718192021222324252627282930313...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Codeforces-787a"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
@@ -844,7 +826,7 @@ using namespace std;
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1072"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
 							</a>
 						</div>
 					</li>											

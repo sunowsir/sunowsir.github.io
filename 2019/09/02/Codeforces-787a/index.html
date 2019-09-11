@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/Codeforces-787a/" itemprop="url">
 		<time datetime="2019-09-02T08:48:33.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-03
 	  </time>
 	</a> 
 
@@ -345,49 +345,12 @@
 </li>
 </ul>
 <p>代码：</p>
-<pre><code class="c++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">        x=<span class="number">1</span>;</span><br><span class="line">        y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    ll d=exgcd(b,a%b,x,y);</span><br><span class="line">    ll tmp=x;</span><br><span class="line">    x=y;</span><br><span class="line">    y=tmp-a/b*y;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll a,b,C,D,x,y;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;C&gt;&gt;D)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&lt;D)&#123;<span class="comment">//若b&lt;D,那么y&lt;0，</span></span><br><span class="line">            <span class="comment">//原方程式等价于y=(a*x+b-d)/c,</span></span><br><span class="line">            <span class="comment">//下面的处理可保证x不小于0,但是不能保证y，</span></span><br><span class="line">            <span class="comment">//所以需要保证(a*x+b-d)%c==0,即：保证：b&gt;D；若不成立需交换；</span></span><br><span class="line">            swap(a,C);</span><br><span class="line">            swap(b,D);</span><br><span class="line">        &#125;</span><br><span class="line">        ll d = exgcd(a,C,x,y);</span><br><span class="line">        ll c = D-b;</span><br><span class="line">        <span class="keyword">if</span>(c%d)  <span class="built_in">cout</span>&lt;&lt;<span class="string">"-1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            x=x*(c/d);</span><br><span class="line">            x=(x%(C/d)+(C/d))%(C/d);</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;b+a*x&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-#define ll long long
-
-ll exgcd(ll a,ll b,ll &amp;x,ll &amp;y){
-    if(b==0){
-        x=1;
-        y=0;
-        return a;
-    }
-    ll d=exgcd(b,a%b,x,y);
-    ll tmp=x;
-    x=y;
-    y=tmp-a/b*y;
-    return d;
-}
-
-int main(){
-    ll a,b,C,D,x,y;
-    while(cin&gt;&gt;a&gt;&gt;b&gt;&gt;C&gt;&gt;D){
-        if(b&lt;D){//若b&lt;D,那么y&lt;0，
-            //原方程式等价于y=(a*x+b-d)/c,
-            //下面的处理可保证x不小于0,但是不能保证y，
-            //所以需要保证(a*x+b-d)%c==0,即：保证：b&gt;D；若不成立需交换；
-            swap(a,C);
-            swap(b,D);
-        }
-        ll d = exgcd(a,C,x,y);
-        ll c = D-b;
-        if(c%d)  cout&lt;&lt;&quot;-1&quot;&lt;&lt;endl;
-        else{
-            x=x*(c/d);
-            x=(x%(C/d)+(C/d))%(C/d);
-            cout&lt;&lt;b+a*x&lt;&lt;endl;
-        }
-    }
-    return 0;
-}</code></pre>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -445,7 +408,7 @@ int main(){
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1276"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
 							</a>
 						</div>
 					</li>											
@@ -493,7 +456,7 @@ int main(){
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1072"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
 							</a>
 						</div>
 					</li>											
@@ -522,7 +485,7 @@ A rabbit must hide in one of t...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1222/" title="HDU-1222">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1222"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/zm/wallhaven-zm511j.jpg" alt="HDU-1222"/>
 							</a>
 						</div>
 					</li>											
@@ -543,12 +506,10 @@ A rabbit must hide in one of t...
 
 
 Sample Input
-you are my friend #
+1you are my friend #
 
 Sample Output
-4
-
-
+14
 
 思路：
 利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词...
@@ -558,7 +519,7 @@ Sample Output
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU - 2072"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839xg2.jpg" alt="HDU - 2072"/>
 							</a>
 						</div>
 					</li>											
@@ -584,7 +545,7 @@ Sample Output
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="CPU信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
 							</a>
 						</div>
 					</li>											

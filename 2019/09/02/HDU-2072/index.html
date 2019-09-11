@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/HDU-2072/" itemprop="url">
 		<time datetime="2019-09-02T08:31:16.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-03
 	  </time>
 	</a> 
 
@@ -341,13 +341,11 @@
 </blockquote>
 <ul>
 <li><p>Sample Input</p>
-<pre><code class="txt">you are my friend #</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you are my friend #</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Sample Output</p>
-<pre><code class="txt">4</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<ul>
 <li><p>思路：</p>
 <p>利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词暂时存在tmp中，根据判断条件（输入的字符串是否为空格或者到了末尾）来判断把tmp存入set中。</p>
 <p>另一个需要注意的就是遍历的for需要从0到字符串最后的后面一个，为了防止什么都没有的情况。</p>
@@ -355,37 +353,14 @@
 <li><p>代码：</p>
 </li>
 </ul>
-<pre><code class="c++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; se;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">word</span><span class="params">(<span class="built_in">string</span> str)</span></span>&#123;</span><br><span class="line">    se.clear();</span><br><span class="line">    <span class="built_in">string</span> tmp=<span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=str.size();i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(str[i]==<span class="string">' '</span>||i==str.size())&#123;</span><br><span class="line">            <span class="keyword">if</span>(tmp==<span class="string">""</span>)  <span class="keyword">continue</span>;</span><br><span class="line">            se.insert(tmp);</span><br><span class="line">            tmp=<span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  tmp+=str[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;se.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> str;</span><br><span class="line">    <span class="keyword">while</span>(getline(<span class="built_in">cin</span>,str)&amp;&amp;str[<span class="number">0</span>]!=<span class="string">'#'</span>)</span><br><span class="line">        word(str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-set&lt;string&gt; se;
-
-void word(string str){
-    se.clear();
-    string tmp=&quot;&quot;;
-    for(int i=0;i&lt;=str.size();i++){
-        if(str[i]==&#39; &#39;||i==str.size()){
-            if(tmp==&quot;&quot;)  continue;
-            se.insert(tmp);
-            tmp=&quot;&quot;;
-        }
-        else  tmp+=str[i];
-    }
-    cout&lt;&lt;se.size()&lt;&lt;endl;
-}
-
-int main(){
-    string str;
-    while(getline(cin,str)&amp;&amp;str[0]!=&#39;#&#39;)
-        word(str);
-    return 0;
-}</code></pre>
 <hr>
 <p>该代码来源于杭电讨论区的朋友（ 喜欢你的笑声）。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/83/wallhaven-839xg2.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -443,7 +418,60 @@ int main(){
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1276"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
+								HDU-1072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1222/" title="HDU-1222">
+								HDU-1222			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+题目描述:
+There is a hill with n holes around. The holes are signed from 0 to n-1.
+A rabbit must hide in one of t...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1222/" title="HDU-1222">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/zm/wallhaven-zm511j.jpg" alt="HDU-1222"/>
 							</a>
 						</div>
 					</li>											
@@ -492,70 +520,14 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 
 
 代码：
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-
-#d...
+123456789101112131415161718192021222324252627282930313...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Codeforces-787a"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
-								HDU-1072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1072"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1222/" title="HDU-1222">
-								HDU-1222			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-题目描述:
-There is a hill with n holes around. The holes are signed from 0 to n-1.
-A rabbit must hide in one of t...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1222/" title="HDU-1222">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1222"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
@@ -581,7 +553,7 @@ A rabbit must hide in one of t...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="CPU信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
 							</a>
 						</div>
 					</li>											

@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/HDU-1072/" itemprop="url">
 		<time datetime="2019-09-02T08:46:45.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-03
 	  </time>
 	</a> 
 
@@ -342,64 +342,14 @@
 <li><p>题目思路：<br>其实就是c++STL的队列和栈的简单应用；</p>
 </li>
 <li><p>代码如下：</p>
-<pre><code class="c++">
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main(){
-      int n;
-      cin&gt;&gt;n;
-      while(n--){
-          int com_num,typ_num;
-          cin&gt;&gt;com_num;
-          string com;
-          cin&gt;&gt;com;
-          if(com==&quot;FIFO&quot;){
-              queue&lt;int&gt; q;
-              for(int i=0;i&lt;com_num;i++){
-                  cin&gt;&gt;com;
-                  if(com==&quot;IN&quot;){
-                      cin&gt;&gt;typ_num;
-                      q.push(typ_num);
-                  }
-                  if(com==&quot;OUT&quot;){
-                      if(q.empty()){
-                          cout&lt;&lt;&quot;None&quot;&lt;&lt;endl;
-                      }
-                      else{
-                          cout&lt;&lt;q.front()&lt;&lt;endl;
-                          q.pop();
-                      }
-                  }
-              }
-          }
-          if(com==&quot;FILO&quot;){
-          stack&lt;int&gt; st;
-          for(int i=0;i&lt;com_num;i++){
-              cin&gt;&gt;com;
-              if(com==&quot;IN&quot;){
-                  cin&gt;&gt;typ_num;
-                  st.push(typ_num);
-                  }
-                  if(com==&quot;OUT&quot;){
-                      if(st.empty()){
-                          cout&lt;&lt;&quot;None&quot;&lt;&lt;endl;
-                      }
-                      else{
-                          cout&lt;&lt;st.top()&lt;&lt;endl;
-                          st.pop();
-                      }
-                  }
-              }
-          }
-      }
-      return 0;
-}</code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	<span class="keyword">int</span> n;</span><br><span class="line">  	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">  	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">      	<span class="keyword">int</span> com_num,typ_num;</span><br><span class="line">      	<span class="built_in">cin</span>&gt;&gt;com_num;</span><br><span class="line">      	<span class="built_in">string</span> com;</span><br><span class="line">      	<span class="built_in">cin</span>&gt;&gt;com;</span><br><span class="line">      	<span class="keyword">if</span>(com==<span class="string">"FIFO"</span>)&#123;</span><br><span class="line">          	<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">          	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;com_num;i++)&#123;</span><br><span class="line">              	<span class="built_in">cin</span>&gt;&gt;com;</span><br><span class="line">              	<span class="keyword">if</span>(com==<span class="string">"IN"</span>)&#123;</span><br><span class="line">                  	<span class="built_in">cin</span>&gt;&gt;typ_num;</span><br><span class="line">                  	q.push(typ_num);</span><br><span class="line">              	&#125;</span><br><span class="line">              	<span class="keyword">if</span>(com==<span class="string">"OUT"</span>)&#123;</span><br><span class="line">                  	<span class="keyword">if</span>(q.empty())&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;<span class="string">"None"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                  	&#125;</span><br><span class="line">                  	<span class="keyword">else</span>&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;q.front()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                      	q.pop();</span><br><span class="line">                  	&#125;</span><br><span class="line">              	&#125;</span><br><span class="line">          	&#125;</span><br><span class="line">      	&#125;</span><br><span class="line">      	<span class="keyword">if</span>(com==<span class="string">"FILO"</span>)&#123;</span><br><span class="line">          <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;com_num;i++)&#123;</span><br><span class="line">              <span class="built_in">cin</span>&gt;&gt;com;</span><br><span class="line">              <span class="keyword">if</span>(com==<span class="string">"IN"</span>)&#123;</span><br><span class="line">                  <span class="built_in">cin</span>&gt;&gt;typ_num;</span><br><span class="line">                  st.push(typ_num);</span><br><span class="line">              	&#125;</span><br><span class="line">              	<span class="keyword">if</span>(com==<span class="string">"OUT"</span>)&#123;</span><br><span class="line">                  	<span class="keyword">if</span>(st.empty())&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;<span class="string">"None"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                  	&#125;</span><br><span class="line">                  	<span class="keyword">else</span>&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;st.top()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                      	st.pop();</span><br><span class="line">                  	&#125;</span><br><span class="line">              	&#125;</span><br><span class="line">          	&#125;</span><br><span class="line">      	&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -457,7 +407,70 @@ int main(){
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1276"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1222/" title="HDU-1222">
+								HDU-1222			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+题目描述:
+There is a hill with n holes around. The holes are signed from 0 to n-1.
+A rabbit must hide in one of t...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1222/" title="HDU-1222">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/zm/wallhaven-zm511j.jpg" alt="HDU-1222"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-2072/" title="HDU - 2072">
+								HDU - 2072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+Sample Input
+1you are my friend #
+
+Sample Output
+14
+
+思路：
+利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839xg2.jpg" alt="HDU - 2072"/>
 							</a>
 						</div>
 					</li>											
@@ -506,82 +519,14 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 
 
 代码：
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-
-#d...
+123456789101112131415161718192021222324252627282930313...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Codeforces-787a"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1222/" title="HDU-1222">
-								HDU-1222			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-题目描述:
-There is a hill with n holes around. The holes are signed from 0 to n-1.
-A rabbit must hide in one of t...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1222/" title="HDU-1222">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1222"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-2072/" title="HDU - 2072">
-								HDU - 2072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-Sample Input
-you are my friend #
-
-Sample Output
-4
-
-
-
-思路：
-利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU - 2072"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
@@ -607,7 +552,7 @@ Sample Output
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="CPU信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
 							</a>
 						</div>
 					</li>											

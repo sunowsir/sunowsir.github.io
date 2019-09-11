@@ -266,18 +266,6 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-			</div>
-		</div>
-
-		
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	 
 
 <div class="layout-post">
@@ -319,7 +307,7 @@
 
 	<a href="/2019/09/02/CPU信息获取/" itemprop="url">
 		<time datetime="2019-09-02T08:50:49.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-03
 	  </time>
 	</a> 
 
@@ -358,18 +346,8 @@
 <li><p><code>/proc</code>文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是<code>/proc</code>目录不是真实存储在硬盘中的，它的数据存储在内存中，但是由于它和其他目录一样把自己注册到虚拟文件系统层了，所以我们还是能看到这个目录相关信息，然而只有虚拟文件系统层调用它的时候，他才会建立相关文件和目录并与内核沟通获取相关信息。</p>
 </li>
 <li><p>上面我们说道<code>/proc</code> 文件系统存储着内核控制相关信息的目录，该目录下的<code>/proc/stat</code>文件存储的是<code>CPU</code>相关信息，我们想要获取<code>CPU</code>相关信息最直接和最快速的方式就是读取该文件，其实<code>Linux下</code>很多的工具都是读取的这个文件。在这个文件中包含了所有的<code>CPU</code>活动信息，并且该文件中所有值都是从系统启动算起直到访问文件的这一刻的数据。如下就是某一刻<code>/proc/stat</code>文件中的数据：</p>
-<pre><code class="bash">cpu  499312 1086 227835 10498412 3803 0 10904 0 0 0
-cpu0 125361 278 56675 2626355 450 0 2242 0 0 0
-cpu1 124704 288 57768 2627741 350 0 2168 0 0 0
-cpu2 130284 261 55543 2620559 2442 0 1762 0 0 0
-cpu3 118961 258 57848 2623755 560 0 4731 0 0 0
-intr 46393945 9 924 0 0 0 0 0 0 1 14751 0 0 215 0 0 0 139800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4476 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 408029 0 283839 7963609 40 945 1535489 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-ctxt 124171702
-btime 1539737966
-processes 626819
-procs_running 4
-procs_blocked 0
-softirq 27922585 9163685 6158929 26 485 278010 0 160301 6495615 0 5665534</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cpu  499312 1086 227835 10498412 3803 0 10904 0 0 0</span><br><span class="line">cpu0 125361 278 56675 2626355 450 0 2242 0 0 0</span><br><span class="line">cpu1 124704 288 57768 2627741 350 0 2168 0 0 0</span><br><span class="line">cpu2 130284 261 55543 2620559 2442 0 1762 0 0 0</span><br><span class="line">cpu3 118961 258 57848 2623755 560 0 4731 0 0 0</span><br><span class="line">intr 46393945 9 924 0 0 0 0 0 0 1 14751 0 0 215 0 0 0 139800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4476 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 408029 0 283839 7963609 40 945 1535489 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span><br><span class="line">ctxt 124171702</span><br><span class="line">btime 1539737966</span><br><span class="line">processes 626819</span><br><span class="line">procs_running 4</span><br><span class="line">procs_blocked 0</span><br><span class="line">softirq 27922585 9163685 6158929 26 485 278010 0 160301 6495615 0 5665534</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>数据单位：jiffies</p>
 </blockquote>
@@ -414,44 +392,19 @@ softirq 27922585 9163685 6158929 26 485 278010 0 160301 6495615 0 5665534</code>
 </li>
 <li><p>bash 数值计算：</p>
 <p>bash中的数值计算比较方便的方式是双小括号：</p>
-<pre><code class="bash">num=0
-((num++)) # 在双小括号中可以正常使用C语言的数值计算语法
-echo ${num}
-
-# 结果输出---------------
-1</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">num=0</span><br><span class="line">((num++)) <span class="comment"># 在双小括号中可以正常使用C语言的数值计算语法</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;num&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 结果输出---------------</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 <li><p>代码</p>
-<pre><code class="bash">#!/bin/bash
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">time_and_load=`date +<span class="string">"%Y-%m-%d__%H:%M:%S "</span>``uptime | tr -s <span class="string">" "</span> <span class="string">"\n"</span> | tr -s <span class="string">","</span> <span class="string">" "</span> | awk NF | tail -3 | tr -s <span class="string">"\n"</span> <span class="string">" "</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 前</span></span><br><span class="line"><span class="comment"># 开机后总时间</span></span><br><span class="line">cpu_local1=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $2 + $3 + $4 + $5 + $6 + $7 + 8);&#125;'</span>`</span><br><span class="line"><span class="comment"># 开机后累计空闲</span></span><br><span class="line">cpu_idle1=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $5);&#125;'</span>`</span><br><span class="line"></span><br><span class="line">sleep 0.5s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 后</span></span><br><span class="line"><span class="comment"># 开机后总时间</span></span><br><span class="line">cpu_local2=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $2 + $3 + $4 + $5 + $6 + $7 + 8);&#125;'</span>`</span><br><span class="line"><span class="comment"># 开机后累计空闲</span></span><br><span class="line">cpu_idle2=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $5);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 内</span></span><br><span class="line">((cpu_local = <span class="variable">$cpu_local2</span> - <span class="variable">$cpu_local1</span>))</span><br><span class="line">((cpu_idle = <span class="variable">$cpu_idle2</span> - <span class="variable">$cpu_idle1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算cpu占用率</span></span><br><span class="line">cpu_occu=`<span class="built_in">echo</span> <span class="string">"<span class="variable">$cpu_local</span> <span class="variable">$cpu_idle</span>"</span> | awk <span class="string">'&#123;printf("%.2f%%", (1 - $2 / $1) * 100);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># CPU温度</span></span><br><span class="line">cpu_temp_info=`cat /sys/class/thermal/thermal_zone0/temp | awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">        if ($1 &gt;= 1000 &amp;&amp; $1 &lt; 50000) &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f normal", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        else if ($1 &gt;= 50000 &amp;&amp; $1 &lt;= 70000) &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f note", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        else &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f warning", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;'</span>`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;time_and_load&#125;</span><span class="variable">$&#123;cpu_occu&#125;</span> <span class="variable">$&#123;cpu_temp_info&#125;</span>"</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<p>time_and_load=<code>date +&quot;%Y-%m-%d__%H:%M:%S &quot;``uptime | tr -s &quot; &quot; &quot;\n&quot; | tr -s &quot;,&quot; &quot; &quot; | awk NF | tail -3 | tr -s &quot;\n&quot; &quot; &quot;</code></p>
-<h1 id="0-5s-前"><a href="#0-5s-前" class="headerlink" title="0.5s 前"></a>0.5s 前</h1><h1 id="开机后总时间"><a href="#开机后总时间" class="headerlink" title="开机后总时间"></a>开机后总时间</h1><p>cpu_local1=<code>cat /proc/stat | grep  -w &quot;cpu&quot; | awk &#39;{printf(&quot;%d&quot;, $2 + $3 + $4 + $5 + $6 + $7 + 8);}&#39;</code></p>
-<h1 id="开机后累计空闲"><a href="#开机后累计空闲" class="headerlink" title="开机后累计空闲"></a>开机后累计空闲</h1><p>cpu_idle1=<code>cat /proc/stat | grep  -w &quot;cpu&quot; | awk &#39;{printf(&quot;%d&quot;, $5);}&#39;</code></p>
-<p>sleep 0.5s</p>
-<h1 id="0-5s-后"><a href="#0-5s-后" class="headerlink" title="0.5s 后"></a>0.5s 后</h1><h1 id="开机后总时间-1"><a href="#开机后总时间-1" class="headerlink" title="开机后总时间"></a>开机后总时间</h1><p>cpu_local2=<code>cat /proc/stat | grep  -w &quot;cpu&quot; | awk &#39;{printf(&quot;%d&quot;, $2 + $3 + $4 + $5 + $6 + $7 + 8);}&#39;</code></p>
-<h1 id="开机后累计空闲-1"><a href="#开机后累计空闲-1" class="headerlink" title="开机后累计空闲"></a>开机后累计空闲</h1><p>cpu_idle2=<code>cat /proc/stat | grep  -w &quot;cpu&quot; | awk &#39;{printf(&quot;%d&quot;, $5);}&#39;</code></p>
-<h1 id="0-5s-内"><a href="#0-5s-内" class="headerlink" title="0.5s 内"></a>0.5s 内</h1><p>((cpu_local = $cpu_local2 - $cpu_local1))<br>((cpu_idle = $cpu_idle2 - $cpu_idle1))</p>
-<h1 id="计算cpu占用率"><a href="#计算cpu占用率" class="headerlink" title="计算cpu占用率"></a>计算cpu占用率</h1><p>cpu_occu=<code>echo &quot;$cpu_local $cpu_idle&quot; | awk &#39;{printf(&quot;%.2f%%&quot;, (1 - $2 / $1) * 100);}&#39;</code></p>
-<h1 id="CPU温度"><a href="#CPU温度" class="headerlink" title="CPU温度"></a>CPU温度</h1><p>cpu_temp_info=<code>cat /sys/class/thermal/thermal_zone0/temp | awk &#39;{
-        if ($1 &gt;= 1000 &amp;&amp; $1 &lt; 50000) {
-            printf(&quot;%.2f normal&quot;, $1 / 1000);
-        }
-        else if ($1 &gt;= 50000 &amp;&amp; $1 &lt;= 70000) {
-            printf(&quot;%.2f note&quot;, $1 / 1000);
-        }
-        else {
-            printf(&quot;%.2f warning&quot;, $1 / 1000);
-        }
-    }&#39;</code></p>
-<p>echo “${time_and_load}${cpu_occu} ${cpu_temp_info}”</p>
-<pre><code></code></pre>	
+	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -712,7 +665,7 @@ awk：文本处理工具
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1276"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
 							</a>
 						</div>
 					</li>											
@@ -761,17 +714,14 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 
 
 代码：
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-
-#d...
+123456789101112131415161718192021222324252627282930313...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Codeforces-787a"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
@@ -795,7 +745,7 @@ using namespace std;
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="HDU-1072"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
 							</a>
 						</div>
 					</li>											

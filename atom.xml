@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-02T09:03:57.193Z</updated>
+  <updated>2019-09-03T07:38:06.045Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/09/02/HDU-1276/"/>
     <id>http://yoursite.com/2019/09/02/HDU-1276/</id>
     <published>2019-09-02T08:52:14.000Z</published>
-    <updated>2019-09-02T09:03:57.193Z</updated>
+    <updated>2019-09-03T07:38:06.045Z</updated>
     
     <summary type="html">
     
@@ -37,6 +37,8 @@
     
     </summary>
     
+      <category term="题解" scheme="http://yoursite.com/categories/%E9%A2%98%E8%A7%A3/"/>
+    
     
       <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
     
@@ -49,7 +51,7 @@
     <link href="http://yoursite.com/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2019/09/02/CPU信息获取/</id>
     <published>2019-09-02T08:50:49.000Z</published>
-    <updated>2019-09-02T09:02:54.637Z</updated>
+    <updated>2019-09-03T07:35:11.854Z</updated>
     
     <summary type="html">
     
@@ -65,6 +67,8 @@
       
     
     </summary>
+    
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
     
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>
@@ -107,7 +111,7 @@
     <link href="http://yoursite.com/2019/09/02/Codeforces-787a/"/>
     <id>http://yoursite.com/2019/09/02/Codeforces-787a/</id>
     <published>2019-09-02T08:48:33.000Z</published>
-    <updated>2019-09-02T09:03:21.221Z</updated>
+    <updated>2019-09-03T07:33:57.592Z</updated>
     
     <summary type="html">
     
@@ -134,7 +138,7 @@
     <link href="http://yoursite.com/2019/09/02/HDU-1072/"/>
     <id>http://yoursite.com/2019/09/02/HDU-1072/</id>
     <published>2019-09-02T08:46:45.000Z</published>
-    <updated>2019-09-02T09:03:34.649Z</updated>
+    <updated>2019-09-03T07:36:41.050Z</updated>
     
     <summary type="html">
     
@@ -148,6 +152,8 @@
       
     
     </summary>
+    
+      <category term="题解" scheme="http://yoursite.com/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
       <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
@@ -394,7 +400,7 @@
     <link href="http://yoursite.com/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2019/09/02/Linux常见配置文件/</id>
     <published>2019-09-02T08:40:04.000Z</published>
-    <updated>2019-09-02T09:06:21.248Z</updated>
+    <updated>2019-09-03T07:39:47.106Z</updated>
     
     <summary type="html">
     
@@ -409,6 +415,8 @@
     
     </summary>
     
+      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
+    
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
     
@@ -421,7 +429,7 @@
     <link href="http://yoursite.com/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/09/02/deepin系统使用笔记/</id>
     <published>2019-09-02T08:39:06.000Z</published>
-    <updated>2019-09-02T08:39:38.024Z</updated>
+    <updated>2019-09-03T07:35:56.050Z</updated>
     
     <summary type="html">
     
@@ -442,6 +450,8 @@
     
     </summary>
     
+      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
+    
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
     
@@ -452,7 +462,7 @@
     <link href="http://yoursite.com/2019/09/02/HDU-1222/"/>
     <id>http://yoursite.com/2019/09/02/HDU-1222/</id>
     <published>2019-09-02T08:38:28.000Z</published>
-    <updated>2019-09-02T09:03:46.201Z</updated>
+    <updated>2019-09-03T07:37:24.482Z</updated>
     
     <summary type="html">
     
@@ -466,6 +476,8 @@
       
     
     </summary>
+    
+      <category term="题解" scheme="http://yoursite.com/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
       <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
@@ -504,7 +516,7 @@
     <link href="http://yoursite.com/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2019/09/02/Linux三剑客之awk的使用/</id>
     <published>2019-09-02T08:35:47.000Z</published>
-    <updated>2019-09-02T08:36:04.449Z</updated>
+    <updated>2019-09-03T08:26:18.335Z</updated>
     
     <summary type="html">
     
@@ -518,6 +530,8 @@
       
     
     </summary>
+    
+      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
     
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
@@ -584,7 +598,7 @@
     <link href="http://yoursite.com/2019/09/02/HDU-2072/"/>
     <id>http://yoursite.com/2019/09/02/HDU-2072/</id>
     <published>2019-09-02T08:31:16.000Z</published>
-    <updated>2019-09-02T09:04:08.201Z</updated>
+    <updated>2019-09-03T07:38:59.622Z</updated>
     
     <summary type="html">
     
@@ -598,6 +612,8 @@
       
     
     </summary>
+    
+      <category term="题解" scheme="http://yoursite.com/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
       <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
