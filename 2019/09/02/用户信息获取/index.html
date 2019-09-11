@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/用户信息获取/" itemprop="url">
 		<time datetime="2019-09-02T08:41:40.000Z" itemprop="dateUpdated">
-	  		2019-09-03
+	  		2019-09-11
 	  </time>
 	</a> 
 
@@ -356,25 +356,15 @@
 </ol>
 </li>
 <li><p>代码</p>
-<pre><code class="bash">#!/bin/bash
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">nowtime=`date +<span class="string">"%Y-%m-%d_%H:%M:%S"</span>`</span><br><span class="line">usernum=`awk -F <span class="string">":"</span> <span class="string">'BEGIN &#123;num = 0;&#125;&#123;if ($3 &gt;= 1000) &#123;num++;&#125;&#125;END &#123;printf("%d\n", num);&#125;'</span> /etc/passwd`</span><br><span class="line"></span><br><span class="line">active_user=`last | awk NF | grep  -v <span class="string">"system"</span> | grep -v <span class="string">"wtmp"</span> | cut -d <span class="string">" "</span> -f1 | sort | uniq -c | sort -n -r | head -3 | awk <span class="string">'BEGIN&#123;num = 0&#125;&#123;if(num &gt; 0) &#123;printf(",")&#125;;printf("%s", $2);num++&#125;'</span>`</span><br><span class="line"></span><br><span class="line">all_have_root=`cat /etc/group | grep <span class="string">"^sudo"</span> | cut -d <span class="string">":"</span> -f4`</span><br><span class="line"></span><br><span class="line">now_login=`w | awk <span class="string">'BEGIN&#123;num=0&#125; &#123;if (NR &gt; 2)&#123;if(num &gt; 0) &#123;printf(",");&#125; printf("%s_%s_%s", $1, $3, $2);num++&#125;&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$nowtime</span> <span class="variable">$usernum</span> [<span class="variable">$active_user</span>] [<span class="variable">$all_have_root</span>] [<span class="variable">$now_login</span>]"</span></span><br></pre></td></tr></table></figure>
 
-nowtime=`date +&quot;%Y-%m-%d_%H:%M:%S&quot;`
-usernum=`awk -F &quot;:&quot; &#39;BEGIN {num = 0;}{if ($3 &gt;= 1000) {num++;}}END {printf(&quot;%d\n&quot;, num);}&#39; /etc/passwd`
 
-active_user=`last | awk NF | grep  -v &quot;system&quot; | grep -v &quot;wtmp&quot; | cut -d &quot; &quot; -f1 | sort | uniq -c | sort -n -r | head -3 | awk &#39;BEGIN{num = 0}{if(num &gt; 0) {printf(&quot;,&quot;)};printf(&quot;%s&quot;, $2);num++}&#39;`
-
-all_have_root=`cat /etc/group | grep &quot;^sudo&quot; | cut -d &quot;:&quot; -f4`
-
-now_login=`w | awk &#39;BEGIN{num=0} {if (NR &gt; 2){if(num &gt; 0) {printf(&quot;,&quot;);} printf(&quot;%s_%s_%s&quot;, $1, $3, $2);num++}}&#39;`
-
-echo &quot;$nowtime $usernum [$active_user] [$all_have_root] [$now_login]&quot;
-</code></pre>
 </li>
 </ul>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/vg/wallhaven-vgdj1m.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -486,16 +476,14 @@ awk：该工具用来处理 df的数据。
 
 
 代码：
-   #!/bin/bash
-
-   df -m | grep &quot;^/dev/&quot; | awk -v nt...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" |...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="磁盘信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5ymwp.jpg" alt="磁盘信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -519,18 +507,14 @@ awk该工具用来处理数据
 
 
 代码
-#!/bin/bash
-
-ps -aux | awk -v last_all=$(ps -aux | awk &#39;
-BEGIN{
-    num ...
+1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5w3l27.jpg" alt="进程信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -554,16 +538,14 @@ grep：该工具用来筛选数据
 awk&#39;：该工具用来处理数据
 
 代码：
-#!/bin/bash
-
-free -m | grep &quot;^Mem&quot; | awk -v last...
+123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/内存信息获取/" title="内存信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="内存信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/xl/wallhaven-xldjkv.jpg" alt="内存信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -597,7 +579,7 @@ free：内存信息
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/系统信息获取/" title="系统信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="系统信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5wm328.jpg" alt="系统信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -646,7 +628,7 @@ free：内存信息
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="POJ-1979"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											

@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/磁盘信息获取/" itemprop="url">
 		<time datetime="2019-09-02T08:44:48.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-11
 	  </time>
 	</a> 
 
@@ -350,30 +350,15 @@
 </ol>
 </li>
 <li><p>代码：</p>
-<pre><code class="bash">   #!/bin/bash
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">df -m | grep <span class="string">"^/dev/"</span> | awk -v ntime=$(date +<span class="string">"%Y-%m-%d__%H:%M:%S"</span>) <span class="string">'</span></span><br><span class="line"><span class="string">BEGIN&#123;</span></span><br><span class="line"><span class="string">    num = 0; </span></span><br><span class="line"><span class="string">    unum = 0; </span></span><br><span class="line"><span class="string">    hnum = 0;</span></span><br><span class="line"><span class="string">&#125; </span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">    num += $2; </span></span><br><span class="line"><span class="string">    unum += $3; </span></span><br><span class="line"><span class="string">    hnum += $4;</span></span><br><span class="line"><span class="string">    printf("%s 1 %s %sM %sM %s\n", ntime, $6, $2, $4, $5);</span></span><br><span class="line"><span class="string">&#125; </span></span><br><span class="line"><span class="string">END&#123;</span></span><br><span class="line"><span class="string">    printf("%s 0 disk %dM %dM %.2f%%\n", ntime, num, hnum, unum / num * 100);</span></span><br><span class="line"><span class="string">&#125;'</span></span><br></pre></td></tr></table></figure>
 
-   df -m | grep &quot;^/dev/&quot; | awk -v ntime=$(date +&quot;%Y-%m-%d__%H:%M:%S&quot;) &#39;
-   BEGIN{
-       num = 0; 
-       unum = 0; 
-       hnum = 0;
-   } 
-   {
-       num += $2; 
-       unum += $3; 
-       hnum += $4;
-       printf(&quot;%s 1 %s %sM %sM %s\n&quot;, ntime, $6, $2, $4, $5);
-   } 
-   END{
-       printf(&quot;%s 0 disk %dM %dM %.2f%%\n&quot;, ntime, num, hnum, unum / num * 100);
-   }&#39;
-</code></pre>
+
 </li>
 </ul>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/j5/wallhaven-j5ymwp.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -483,18 +468,14 @@ awk该工具用来处理数据
 
 
 代码
-#!/bin/bash
-
-ps -aux | awk -v last_all=$(ps -aux | awk &#39;
-BEGIN{
-    num ...
+1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5w3l27.jpg" alt="进程信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -518,16 +499,14 @@ grep：该工具用来筛选数据
 awk&#39;：该工具用来处理数据
 
 代码：
-#!/bin/bash
-
-free -m | grep &quot;^Mem&quot; | awk -v last...
+123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/内存信息获取/" title="内存信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="内存信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/xl/wallhaven-xldjkv.jpg" alt="内存信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -561,7 +540,7 @@ free：内存信息
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/系统信息获取/" title="系统信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="系统信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5wm328.jpg" alt="系统信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -593,14 +572,14 @@ awk：文本处理工具
 
 
 代码
-#...
+1...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/用户信息获取/" title="用户信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="用户信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/vg/wallhaven-vgdj1m.jpg" alt="用户信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -649,7 +628,7 @@ awk：文本处理工具
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="POJ-1979"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											

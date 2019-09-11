@@ -84,7 +84,7 @@
     <link href="http://yoursite.com/2019/09/02/POJ-1979/"/>
     <id>http://yoursite.com/2019/09/02/POJ-1979/</id>
     <published>2019-09-02T08:49:24.000Z</published>
-    <updated>2019-09-02T09:06:04.824Z</updated>
+    <updated>2019-09-11T08:53:18.346Z</updated>
     
     <summary type="html">
     
@@ -98,6 +98,8 @@
       
     
     </summary>
+    
+      <category term="题解" scheme="http://yoursite.com/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
       <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
@@ -203,7 +205,7 @@
     <link href="http://yoursite.com/2019/09/02/%E7%A3%81%E7%9B%98%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2019/09/02/磁盘信息获取/</id>
     <published>2019-09-02T08:44:48.000Z</published>
-    <updated>2019-09-02T09:04:27.833Z</updated>
+    <updated>2019-09-11T08:56:48.965Z</updated>
     
     <summary type="html">
     
@@ -222,6 +224,8 @@
     
     </summary>
     
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
+    
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>
     
@@ -236,7 +240,7 @@
     <link href="http://yoursite.com/2019/09/02/%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2019/09/02/进程信息获取/</id>
     <published>2019-09-02T08:44:03.000Z</published>
-    <updated>2019-09-02T09:04:42.261Z</updated>
+    <updated>2019-09-11T09:00:01.524Z</updated>
     
     <summary type="html">
     
@@ -252,11 +256,13 @@
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code
+&lt;figure
         
       
     
     </summary>
+    
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
     
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>
@@ -272,7 +278,7 @@
     <link href="http://yoursite.com/2019/09/02/%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2019/09/02/内存信息获取/</id>
     <published>2019-09-02T08:43:25.000Z</published>
-    <updated>2019-09-02T09:04:52.329Z</updated>
+    <updated>2019-09-11T09:00:33.675Z</updated>
     
     <summary type="html">
     
@@ -292,6 +298,8 @@
     
     </summary>
     
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
+    
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>
     
@@ -306,7 +314,7 @@
     <link href="http://yoursite.com/2019/09/02/%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2019/09/02/系统信息获取/</id>
     <published>2019-09-02T08:42:44.000Z</published>
-    <updated>2019-09-02T09:05:03.813Z</updated>
+    <updated>2019-09-11T09:01:45.914Z</updated>
     
     <summary type="html">
     
@@ -327,6 +335,8 @@
     
     </summary>
     
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
+    
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>
     
@@ -341,7 +351,7 @@
     <link href="http://yoursite.com/2019/09/02/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2019/09/02/用户信息获取/</id>
     <published>2019-09-02T08:41:40.000Z</published>
-    <updated>2019-09-03T06:26:08.758Z</updated>
+    <updated>2019-09-11T09:02:30.825Z</updated>
     
     <summary type="html">
     
@@ -362,6 +372,8 @@
     
     </summary>
     
+      <category term="script" scheme="http://yoursite.com/categories/script/"/>
+    
     
       <category term="script" scheme="http://yoursite.com/tags/script/"/>
     
@@ -376,7 +388,7 @@
     <link href="http://yoursite.com/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/09/02/进程、线程及共享内存学习笔记/</id>
     <published>2019-09-02T08:40:51.000Z</published>
-    <updated>2019-09-02T08:41:18.990Z</updated>
+    <updated>2019-09-11T08:58:54.750Z</updated>
     
     <summary type="html">
     
@@ -389,6 +401,8 @@
       
     
     </summary>
+    
+      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
     
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
@@ -491,7 +505,7 @@
     <link href="http://yoursite.com/2019/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%81%A5%E5%BA%B7%E7%9B%91%E6%8E%A7/"/>
     <id>http://yoursite.com/2019/09/02/服务器健康监控/</id>
     <published>2019-09-02T08:36:30.000Z</published>
-    <updated>2019-09-02T08:38:00.624Z</updated>
+    <updated>2019-09-11T08:57:45.895Z</updated>
     
     <summary type="html">
     
@@ -505,6 +519,8 @@
       
     
     </summary>
+    
+      <category term="Project" scheme="http://yoursite.com/categories/Project/"/>
     
     
       <category term="Project" scheme="http://yoursite.com/tags/Project/"/>
@@ -543,7 +559,7 @@
     <link href="http://yoursite.com/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2019/09/02/linux三剑客之grep的使用/</id>
     <published>2019-09-02T08:34:08.000Z</published>
-    <updated>2019-09-02T08:34:30.282Z</updated>
+    <updated>2019-09-11T08:50:32.299Z</updated>
     
     <summary type="html">
     
@@ -554,11 +570,13 @@
           &lt;blockquote&gt;
 &lt;p&gt;部分内容源自网络和grep帮助信息。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h2&gt;&lt;pre&gt;&lt;code
+&lt;h2 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h2&gt;&lt;figure
         
       
     
     </summary>
+    
+      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
     
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
@@ -570,7 +588,7 @@
     <link href="http://yoursite.com/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/"/>
     <id>http://yoursite.com/2019/09/02/MYSQL-笔记1/</id>
     <published>2019-09-02T08:32:55.000Z</published>
-    <updated>2019-09-02T08:33:42.791Z</updated>
+    <updated>2019-09-11T08:51:48.078Z</updated>
     
     <summary type="html">
     
@@ -587,6 +605,8 @@
       
     
     </summary>
+    
+      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
     
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>

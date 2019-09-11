@@ -319,7 +319,7 @@
 
 	<a href="/2019/09/02/进程、线程及共享内存学习笔记/" itemprop="url">
 		<time datetime="2019-09-02T08:40:51.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-11
 	  </time>
 	</a> 
 
@@ -366,10 +366,7 @@
 <li><p><code>fork()</code>：</p>
 <ul>
 <li><p>原型：</p>
-<pre><code class="c">#include &lt;sys/types.h&gt;
-#include &lt;unistd.h&gt;
-
-pid_t fork(void);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">pid_t</span> fork(<span class="keyword">void</span>);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>说明：</p>
 <p>通过复制调用者来创建新进程。这个新的进程简称为子进程。调用该函数的进程称为父进程。</p>
@@ -380,10 +377,7 @@ pid_t fork(void);</code></pre>
 <li><p><code>wait()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;sys/types.h&gt;
-#include &lt;sys/wait.h&gt;
-
-pid_t wait(int *stat_loc);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">pid_t</span> wait(<span class="keyword">int</span> *stat_loc);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <p>当调用这个函数的时候，当前进程会阻塞等待，该进程的某个子进程运行结束为止。<br>该结束的子进程的返回状态被存储在wait()函数的参数stat_loc变量中。</p>
@@ -393,9 +387,7 @@ pid_t wait(int *stat_loc);</code></pre>
 <li><p><code>system();</code></p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-int system(char *command);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">system</span><span class="params">(<span class="keyword">char</span> *command)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <p>创建新的进程，执行制定命令。</p>
@@ -405,13 +397,7 @@ int system(char *command);</code></pre>
 <li><p>exec函数族：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;unistd.h&gt;
-int execl(cONst char *path, const char *arg, ...);
-int execlp(const char *file, const char *arg, ...);
-int execle(const char *path, const char *arg, ..., char *const envp[]);
-int execv(const char *path, char *const argv[]);
-int execvp(const char *file, char *const argv[]);
-int execve(const char *filename, char *const argv[], char *const envp[]);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execl</span><span class="params">(cONst <span class="keyword">char</span> *path, <span class="keyword">const</span> <span class="keyword">char</span> *arg, ...)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execlp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *file, <span class="keyword">const</span> <span class="keyword">char</span> *arg, ...)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execle</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">const</span> <span class="keyword">char</span> *arg, ..., <span class="keyword">char</span> *<span class="keyword">const</span> envp[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execv</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">char</span> *<span class="keyword">const</span> argv[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execvp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *file, <span class="keyword">char</span> *<span class="keyword">const</span> argv[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execve</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *filename, <span class="keyword">char</span> *<span class="keyword">const</span> argv[], <span class="keyword">char</span> *<span class="keyword">const</span> envp[])</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <p>exec 函数族<br>execve 函数是该族的基础函数，其他函数是由该函数封装而来<br>exec 族被用启动新的指定路径下的程序来替换当前的程序。<br>函数名称后面的后缀不同参数不尽相同见下面附录1。</p>
@@ -421,8 +407,7 @@ int execve(const char *filename, char *const argv[], char *const envp[]);</code>
 <li><p><code>exit()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;stdlib.h&gt;
-void exit(int status);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exit</span><span class="params">(<span class="keyword">int</span> status)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <p>终止进程并返回状态码。</p>
@@ -436,8 +421,7 @@ void exit(int status);</code></pre>
 <li><p><code>pthread_create()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr,void *(*start_routine) (void *), void *arg);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_create</span><span class="params">(<span class="keyword">pthread_t</span> *thread, <span class="keyword">const</span> <span class="keyword">pthread_attr_t</span> *attr,<span class="keyword">void</span> *(*start_routine) (<span class="keyword">void</span> *), <span class="keyword">void</span> *arg)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -459,8 +443,7 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,void *(*start_r
 <li><p><code>pthread_join()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-int pthread_join(pthread_t thread, void **retval);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_join</span><span class="params">(<span class="keyword">pthread_t</span> thread, <span class="keyword">void</span> **retval)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -473,8 +456,7 @@ int pthread_join(pthread_t thread, void **retval);</code></pre>
 <li><p><code>pthread_detach()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-int pthread_detach(pthread_t thread);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_detach</span><span class="params">(<span class="keyword">pthread_t</span> thread)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <p>该函数会把由thread参数指向的线程标记为分离。一个被标记分离的线程终止后，该线程的资源会被系统自动收回，不需要其他线程进程其他的操作。尝试标记已经分离的线程是不明操作，会导致未知错误。</p>
@@ -484,8 +466,7 @@ int pthread_detach(pthread_t thread);</code></pre>
 <li><p><code>pthread_self()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-pthread_t pthread_self(void);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="keyword">pthread_t</span> pthread_self(<span class="keyword">void</span>);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -497,8 +478,7 @@ pthread_t pthread_self(void);</code></pre>
 <li><p><code>pthread_equal</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-int pthread_equal(pthread_t t1, pthread_t t2);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_equal</span><span class="params">(<span class="keyword">pthread_t</span> t1, <span class="keyword">pthread_t</span> t2)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -511,8 +491,7 @@ int pthread_equal(pthread_t t1, pthread_t t2);</code></pre>
 <li><p><code>pthread_exit()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-void pthread_exit(void *retval);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pthread_exit</span><span class="params">(<span class="keyword">void</span> *retval)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 </li>
@@ -527,9 +506,7 @@ void pthread_exit(void *retval);</code></pre>
 <li><p><code>pthread_mutex_init()</code>、<code>pthread_mutex_destroy()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-int pthread_mutex_init(pthread_mutex_t *restrict mutex,const pthread_mutexattr_t *restrict attr);
-int pthread_mutex_destroy(pthread_mutex_t *mutex);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_mutex_init</span><span class="params">(<span class="keyword">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex,<span class="keyword">const</span> <span class="keyword">pthread_mutexattr_t</span> *<span class="keyword">restrict</span> attr)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_mutex_destroy</span><span class="params">(<span class="keyword">pthread_mutex_t</span> *mutex)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -550,10 +527,7 @@ int pthread_mutex_destroy(pthread_mutex_t *mutex);</code></pre>
 <li><p><code>pthread_mutex_lock()</code>、<code>pthread_mutex_trylock()</code>和<code>pthread_mutex_unlock</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-int pthread_mutex_lock(pthread_mutex_t *mutex);
-int pthread_mutex_trylock(pthread_mutex_t *mutex);
-int pthread_mutex_unlock(pthread_mutex_t *mutex);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_mutex_lock</span><span class="params">(<span class="keyword">pthread_mutex_t</span> *mutex)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_mutex_trylock</span><span class="params">(<span class="keyword">pthread_mutex_t</span> *mutex)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_mutex_unlock</span><span class="params">(<span class="keyword">pthread_mutex_t</span> *mutex)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -580,12 +554,7 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);</code></pre>
 <li><p>``pthread_rwlock_init()<code>、</code>pthread_rwlock_destory()`：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;pthread.h&gt;
-
-int pthread_rwlock_destroy(pthread_rwlock_t *rwlock);
-int pthread_rwlock_init(pthread_rwlock_t *restrict rwlock,const pthread_rwlockattr_t *restrict attr);
-
-pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_destroy</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *rwlock)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_init</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *<span class="keyword">restrict</span> rwlock,<span class="keyword">const</span> <span class="keyword">pthread_rwlockattr_t</span> *<span class="keyword">restrict</span> attr)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">pthread_rwlock_t</span> rwlock = PTHREAD_RWLOCK_INITIALIZER;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -604,103 +573,73 @@ pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;</code></pre>
 </ul>
 </li>
 </ol>
-<pre><code>       2. `pthread_rwlock_rdlock()`：
+<pre><code>   2. `pthread_rwlock_rdlock()`：
 
-          * 函数原型及头文件：
+      * 函数原型及头文件：
 
-            ```c
-            #include &lt;pthread.h&gt;
-            int pthread_rwlock_tryrdlock(pthread_rwlock_t *rwlock);
-            int pthread_rwlock_rdlock(pthread_rwlock_t *rwlock);
-            ```
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_tryrdlock</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *rwlock)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_rdlock</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *rwlock)</span></span>;</span><br></pre></td></tr></table></figure>
 
-          * 函数说明：
+      * 函数说明：
 
-            两个函数函数都会对由rwlock引用的读写锁解开读锁。但是对于`pthread_rwlock_rdlock()`函数如果写入权限没有上锁并且互斥锁上没有写入权限被阻塞，则调用线程获取读锁定。调用该函数的线程读权限会被上锁。try函数遇到这种情况会返回调用失败两个函数都是成功返回０。
+        两个函数函数都会对由rwlock引用的读写锁解开读锁。但是对于`pthread_rwlock_rdlock()`函数如果写入权限没有上锁并且互斥锁上没有写入权限被阻塞，则调用线程获取读锁定。调用该函数的线程读权限会被上锁。try函数遇到这种情况会返回调用失败两个函数都是成功返回０。
 
-       3. `pthread_rwlock_wrlock()`：
+   3. `pthread_rwlock_wrlock()`：
 
-          * 函数原型及头文件：
+      * 函数原型及头文件：
 
-            ```c
-            #include &lt;pthread.h&gt;
-            int pthread_rwlock_trywrlock(pthread_rwlock_t *rwlock);
-            int pthread_rwlock_wrlock(pthread_rwlock_t *rwlock);
-            ```
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_trywrlock</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *rwlock)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_wrlock</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *rwlock)</span></span>;</span><br></pre></td></tr></table></figure>
 
-          * 函数说明：
+      * 函数说明：
 
-            两个函数同样都会为调用者加写权限锁，但是try函数回去尝试，也就是说如果任何线程当前持有rwlock（用于读或写），函数将调用失败。但是另一个函数遇到这种情况会阻塞。函数执行成功返回０。
+        两个函数同样都会为调用者加写权限锁，但是try函数回去尝试，也就是说如果任何线程当前持有rwlock（用于读或写），函数将调用失败。但是另一个函数遇到这种情况会阻塞。函数执行成功返回０。
 
-       4. `pthread_rwlock_unlock()`：
+   4. `pthread_rwlock_unlock()`：
 
-          * 函数原型及头文件：
+      * 函数原型及头文件：
 
-            ```c
-            #include &lt;pthread.h&gt;
-            int pthread_rwlock_unlock(pthread_rwlock_t *rwlock);
-            ```
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_rwlock_unlock</span><span class="params">(<span class="keyword">pthread_rwlock_t</span> *rwlock)</span></span>;</span><br></pre></td></tr></table></figure>
 
-          * 函数说明：
+      * 函数说明：
 
-            该函数将释放由rwlock引用的读写锁对象上的锁。 如果读写锁定rwlock未被调用线程保持，则结果是不确定的。
+        该函数将释放由rwlock引用的读写锁对象上的锁。 如果读写锁定rwlock未被调用线程保持，则结果是不确定的。
 
-    3. 条件变量：
+3. 条件变量：
 
-       1. `thread_cond_init()`、`thread_cond_destory()`
+   1. `thread_cond_init()`、`thread_cond_destory()`
 
-          * 函数原型及头文件：
+      * 函数原型及头文件：
 
-            ```c
-            #include &lt;pthread.h&gt;
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_cond_destroy</span><span class="params">(<span class="keyword">pthread_cond_t</span> *cond)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_cond_init</span><span class="params">(<span class="keyword">pthread_cond_t</span> *<span class="keyword">restrict</span> cond,<span class="keyword">const</span> <span class="keyword">pthread_condattr_t</span> *<span class="keyword">restrict</span> attr)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">pthread_cond_t</span> cond = PTHREAD_COND_INITIALIZER;</span><br></pre></td></tr></table></figure>
 
-            int pthread_cond_destroy(pthread_cond_t *cond);
-            int pthread_cond_init(pthread_cond_t *restrict cond,const pthread_condattr_t *restrict attr);
+      * 函数说明：
 
-            pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
-            ```
+        `pthread_cond_destroy()`函数将销毁由cond指定的给定条件变量; 实际上，对象会处于未初始化状态。可以使用`pthread_cond_init()`重新初始化已销毁的条件变量对象; 在对象被销毁之后引用该对象的结果是未定义的。`pthread_cond_init()`函数应使用attr引用的属性初始化cond引用的条件变量。
 
-          * 函数说明：
+   2. `thread_cond_wait()`、`thread_cond_timedwait()`：
 
-            `pthread_cond_destroy()`函数将销毁由cond指定的给定条件变量; 实际上，对象会处于未初始化状态。可以使用`pthread_cond_init()`重新初始化已销毁的条件变量对象; 在对象被销毁之后引用该对象的结果是未定义的。`pthread_cond_init()`函数应使用attr引用的属性初始化cond引用的条件变量。
+      - 函数原型及头文件：
 
-       2. `thread_cond_wait()`、`thread_cond_timedwait()`：
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_cond_timedwait</span><span class="params">(<span class="keyword">pthread_cond_t</span> *<span class="keyword">restrict</span> cond, <span class="keyword">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex, <span class="keyword">const</span> struct timespec *<span class="keyword">restrict</span> abstime)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_cond_wait</span><span class="params">(<span class="keyword">pthread_cond_t</span> *<span class="keyword">restrict</span> cond, <span class="keyword">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex)</span></span>;</span><br></pre></td></tr></table></figure>
 
-          - 函数原型及头文件：
+      - 函数说明：
 
-            ```c
-            #include &lt;pthread.h&gt;
+        两个函数都会阻塞条件变量。 应用程序应确保在调用线程锁定互斥锁的情况下调用这些函数; 否则，会产生错误或未定义的行为（对于其他互斥锁）。
 
-            int pthread_cond_timedwait(pthread_cond_t *restrict cond, pthread_mutex_t *restrict mutex, const struct timespec *restrict abstime);
-            int pthread_cond_wait(pthread_cond_t *restrict cond, pthread_mutex_t *restrict mutex);
-            ```
+   3. `thread_cond_signal()`、`thread_cond_broadcast()`：
 
-          - 函数说明：
+      - 函数原型及头文件：
 
-            两个函数都会阻塞条件变量。 应用程序应确保在调用线程锁定互斥锁的情况下调用这些函数; 否则，会产生错误或未定义的行为（对于其他互斥锁）。
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_cond_broadcast</span><span class="params">(<span class="keyword">pthread_cond_t</span> *cond)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_cond_signal</span><span class="params">(<span class="keyword">pthread_cond_t</span> *cond)</span></span>;</span><br></pre></td></tr></table></figure>
 
-       3. `thread_cond_signal()`、`thread_cond_broadcast()`：
+      - 函数说明：
 
-          - 函数原型及头文件：
-
-            ```c
-            #include &lt;pthread.h&gt;
-
-            int pthread_cond_broadcast(pthread_cond_t *cond);
-            int pthread_cond_signal(pthread_cond_t *cond);
-            ```
-
-          - 函数说明：
-
-            `pthread_cond_broadcast()`函数将取消阻止当前在指定条件变量cond上阻塞的所有线程。`pthread_cond_signal()`函数应解除阻塞在指定条件变量cond上阻塞的至少一个线程（如果在cond上阻塞了任何线程）。</code></pre><ul>
+        `pthread_cond_broadcast()`函数将取消阻止当前在指定条件变量cond上阻塞的所有线程。`pthread_cond_signal()`函数应解除阻塞在指定条件变量cond上阻塞的至少一个线程（如果在cond上阻塞了任何线程）。</code></pre><ul>
 <li><p>共享内存相关：</p>
 <ol>
 <li><p><code>shmget()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;sys/ipc.h&gt;
-#include &lt;sys/shm.h&gt;
-int shmget(key_t key, size_t size, int shmflg);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/ipc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmget</span><span class="params">(<span class="keyword">key_t</span> key, <span class="keyword">size_t</span> size, <span class="keyword">int</span> shmflg)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -728,10 +667,7 @@ int shmget(key_t key, size_t size, int shmflg);</code></pre>
 <li><p><code>shmat()</code>、<code>shmdt()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;sys/types.h&gt;
-#include &lt;sys/shm.h&gt;
-void *shmat(int shmid, const void *shmaddr, int shmflg);
-int shmdt(const void *shmaddr);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">shmat</span><span class="params">(<span class="keyword">int</span> shmid, <span class="keyword">const</span> <span class="keyword">void</span> *shmaddr, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmdt</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *shmaddr)</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>函数说明：</p>
 <ul>
@@ -761,33 +697,13 @@ int shmdt(const void *shmaddr);</code></pre>
 <li><p><code>shmctl()</code>：</p>
 <ul>
 <li><p>函数原型及头文件：</p>
-<pre><code class="c">#include &lt;sys/ipc.h&gt;
-#include &lt;sys/shm.h&gt;
-int shmctl(int shmid, int cmd, struct shmid_ds *buf);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/ipc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmctl</span><span class="params">(<span class="keyword">int</span> shmid, <span class="keyword">int</span> cmd, struct shmid_ds *buf)</span></span>;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>该函数执行由cmd参数指定的操作，cmd参数存储在由shmid参数存储的识别码指向的共享内存段。</p>
 </li>
 <li><p>buf参数是一个shmid_ds结构体指针，shmid_ds结构体在头文件&lt;sys/shm.h&gt;中定义，如下所示：</p>
-<pre><code class="c">struct shmid_ds {
-    struct ipc_perm shm_perm;    /* 所有权和权限 */
-    size_t shm_segsz;            /* 段大小（单位：字节） */
-    time_t shm_atime;            /* 最后的链接时间 */
-    time_t shm_dtime;            /* 最后的断开链接时间 */
-    time_t shm_ctime;            /* 最后的更改时间 */
-    pid_t  shm_cpid;            /* 创建者的PID */
-    pid_t  shm_lpid;            /* 最后的shmat()函数或shmdt()函数的pid */
-    ...
-};
-ipc_perm结构体的定义如下（其中udi、gid和mode可设置为IPC_SET）：
-struct ipc_perm {
-    key_t            __key;        /* 提供给shmget()函数的键值 */
-    uid_t            uid;        /* 有效的拥有者的UID */
-    gid_t            gid;        /* 有效的拥有者的GID */
-    uid_t            cuid;        /* 有效的创建者UID */
-    gid_t             cgid;        /* 有效的创建者GID */
-    unsigned short    mode;        /* 权限 + SHM_DEST 和 SHM_LOCKED 标记 */
-    unsigned short    __seq;        /* 序列号 */
-};</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">shmid_ds</span> &#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ipc_perm</span> <span class="title">shm_perm</span>;</span>	<span class="comment">/* 所有权和权限 */</span></span><br><span class="line">    <span class="keyword">size_t</span> shm_segsz;			<span class="comment">/* 段大小（单位：字节） */</span></span><br><span class="line">    <span class="keyword">time_t</span> shm_atime;			<span class="comment">/* 最后的链接时间 */</span></span><br><span class="line">    <span class="keyword">time_t</span> shm_dtime;			<span class="comment">/* 最后的断开链接时间 */</span></span><br><span class="line">    <span class="keyword">time_t</span> shm_ctime;			<span class="comment">/* 最后的更改时间 */</span></span><br><span class="line">    <span class="keyword">pid_t</span>  shm_cpid;			<span class="comment">/* 创建者的PID */</span></span><br><span class="line">    <span class="keyword">pid_t</span>  shm_lpid;			<span class="comment">/* 最后的shmat()函数或shmdt()函数的pid */</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line">ipc_perm结构体的定义如下（其中udi、gid和mode可设置为IPC_SET）：</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ipc_perm</span> &#123;</span></span><br><span class="line">	<span class="keyword">key_t</span>			__key;		<span class="comment">/* 提供给shmget()函数的键值 */</span></span><br><span class="line">	<span class="keyword">uid_t</span>			uid;		<span class="comment">/* 有效的拥有者的UID */</span></span><br><span class="line">	<span class="keyword">gid_t</span>			gid;		<span class="comment">/* 有效的拥有者的GID */</span></span><br><span class="line">	<span class="keyword">uid_t</span>			cuid;		<span class="comment">/* 有效的创建者UID */</span></span><br><span class="line">	<span class="keyword">gid_t</span> 			cgid;		<span class="comment">/* 有效的创建者GID */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span>	mode;		<span class="comment">/* 权限 + SHM_DEST 和 SHM_LOCKED 标记 */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span>	__seq;		<span class="comment">/* 序列号 */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>cmd参数的有效值如下：</p>
 <p>IPC_STAT、IPC_SET IPC_RMID、IPC_INFO、SHM_INFO、SHM_STAT、SHM_LOCK、SHM_UNLOCK 。</p>
@@ -903,7 +819,7 @@ struct ipc_perm {
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/ym/wallhaven-ym233x.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -1045,20 +961,21 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 								
 部分内容源自网络和grep帮助信息。
 
-用法grep [参数选项] [模式串] [文件或目录]
+用法1grep [参数选项] [模式串] [文件或目录]
+
 常用参数选项说明
 -o只显示与模式串匹配的内容。
 
 -E 使用扩展正则表达式。
 栗子：
-cat index.html | grep -E...
+1cat index.html | grep...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/linux三剑客之grep的使用/" title="linux三剑客之grep的使用">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="linux三剑客之grep的使用"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/39/wallhaven-392lk9.jpg" alt="linux三剑客之grep的使用"/>
 							</a>
 						</div>
 					</li>											
@@ -1093,7 +1010,37 @@ more abo...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/MYSQL-笔记1/" title="MYSQL-笔记1">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MYSQL-笔记1"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/6k/wallhaven-6kyk9w.jpg" alt="MYSQL-笔记1"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/方便的轻文本处理语言-markdown/" title="方便的轻文本处理语言-markdown">
+								方便的轻文本处理语言-markdown			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+  如果你并不需要word那么复杂的功能，没有极强的专业性需求，那么markdown是你很好的选择。
+
+
+  不同的markdown编辑器对markdown语法的支持与拓展会有一些出入，但是基础语法基本都会支持。
+
+
+  有的效果默...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/方便的轻文本处理语言-markdown/" title="方便的轻文本处理语言-markdown">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/g8/wallhaven-g8mw63.png" alt="方便的轻文本处理语言-markdown"/>
 							</a>
 						</div>
 					</li>											
@@ -1168,7 +1115,7 @@ more abo...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="POJ-1979"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											
@@ -1201,30 +1148,6 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
-								HDU-1072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
 							</a>
 						</div>
 					</li>											

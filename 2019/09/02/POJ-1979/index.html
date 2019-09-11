@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/POJ-1979/" itemprop="url">
 		<time datetime="2019-09-02T08:49:24.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-11
 	  </time>
 	</a> 
 
@@ -342,47 +342,10 @@
 <p>For each data set, your program should output a line which contains the number of tiles he can reach from the initial tile (including itself).</p>
 </blockquote>
 <p>Sample Input</p>
-<pre><code class="txt">6 9
-....#.
-.....#
-......
-......
-......
-......
-......
-#@...#
-.#..#.
-11 9
-.#.........
-.#.#######.
-.#.#.....#.
-.#.#.###.#.
-.#.#..@#.#.
-.#.#####.#.
-.#.......#.
-.#########.
-...........
-11 6
-..#..#..#..
-..#..#..#..
-..#..#..###
-..#..#..#@.
-..#..#..#..
-..#..#..#..
-7 7
-..#.#..
-..#.#..
-###.###
-...@...
-###.###
-..#.#..
-..#.#..
-0 0</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">6 9</span><br><span class="line">....#.</span><br><span class="line">.....#</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">#@...#</span><br><span class="line">.#..#.</span><br><span class="line">11 9</span><br><span class="line">.#.........</span><br><span class="line">.#.#######.</span><br><span class="line">.#.#.....#.</span><br><span class="line">.#.#.###.#.</span><br><span class="line">.#.#..@#.#.</span><br><span class="line">.#.#####.#.</span><br><span class="line">.#.......#.</span><br><span class="line">.#########.</span><br><span class="line">...........</span><br><span class="line">11 6</span><br><span class="line">..#..#..#..</span><br><span class="line">..#..#..#..</span><br><span class="line">..#..#..###</span><br><span class="line">..#..#..#@.</span><br><span class="line">..#..#..#..</span><br><span class="line">..#..#..#..</span><br><span class="line">7 7</span><br><span class="line">..#.#..</span><br><span class="line">..#.#..</span><br><span class="line">###.###</span><br><span class="line">...@...</span><br><span class="line">###.###</span><br><span class="line">..#.#..</span><br><span class="line">..#.#..</span><br><span class="line">0 0</span><br></pre></td></tr></table></figure>
+
 <p>Sample Output</p>
-<pre><code class="txt">45
-59
-6
-13</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">45</span><br><span class="line">59</span><br><span class="line">6</span><br><span class="line">13</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>题目大意：<br>给出一个w列和h行的方阵，方阵中有’.’,’#’和‘@’。其中’.’是可以移动的地方，’#’是红色的砖，是不可以移动的地        方，‘@’是最初人的地点就（图的入口），人可以上下左右移动，以0 0 为结束。<br>要求输出人可以移动的砖的个数。该题利用搜索。</p>
 <blockquote>
@@ -390,24 +353,17 @@
 </blockquote>
 </li>
 <li><p>代码：</p>
-<pre><code class="c++">#include&lt;iostream&gt;
-#include&lt;cstring&gt;
-using namespace std;
-</code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="keyword">int</span> w,h,tmp=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> ma[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;h&gt;&gt;w)&#123;</span><br><span class="line">		<span class="keyword">if</span>(w==<span class="number">0</span>&amp;&amp;h==<span class="number">0</span>)  <span class="keyword">break</span>;</span><br><span class="line">		<span class="built_in">memset</span>(ma,<span class="string">'0'</span>,<span class="keyword">sizeof</span>(ma));</span><br><span class="line">		<span class="keyword">int</span> ax,ay;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;w;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;h;j++)&#123;</span><br><span class="line">				<span class="built_in">cin</span>&gt;&gt;ma[i][j];</span><br><span class="line">				<span class="keyword">if</span>(ma[i][j]==<span class="string">'@'</span>)&#123;</span><br><span class="line">					ax=i;</span><br><span class="line">					ay=j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp=<span class="number">0</span>;</span><br><span class="line">		dfs(ax,ay);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;tmp&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	ma[x][y]=<span class="string">'#'</span>;</span><br><span class="line">	tmp++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> nx=x+dx[i];</span><br><span class="line">		<span class="keyword">int</span> ny=y+dy[i];</span><br><span class="line">		<span class="keyword">if</span>(ma[nx][ny]==<span class="string">'.'</span>&amp;&amp;nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;w&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;h&amp;&amp;ma[nx][ny]==<span class="string">'.'</span>)&#123;</span><br><span class="line">			dfs(nx,ny);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">Select Code</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="keyword">int</span> w,h,tmp=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> ma[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;h&gt;&gt;w)&#123;</span><br><span class="line">		<span class="keyword">if</span>(w==<span class="number">0</span>&amp;&amp;h==<span class="number">0</span>)  <span class="keyword">break</span>;</span><br><span class="line">		<span class="built_in">memset</span>(ma,<span class="string">'0'</span>,<span class="keyword">sizeof</span>(ma));</span><br><span class="line">		<span class="keyword">int</span> ax,ay;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;w;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;h;j++)&#123;</span><br><span class="line">				<span class="built_in">cin</span>&gt;&gt;ma[i][j];</span><br><span class="line">				<span class="keyword">if</span>(ma[i][j]==<span class="string">'@'</span>)&#123;</span><br><span class="line">					ax=i;</span><br><span class="line">					ay=j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp=<span class="number">0</span>;</span><br><span class="line">		dfs(ax,ay);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;tmp&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	ma[x][y]=<span class="string">'#'</span>;</span><br><span class="line">	tmp++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> nx=x+dx[i];</span><br><span class="line">		<span class="keyword">int</span> ny=y+dy[i];</span><br><span class="line">		<span class="keyword">if</span>(ma[nx][ny]==<span class="string">'.'</span>&amp;&amp;nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;w&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;h&amp;&amp;ma[nx][ny]==<span class="string">'.'</span>)&#123;</span><br><span class="line">			dfs(nx,ny);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<p>void dfs(int x,int y);<br>int w,h,tmp=0;</p>
-<p>char ma[100][100];<br>int dx[4]={0,0,1,-1};<br>int dy[4]={1,-1,0,0};</p>
-<p>int main(){<br>    while(cin&gt;&gt;h&gt;&gt;w){<br>        if(w==0&amp;&amp;h==0)  break;<br>        memset(ma,’0’,sizeof(ma));<br>        int ax,ay;<br>        for(int i=0;i&lt;w;i++){<br>            for(int j=0;j&lt;h;j++){<br>                cin&gt;&gt;ma[i][j];<br>                if(ma[i][j]==’@’){<br>                    ax=i;<br>                    ay=j;<br>                }<br>            }<br>        }<br>        tmp=0;<br>        dfs(ax,ay);<br>        cout&lt;&lt;tmp&lt;&lt;endl;<br>    }<br>    return 0;<br>}</p>
-<p>void dfs(int x,int y){<br>    ma[x][y]=’#’;<br>    tmp++;<br>    for(int i=0;i&lt;4;i++){<br>        int nx=x+dx[i];<br>        int ny=y+dy[i];<br>        if(ma[nx][ny]==’.’&amp;&amp;nx&gt;=0&amp;&amp;nx&lt;w&amp;&amp;ny&gt;=0&amp;&amp;ny&lt;h&amp;&amp;ma[nx][ny]==’.’){<br>            dfs(nx,ny);<br>        }<br>    }<br>}<br>Select Code<br>#include<iostream><br>#include<cstring><br>using namespace std;</cstring></iostream></p>
-<p>void dfs(int x,int y);<br>int w,h,tmp=0;</p>
-<p>char ma[100][100];<br>int dx[4]={0,0,1,-1};<br>int dy[4]={1,-1,0,0};</p>
-<p>int main(){<br>    while(cin&gt;&gt;h&gt;&gt;w){<br>        if(w==0&amp;&amp;h==0)  break;<br>        memset(ma,’0’,sizeof(ma));<br>        int ax,ay;<br>        for(int i=0;i&lt;w;i++){<br>            for(int j=0;j&lt;h;j++){<br>                cin&gt;&gt;ma[i][j];<br>                if(ma[i][j]==’@’){<br>                    ax=i;<br>                    ay=j;<br>                }<br>            }<br>        }<br>        tmp=0;<br>        dfs(ax,ay);<br>        cout&lt;&lt;tmp&lt;&lt;endl;<br>    }<br>    return 0;<br>}</p>
-<p>void dfs(int x,int y){<br>    ma[x][y]=’#’;<br>    tmp++;<br>    for(int i=0;i&lt;4;i++){<br>        int nx=x+dx[i];<br>        int ny=y+dy[i];<br>        if(ma[nx][ny]==’.’&amp;&amp;nx&gt;=0&amp;&amp;nx&lt;w&amp;&amp;ny&gt;=0&amp;&amp;ny&lt;h&amp;&amp;ma[nx][ny]==’.’){<br>            dfs(nx,ny);<br>        }<br>    }<br>}</p>
-<pre><code>&gt; POJ上不支持`bits/stdc++`的头文件，很尴尬。</code></pre>	
+<blockquote>
+<p>POJ上不支持<code>bits/stdc++</code>的头文件，很尴尬。</p>
+</blockquote>
+	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -466,38 +422,6 @@ using namespace std;
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
-								Codeforces-787a			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-题目思路：拓展欧几里德：
-$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
-
-
-代码：
-123456789101112131415161718192021222324252627282930313...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
@@ -592,6 +516,38 @@ Sample Output
 			
 					<li>
 						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
+								Codeforces-787a			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+题目思路：拓展欧几里德：
+$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
+
+
+代码：
+123456789101112131415161718192021222324252627282930313...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/02/CPU信息获取/" title="CPU信息获取">
 								CPU信息获取			
 							</a>
@@ -663,16 +619,14 @@ awk：该工具用来处理 df的数据。
 
 
 代码：
-   #!/bin/bash
-
-   df -m | grep &quot;^/dev/&quot; | awk -v nt...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" |...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="磁盘信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5ymwp.jpg" alt="磁盘信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -696,18 +650,14 @@ awk该工具用来处理数据
 
 
 代码
-#!/bin/bash
-
-ps -aux | awk -v last_all=$(ps -aux | awk &#39;
-BEGIN{
-    num ...
+1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5w3l27.jpg" alt="进程信息获取"/>
 							</a>
 						</div>
 					</li>											
@@ -731,16 +681,14 @@ grep：该工具用来筛选数据
 awk&#39;：该工具用来处理数据
 
 代码：
-#!/bin/bash
-
-free -m | grep &quot;^Mem&quot; | awk -v last...
+123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/内存信息获取/" title="内存信息获取">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="内存信息获取"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/xl/wallhaven-xldjkv.jpg" alt="内存信息获取"/>
 							</a>
 						</div>
 					</li>											

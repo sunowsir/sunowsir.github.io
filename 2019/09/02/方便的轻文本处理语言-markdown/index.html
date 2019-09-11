@@ -307,7 +307,7 @@
 
 	<a href="/2019/09/02/方便的轻文本处理语言-markdown/" itemprop="url">
 		<time datetime="2019-09-02T08:05:09.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-11
 	  </time>
 	</a> 
 
@@ -356,198 +356,130 @@
 <ul>
 <li><p>标题</p>
 <p>在文字的开头加上若干<code>#</code>最后跟上空格，这段文字就变成了相应等级的标题。</p>
-<pre><code class="markdown"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>引用</p>
 <p>当我们需要加上一段引用文字或者一些声明的时候可以选择使用引用语法</p>
-<pre><code class="markdown">&gt; 这是引用
-&gt;&gt; 这也是引用</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这是引用</span></span><br><span class="line">&gt;&gt; 这也是引用</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>列表</p>
 <p>当我们需要列举若干项的时候可以选择使用有序、无序列表和任务列表</p>
-<pre><code class="markdown">* 无序列表1
-* 无序列表2
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>无序列表1</span><br><span class="line"><span class="bullet">* </span>无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>无序列表1</span><br><span class="line"><span class="bullet">- </span>无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>有序列表1</span><br><span class="line"><span class="bullet">2. </span>有序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>[ ] 任务列表，未完成项</span><br><span class="line"><span class="bullet">- </span>[x] 任务列表，已完成项</span><br></pre></td></tr></table></figure>
 
-- 无序列表1
-- 无序列表2
 
-1. 有序列表1
-2. 有序列表2
 
-- [ ] 任务列表，未完成项
-- [x] 任务列表，已完成项</code></pre>
 </li>
 </ul>
 <ul>
 <li><p>代码块</p>
 <p>当我们需要插入一段代码的时候可以使用代码块语法</p>
-<pre><code class="markdown">C语言中使用`#include&lt;&gt;`引入头文件
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C语言中使用<span class="code">`#include&lt;&gt;`</span>引入头文件</span><br><span class="line"></span><br><span class="line">​<span class="code">```c</span></span><br><span class="line"><span class="code">	#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code">	int main () &#123;</span></span><br><span class="line"><span class="code">		return 0;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line"><span class="code">​</span></span><br></pre></td></tr></table></figure>
 
-​```c
-    #include &lt;stdio.h&gt;
-    int main () {
-        return 0;
-    }
-​```</code></pre>
-</li>
-</ul>
-<ul>
-<li><p>数学公式</p>
-<p>当我们需要插入数学公式，并且想要漂亮一些，可以使用数学公式的语法，更多的markdown数学转义符号请自行搜索，很容易搜到的。</p>
-<pre><code class="markdown">在数学中$\sum$ 是求和符号。
-例如：
-$$
-$\sum^{k}_{i = 1}{x / i}$
-$$</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* 数学公式</span><br><span class="line"></span><br><span class="line">  当我们需要插入数学公式，并且想要漂亮一些，可以使用数学公式的语法，更多的markdown数学转义符号请自行搜索，很容易搜到的。</span><br><span class="line"></span><br><span class="line">  ```markdown</span><br><span class="line">  在数学中$\sum$ 是求和符号。</span><br><span class="line">  例如：</span><br><span class="line">  $$</span><br><span class="line">  $\sum^&#123;k&#125;_&#123;i = 1&#125;&#123;x / i&#125;$</span><br><span class="line">  $$</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>文字显示控制</p>
 <p>我们可能有时候需要对文本加粗、高亮等，这里markdown也提供了支持。</p>
 <p>每种效果可以叠加使用。</p>
-<pre><code class="markdown">*斜体*
-**加粗**
-==高亮==
-~~删除~~
-***斜体并加粗***
-==*斜体并高亮*==</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**加粗**</span></span><br><span class="line">==高亮==</span><br><span class="line">~~删除~~</span><br><span class="line"><span class="strong">***斜体并加粗**</span>*</span><br><span class="line">==<span class="emphasis">*斜体并高亮*</span>==</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>表格</p>
 <p>当然了， 常用的表格markdown也是支持的。</p>
 <p>通过冒号可以控制对齐方式</p>
-<pre><code class="markdown">|first head|second head|third head|
-|:--|:--:|--:|
-|左对齐列|中心对齐列|右侧对齐列|
-|asd|fgh|jkl|</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|first head|second head|third head|</span><br><span class="line">|:--|:--:|--:|</span><br><span class="line">|左对齐列|中心对齐列|右侧对齐列|</span><br><span class="line">|asd|fgh|jkl|</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>脚注</p>
 <p>markdown也是支持脚注的。</p>
-<pre><code class="markdown">可以这样使用脚注[^1]</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可以这样使用脚注[^1]</span><br><span class="line">[<span class="symbol">^1</span>]:<span class="link">脚注1的内容</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分割线</p>
+<p>当我们想要分割两段内容的时候可以用分割线</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上面的内容</span><br><span class="line">---</span><br><span class="line">下面的内容</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
-<pre><code>
-* 分割线
-
-  当我们想要分割两段内容的时候可以用分割线
-
-  ```markdown
-  上面的内容
-  ---
-  下面的内容</code></pre><ul>
+<ul>
 <li><p>引入图像与链接</p>
 <p>引入图像和链接是必不可少的功能。</p>
-<pre><code class="markdown">![Linux引入图片](/home/UserName/1.jpg)
-![windows引入图片](C:\Users\UserName\Downloads\2.png)
-[百度](https://www.baidu.com)</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Linux引入图片</span>](<span class="link">/home/UserName/1.jpg</span>)</span><br><span class="line">![<span class="string">windows引入图片</span>](<span class="link">C:\Users\UserName\Downloads\2.png</span>)</span><br><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)</span><br><span class="line">[<span class="symbol">参考链接</span>]: <span class="link">www.baidu.com</span></span><br><span class="line">&lt;www.baidu.com&gt;</span><br><span class="line">[<span class="string">页内链接</span>](<span class="link">#一级标题</span>)</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
-<p>  &lt;<a href="http://www.baidu.com&gt;" target="_blank" rel="noopener">www.baidu.com&gt;</a><br>  <a href="#一级标题">页内链接</a></p>
-<pre><code>
+<ul>
+<li><p>目录树</p>
+<p>当文本过长，需要加上目录树。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">文本1</span><br><span class="line"></span><br><span class="line">[TOC]</span><br><span class="line"></span><br><span class="line">文本2</span><br></pre></td></tr></table></figure>
 
 
-* 目录树
 
-  当文本过长，需要加上目录树。
-
-  ```markdown
-  文本1
-
-  [TOC]
-
-  文本2</code></pre><ul>
+</li>
+</ul>
+<ul>
 <li><p>emoji表情</p>
 <p>有些markdown编辑器是支持emoji表情插入的。</p>
-<pre><code class="markdown">:smile:</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile:</span><br></pre></td></tr></table></figure>
+
 <p>效果:</p>
 <p>:smile:</p>
 </li>
 <li><p>文本折叠</p>
 <p>当我们的某个段落太长需要折叠起来，markdown貌似没有原生语法支持折叠，</p>
 <p>但是有些markdown编辑器是支持HTML语法的，这里可以使用HTML实现。</p>
-<pre><code class="html">&lt;details&gt;
-    &lt;summary&gt;测试标题&lt;/summary&gt;
-测试文本
-&lt;/details&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span>测试标题<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">测试文本</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>注释</p>
 <p>markdown当然也有像C语言中<code>//</code>一样的注释</p>
-<pre><code class="markdown">&lt;!--这是注释--&gt;</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--这是注释--&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>流程图</p>
 <p>markdown当然也可以画流程图</p>
-<pre><code class="markdown">​```mermaid
-flowchat
-flow
-st=&gt;start: Start
-op=&gt;operation: Your Operation
-cond=&gt;condition: Yes or No?
-e=&gt;end
-st-&gt;op-&gt;cond
-cond(yes)-&gt;e
-cond(no)-&gt;op
-​```</code></pre>
-</li>
-</ul>
-<ul>
-<li><p>时序图</p>
-<p>既然支持流程图，当然也支持时序图</p>
-<pre><code class="markdown">​```mermaid
-sequenceDiagram
-X-&gt;&gt;Y: 一起去电影院怎么样？
-Note right of Y: 去不去
-Y-&gt;&gt;X: 好的，我等你！
-​```</code></pre>
-</li>
-</ul>
-<ul>
-<li><p>特殊字符需要使用Unicode编码。</p>
-</li>
-<li><p>甘特图</p>
-<pre><code class="markdown">​```mermaid
-    gantt
-        dateFormat  YYYY-MM-DD
-        title 软件开发甘特图
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">```mermaid</span></span><br><span class="line"><span class="code">flowchat</span></span><br><span class="line"><span class="code">flow</span></span><br><span class="line"><span class="code">st=&gt;start: Start</span></span><br><span class="line"><span class="code">op=&gt;operation: Your Operation</span></span><br><span class="line"><span class="code">cond=&gt;condition: Yes or No?</span></span><br><span class="line"><span class="code">e=&gt;end</span></span><br><span class="line"><span class="code">st-&gt;op-&gt;cond</span></span><br><span class="line"><span class="code">cond(yes)-&gt;e</span></span><br><span class="line"><span class="code">cond(no)-&gt;op</span></span><br><span class="line"><span class="code">​</span></span><br></pre></td></tr></table></figure>
 
-        section 设计
-            需求                      :done,    des1, 2014-01-06,2014-01-08
-            原型                      :active,  des2, 2014-01-09, 3d
-            UI设计                    :         des3, after des2, 5d
-            未来任务                   :         des4, after des3, 5d
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* 时序图</span><br><span class="line"></span><br><span class="line">  既然支持流程图，当然也支持时序图</span><br><span class="line"></span><br><span class="line">  ```markdown</span><br><span class="line">  ​```mermaid</span><br><span class="line">  sequenceDiagram</span><br><span class="line">  X-&gt;&gt;Y: 一起去电影院怎么样？</span><br><span class="line">  Note right of Y: 去不去</span><br><span class="line">  Y-&gt;&gt;X: 好的，我等你！</span><br><span class="line">  ​</span><br></pre></td></tr></table></figure>
 
-        section 开发
-            学习准备理解需求                      :crit, done, 2014-01-06,24h
-            设计框架                             :crit, done, after des2, 2d
-            开发                                 :crit, active, 3d
-            未来任务                              :crit, 5d
-            耍                                   :2d
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* 特殊字符需要使用Unicode编码。</span><br><span class="line"></span><br><span class="line">* 甘特图</span><br><span class="line"></span><br><span class="line">  ```markdown</span><br><span class="line">  ​```mermaid</span><br><span class="line">  	gantt</span><br><span class="line">      	dateFormat  YYYY-MM-DD</span><br><span class="line">          title 软件开发甘特图</span><br><span class="line">          </span><br><span class="line">          section 设计</span><br><span class="line">          	需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">          	原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">          	UI设计                    :         des3, after des2, 5d</span><br><span class="line">      		未来任务                   :         des4, after des3, 5d</span><br><span class="line">      </span><br><span class="line">      	section 开发</span><br><span class="line">              学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">              设计框架                             :crit, done, after des2, 2d</span><br><span class="line">              开发                                 :crit, active, 3d</span><br><span class="line">              未来任务                              :crit, 5d</span><br><span class="line">              耍                                   :2d</span><br><span class="line">      </span><br><span class="line">          section 测试</span><br><span class="line">              功能测试                              :active, a1, after des3, 3d</span><br><span class="line">              压力测试                               :after a1  , 20h</span><br><span class="line">              测试报告                               : 48h</span><br><span class="line">  ​</span><br></pre></td></tr></table></figure>
 
-        section 测试
-            功能测试                              :active, a1, after des3, 3d
-            压力测试                               :after a1  , 20h
-            测试报告                               : 48h
-​```</code></pre>
-<p><a href="https://jingyan.baidu.com/article/48b558e3035d9a7f38c09aeb.html" target="_blank" rel="noopener">来自百度经验</a></p>
-</li>
+<pre><code>
+[来自百度经验](https://jingyan.baidu.com/article/48b558e3035d9a7f38c09aeb.html)
+</code></pre></li>
 </ul>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/g8/wallhaven-g8mw63.png"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -581,6 +513,193 @@ Y-&gt;&gt;X: 好的，我等你！
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">
+								进程、线程及共享内存学习笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								进程、线程及共享内存学习笔记
+系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
+
+
+理论基础：
+
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym233x.jpg" alt="进程、线程及共享内存学习笔记"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux常见配置文件/" title="Linux常见配置文件">
+								Linux常见配置文件			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+转载自CoderZhuang，对CoderZhuang先生的博客进行补充和整理。
+
+
+/etc 配置文件
+/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 
+/etc/group ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux常见配置文件/" title="Linux常见配置文件">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/2e/wallhaven-2eod59.jpg" alt="Linux常见配置文件"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/deepin系统使用笔记/" title="deepin系统使用笔记">
+								deepin系统使用笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+
+如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。
+图形界面相关的东西自行探索。
+
+
+[TOC]
+deepin系统安装后推荐配置sudo apt-get install -y git wget curl o...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/deepin系统使用笔记/" title="deepin系统使用笔记">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5yerq.jpg" alt="deepin系统使用笔记"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux三剑客之awk的使用/" title="Linux三剑客之awk的使用">
+								Linux三剑客之awk的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易 内置变量与运算符数据来自RUNOOB
+
+
+简单用法
+12awk [参数] 'awk代码'awk [参数] -f awk脚本文件
+
+常用参数
+123456...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux三剑客之awk的使用/" title="Linux三剑客之awk的使用">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/g8/wallhaven-g8md6l.jpg" alt="Linux三剑客之awk的使用"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/linux三剑客之grep的使用/" title="linux三剑客之grep的使用">
+								linux三剑客之grep的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+部分内容源自网络和grep帮助信息。
+
+用法1grep [参数选项] [模式串] [文件或目录]
+
+常用参数选项说明
+-o只显示与模式串匹配的内容。
+
+-E 使用扩展正则表达式。
+栗子：
+1cat index.html | grep...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/linux三剑客之grep的使用/" title="linux三剑客之grep的使用">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/39/wallhaven-392lk9.jpg" alt="linux三剑客之grep的使用"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/MYSQL-笔记1/" title="MYSQL-笔记1">
+								MYSQL-笔记1			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+  在MYSQL中查询操作涉及内容
+
+[TOC]
+function
+  对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
+
+
+COUNT ： 统计
+SUM ： 求和
+AVG ： 平均数
+
+more abo...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/MYSQL-笔记1/" title="MYSQL-笔记1">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/6k/wallhaven-6kyk9w.jpg" alt="MYSQL-笔记1"/>
+							</a>
+						</div>
+					</li>											
+			
 			
 					<li>
 						<div class="relate-post-text">
@@ -651,7 +770,7 @@ Y-&gt;&gt;X: 好的，我等你！
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="POJ-1979"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											
@@ -684,194 +803,6 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
-								HDU-1072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/BASH脚本实现素数线性筛/" title="BASH脚本实现素数线性筛">
-								BASH脚本实现素数线性筛			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-知识准备
-
-for循环
-12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------123...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/BASH脚本实现素数线性筛/" title="BASH脚本实现素数线性筛">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-8396gk.jpg" alt="BASH脚本实现素数线性筛"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">
-								磁盘信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-知识准备：
-
-df:该工具用来获取文件系统挂载信息。
-
-awk：该工具用来处理 df的数据。
-
-
-
-代码：
-   #!/bin/bash
-
-   df -m | grep &quot;^/dev/&quot; | awk -v nt...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="磁盘信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/进程信息获取/" title="进程信息获取">
-								进程信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-知识准备：
-
-ps 该工具用来获取进程信息
-awk该工具用来处理数据
-
-
-代码
-#!/bin/bash
-
-ps -aux | awk -v last_all=$(ps -aux | awk &#39;
-BEGIN{
-    num ...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/内存信息获取/" title="内存信息获取">
-								内存信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-free：该工具用来获取内存信息
-
-grep：该工具用来筛选数据
-
-awk&#39;：该工具用来处理数据
-
-代码：
-#!/bin/bash
-
-free -m | grep &quot;^Mem&quot; | awk -v last...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/内存信息获取/" title="内存信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="内存信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/系统信息获取/" title="系统信息获取">
-								系统信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-欢迎大家转载，转载请注明出处，谢谢！
-
-
-知识准备
-
-date：获取当前时间
-/etc/issue：系统版本信息
-/proc/loadavg：负载信息
-df：获取磁盘信息
-free：内存信息
-/sys/class/thermal/t...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/系统信息获取/" title="系统信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="系统信息获取"/>
 							</a>
 						</div>
 					</li>											

@@ -319,7 +319,7 @@
 
 	<a href="/2019/09/02/MYSQL-笔记1/" itemprop="url">
 		<time datetime="2019-09-02T08:32:55.000Z" itemprop="dateUpdated">
-	  		2019-09-02
+	  		2019-09-11
 	  </time>
 	</a> 
 
@@ -373,19 +373,10 @@
 <li><p><code>having</code> </p>
 <p> 功能类似<code>where</code>，不同的是，<code>where</code>是筛选已存在的数据，<code>having</code>用来对前面的筛选进行进一步筛选。</p>
 <p>例：</p>
-<pre><code class="mysql">select 
-    name,
-    SUM(sign), 
-    SUM(score) 
-from 
-    games 
-group by 
-    name 
-having 
-    SUM(score) &gt; 80
-;
--- SUM(score)在games表中不存在，是待筛数据。
--- 通过having可以对其进行进一步筛选。</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	name,</span><br><span class="line">	SUM(sign), </span><br><span class="line">	SUM(score) </span><br><span class="line">from </span><br><span class="line">	games </span><br><span class="line">group by </span><br><span class="line">	name </span><br><span class="line">having </span><br><span class="line">	SUM(score) &gt; 80</span><br><span class="line">;</span><br><span class="line">-- SUM(score)在games表中不存在，是待筛数据。</span><br><span class="line">-- 通过having可以对其进行进一步筛选。</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
@@ -393,15 +384,10 @@ having
 <p>常与<code>where配合使用</code>，使用<code>link</code>子句匹配模式串，可以将<code>link</code>看作<code>=</code>。</p>
 <p>可以使用正则表达式中的<code>%</code>来匹配任意字符。</p>
 <p>例：</p>
-<pre><code class="mysql">select 
-    * 
-from 
-    Computer 
-where 
-    Model link &#39;Mac%&#39;
-;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	* </span><br><span class="line">from </span><br><span class="line">	Computer </span><br><span class="line">where </span><br><span class="line">	Model link &apos;Mac%&apos;</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 查找Computer表中Model字段中含有&apos;Mac&apos;的记录。</span><br></pre></td></tr></table></figure>
 
--- 查找Computer表中Model字段中含有&#39;Mac&#39;的记录。</code></pre>
+
+
 </li>
 </ul>
 <ul>
@@ -410,15 +396,10 @@ where
 <p>当然也可以设置升序(asc)还是降序(desc)，默认是升序。</p>
 <p>当然也可以添加<code>where...link...</code>来设置更加复杂的排序规则。</p>
 <p>例：</p>
-<pre><code class="mysql">select 
-    *
-from 
-    Computer
-order by 
-    Sales_volume
-;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	*</span><br><span class="line">from </span><br><span class="line">	Computer</span><br><span class="line">order by </span><br><span class="line">	Sales_volume</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 按照Sales_volume字段排序输出Computer表。</span><br></pre></td></tr></table></figure>
 
--- 按照Sales_volume字段排序输出Computer表。</code></pre>
+
+
 </li>
 </ul>
 <ul>
@@ -428,22 +409,8 @@ order by
 <li><p><code>union</code></p>
 <p>用来连接多个<code>select</code>语句，将结果合并输出，可选是(all)否(默认删除重复数据)删除重复数据。</p>
 <p>例：</p>
-<pre><code class="mysql">select 
-    Sales_volume
-from 
-    Computer
-union all
-select 
-    Sales_volume
-from 
-    Mobile_Phone
-order by 
-    Sales_volume
-;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	Sales_volume</span><br><span class="line">from </span><br><span class="line">	Computer</span><br><span class="line">union all</span><br><span class="line">select </span><br><span class="line">	Sales_volume</span><br><span class="line">from </span><br><span class="line">	Mobile_Phone</span><br><span class="line">order by </span><br><span class="line">	Sales_volume</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 查找Computer表和Mobile_Phone表中的Sales_volume字段数据，</span><br><span class="line">-- 按照Sales_volume以默认方式排序，</span><br><span class="line">-- 而且不删除重复数据。</span><br></pre></td></tr></table></figure>
 
--- 查找Computer表和Mobile_Phone表中的Sales_volume字段数据，
--- 按照Sales_volume以默认方式排序，
--- 而且不删除重复数据。</code></pre>
 </li>
 </ul>
 <h3 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h3><blockquote>
@@ -548,7 +515,7 @@ order by
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/6k/wallhaven-6kyk9w.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -610,7 +577,7 @@ order by
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="进程、线程及共享内存学习笔记"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym233x.jpg" alt="进程、线程及共享内存学习笔记"/>
 							</a>
 						</div>
 					</li>											
@@ -719,20 +686,51 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 								
 部分内容源自网络和grep帮助信息。
 
-用法grep [参数选项] [模式串] [文件或目录]
+用法1grep [参数选项] [模式串] [文件或目录]
+
 常用参数选项说明
 -o只显示与模式串匹配的内容。
 
 -E 使用扩展正则表达式。
 栗子：
-cat index.html | grep -E...
+1cat index.html | grep...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/linux三剑客之grep的使用/" title="linux三剑客之grep的使用">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="linux三剑客之grep的使用"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/39/wallhaven-392lk9.jpg" alt="linux三剑客之grep的使用"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/方便的轻文本处理语言-markdown/" title="方便的轻文本处理语言-markdown">
+								方便的轻文本处理语言-markdown			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+  如果你并不需要word那么复杂的功能，没有极强的专业性需求，那么markdown是你很好的选择。
+
+
+  不同的markdown编辑器对markdown语法的支持与拓展会有一些出入，但是基础语法基本都会支持。
+
+
+  有的效果默...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/方便的轻文本处理语言-markdown/" title="方便的轻文本处理语言-markdown">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/g8/wallhaven-g8mw63.png" alt="方便的轻文本处理语言-markdown"/>
 							</a>
 						</div>
 					</li>											
@@ -807,7 +805,7 @@ cat index.html | grep -E...
 						<div class="relate-post-cover">
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="POJ-1979"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											
@@ -840,30 +838,6 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
-								HDU-1072			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/kw/wallhaven-kwlwy6.jpg" alt="HDU-1072"/>
 							</a>
 						</div>
 					</li>											
