@@ -140,7 +140,7 @@
     <link href="http://yoursite.com/2019/09/02/HDU-1072/"/>
     <id>http://yoursite.com/2019/09/02/HDU-1072/</id>
     <published>2019-09-02T08:46:45.000Z</published>
-    <updated>2019-09-03T07:36:41.050Z</updated>
+    <updated>2019-09-14T06:47:41.122Z</updated>
     
     <summary type="html">
     
@@ -154,8 +154,6 @@
       
     
     </summary>
-    
-      <category term="题解" scheme="http://yoursite.com/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
       <category term="oj" scheme="http://yoursite.com/tags/oj/"/>
@@ -443,7 +441,7 @@
     <link href="http://yoursite.com/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/09/02/deepin系统使用笔记/</id>
     <published>2019-09-02T08:39:06.000Z</published>
-    <updated>2019-09-03T07:35:56.050Z</updated>
+    <updated>2019-09-16T03:56:13.492Z</updated>
     
     <summary type="html">
     
@@ -457,14 +455,11 @@
 &lt;li&gt;图形界面相关的东西自行探索。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2
+&lt;h2 id=&quot;deepin系统安装后推荐配置&quot;&gt;&lt;a
         
       
     
     </summary>
-    
-      <category term="NOTE" scheme="http://yoursite.com/categories/NOTE/"/>
     
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
