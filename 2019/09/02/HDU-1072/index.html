@@ -275,13 +275,20 @@
 
 	<div class="article-content" id="article-content">
 		<ul>
-<li><p>题目描述：<br>首先输入一个N；代表测试数据的个数;<br>然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）<br>然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“OUT”（代表出队或出栈）<br>若已经是空的了遇到“OUT”命令时输出“None”；</p>
+<li>
+<p>题目描述：<br>
+首先输入一个N；代表测试数据的个数;<br>
+然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）<br>
+然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“OUT”（代表出队或出栈）<br>
+若已经是空的了遇到“OUT”命令时输出“None”；</p>
 </li>
-<li><p>题目思路：<br>其实就是c++STL的队列和栈的简单应用；</p>
+<li>
+<p>题目思路：<br>
+其实就是c++STL的队列和栈的简单应用；</p>
 </li>
-<li><p>代码如下：</p>
+<li>
+<p>代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	<span class="keyword">int</span> n;</span><br><span class="line">  	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">  	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">      	<span class="keyword">int</span> com_num,typ_num;</span><br><span class="line">      	<span class="built_in">cin</span>&gt;&gt;com_num;</span><br><span class="line">      	<span class="built_in">string</span> com;</span><br><span class="line">      	<span class="built_in">cin</span>&gt;&gt;com;</span><br><span class="line">      	<span class="keyword">if</span>(com==<span class="string">"FIFO"</span>)&#123;</span><br><span class="line">          	<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">          	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;com_num;i++)&#123;</span><br><span class="line">              	<span class="built_in">cin</span>&gt;&gt;com;</span><br><span class="line">              	<span class="keyword">if</span>(com==<span class="string">"IN"</span>)&#123;</span><br><span class="line">                  	<span class="built_in">cin</span>&gt;&gt;typ_num;</span><br><span class="line">                  	q.push(typ_num);</span><br><span class="line">              	&#125;</span><br><span class="line">              	<span class="keyword">if</span>(com==<span class="string">"OUT"</span>)&#123;</span><br><span class="line">                  	<span class="keyword">if</span>(q.empty())&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;<span class="string">"None"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                  	&#125;</span><br><span class="line">                  	<span class="keyword">else</span>&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;q.front()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                      	q.pop();</span><br><span class="line">                  	&#125;</span><br><span class="line">              	&#125;</span><br><span class="line">          	&#125;</span><br><span class="line">      	&#125;</span><br><span class="line">      	<span class="keyword">if</span>(com==<span class="string">"FILO"</span>)&#123;</span><br><span class="line">          <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;com_num;i++)&#123;</span><br><span class="line">              <span class="built_in">cin</span>&gt;&gt;com;</span><br><span class="line">              <span class="keyword">if</span>(com==<span class="string">"IN"</span>)&#123;</span><br><span class="line">                  <span class="built_in">cin</span>&gt;&gt;typ_num;</span><br><span class="line">                  st.push(typ_num);</span><br><span class="line">              	&#125;</span><br><span class="line">              	<span class="keyword">if</span>(com==<span class="string">"OUT"</span>)&#123;</span><br><span class="line">                  	<span class="keyword">if</span>(st.empty())&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;<span class="string">"None"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                  	&#125;</span><br><span class="line">                  	<span class="keyword">else</span>&#123;</span><br><span class="line">                      	<span class="built_in">cout</span>&lt;&lt;st.top()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                      	st.pop();</span><br><span class="line">                  	&#125;</span><br><span class="line">              	&#125;</span><br><span class="line">          	&#125;</span><br><span class="line">      	&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 	
@@ -337,8 +344,9 @@
 							</p>
 							<p class="relate-post-content">
 								
+
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头...
 							</p>
 						</div>
 
@@ -362,7 +370,10 @@
 							</p>
 							<p class="relate-post-content">
 								
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
+
+原题目：
+Description
+There is a rectangular room, covered with square tiles. Each tile is colored either red or black. ...
 							</p>
 						</div>
 
@@ -389,12 +400,16 @@
 题目传送
 
 
-题目思路：拓展欧几里德：
-$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
+
+题目思路：
+拓展欧几里德：
+$$
+ax+b=cy+d; &lt;=&gt; ax+cy=d-b;
+$$
 
 
 代码：
-123456789101112131415161718192021222324252627282930313...
+12345678910111213141516171819202122232425262728293...
 							</p>
 						</div>
 
@@ -421,9 +436,10 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 题目传送
 
 
+
 题目描述:
 There is a hill with n holes around. The holes are signed from 0 to n-1.
-A rabbit must hide in one of t...
+A rabbit must hide in one of ...
 							</p>
 						</div>
 
@@ -450,14 +466,17 @@ A rabbit must hide in one of t...
 题目传送
 
 
+
 Sample Input
 1you are my friend #
+
 
 Sample Output
 14
 
+
 思路：
-利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单词...
+利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当...
 							</p>
 						</div>
 
@@ -465,6 +484,38 @@ Sample Output
 							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839xg2.jpg" alt="HDU - 2072"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+
+
+概述
+直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
+排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+
+
+适用场景
+插入排序在对几乎...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
 							</a>
 						</div>
 					</li>											
@@ -480,9 +531,12 @@ Sample Output
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+								引言
+好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
 准备知识
-github最基本的使用...
+
+github最...
 							</p>
 						</div>
 
@@ -506,9 +560,11 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
+
 准备知识
 
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
 							</p>
 						</div>
 
@@ -532,10 +588,12 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备
 
+
 for循环
-12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------123...
+12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------1...
 							</p>
 						</div>
 
@@ -559,16 +617,20 @@ for循环
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
+
 df:该工具用来获取文件系统挂载信息。
+
 
 awk：该工具用来处理 df的数据。
 
 
 
+
 代码：
-   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" |...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev...
 							</p>
 						</div>
 
@@ -576,37 +638,6 @@ awk：该工具用来处理 df的数据。
 							<a href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5ymwp.jpg" alt="磁盘信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/进程信息获取/" title="进程信息获取">
-								进程信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-知识准备：
-
-ps 该工具用来获取进程信息
-awk该工具用来处理数据
-
-
-代码
-1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5w3l27.jpg" alt="进程信息获取"/>
 							</a>
 						</div>
 					</li>											

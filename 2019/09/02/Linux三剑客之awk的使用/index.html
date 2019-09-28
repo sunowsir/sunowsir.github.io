@@ -271,16 +271,20 @@
 
 	<div class="article-content" id="article-content">
 		<blockquote>
-<p>awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易<br> 内置变量与运算符数据来自<a href="https://www.runoob.com/linux/linux-comm-awk.html" target="_blank" rel="noopener">RUNOOB</a></p>
+<p>awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易<br>
+内置变量与运算符数据来自<a href="https://www.runoob.com/linux/linux-comm-awk.html" target="_blank" rel="noopener">RUNOOB</a></p>
 </blockquote>
 <ul>
-<li><p>简单用法</p>
+<li>
+<p>简单用法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">awk [参数] <span class="string">'awk代码'</span></span><br><span class="line">awk [参数] -f awk脚本文件</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>常用参数</p>
+<li>
+<p>常用参数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.txt | awk -F <span class="string">':'</span> <span class="string">'BEGIN&#123;&#125;&#123;printf("%s %s", $1, $2);&#125;END&#123;printf("OK!");&#125;'</span></span><br><span class="line"><span class="comment"># -F 参数是指定对每行字符串以什么字符为分割，每个被分割的部分存储在变量：$1, $2, $3...中，整行字符串存储在$0中。</span></span><br><span class="line"><span class="comment"># BEGIN&#123;&#125;中的代码将在文本处理前执行，同样，END&#123;&#125;会文本处理后执行，&#123;&#125;中的代码用来处理每行的文本。</span></span><br><span class="line"></span><br><span class="line">cat xxx.txt | awk -v var1=<span class="variable">$&#123;tmp&#125;</span> <span class="string">'&#123;printf("%d\n", $3/var1);&#125;'</span></span><br><span class="line"><span class="comment"># -v 参数是引入外部变量，把$&#123;tmp&#125;赋值给var1，在awk内部代码中就可以使用var1了。</span></span><br><span class="line"><span class="comment"># -v参数可以多次引用，也就是说可以引入多个变量。</span></span><br><span class="line"></span><br><span class="line">cat xxx | awk -v var1=<span class="variable">$&#123;tmp&#125;</span> <span class="string">'&#123;</span></span><br><span class="line"><span class="string">	if ($1 ~ /eth/) &#123;</span></span><br><span class="line"><span class="string">		print $0;</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">&#125;'</span></span><br><span class="line"><span class="comment"># 通过这种方式可以使用正则表达式进行字符串匹配。</span></span><br><span class="line"><span class="comment"># awk支持print，使用print末尾自动加上\n。</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>内置变量</p>
+<li>
+<p>内置变量</p>
 </li>
 </ul>
 <table>
@@ -290,7 +294,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>$n</td>
 <td>当前记录的第n个字段，字段间由FS分隔</td>
 </tr>
@@ -307,7 +312,7 @@
 <td>命令行中当前文件的位置(从0开始算)</td>
 </tr>
 <tr>
-<td>ARGV    包含命令行参数的数组</td>
+<td>ARGV	包含命令行参数的数组</td>
 <td></td>
 </tr>
 <tr>
@@ -374,7 +379,8 @@
 <td>SUBSEP</td>
 <td>数组下标分隔符(默认值是/034)</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <ul>
 <li>运算符</li>
 </ul>
@@ -385,8 +391,9 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>= += -= <em>= /= %= ^= *</em>=</td>
+<tbody>
+<tr>
+<td>= += -= *= /= %= ^= **=</td>
 <td>赋值</td>
 </tr>
 <tr>
@@ -441,7 +448,8 @@
 <td>in</td>
 <td>数组成员</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 	
 	</div>
 	
@@ -486,6 +494,38 @@
 			
 					<li>
 						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+
+
+概述
+直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
+排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+
+
+适用场景
+插入排序在对几乎...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/16/hexo低成本搭建静态网页博客/" title="hexo低成本搭建静态网页博客">
 								hexo低成本搭建静态网页博客			
 							</a>
@@ -494,9 +534,12 @@
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+								引言
+好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
 准备知识
-github最基本的使用...
+
+github最...
 							</p>
 						</div>
 
@@ -520,12 +563,15 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								进程、线程及共享内存学习笔记
-系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
+
+系统环境：deepin Linux，语言环境：Linux C
+欢迎大家转载，转载请注明出处，谢谢！
+
 
 
 理论基础：
 
-进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程...
 							</p>
 						</div>
 
@@ -553,8 +599,10 @@ github最基本的使用...
 
 
 /etc 配置文件
-/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 
-/etc/group ...
+
+/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息
+
+/etc/group...
 							</p>
 						</div>
 
@@ -583,7 +631,8 @@ github最基本的使用...
 图形界面相关的东西自行探索。
 
 
-deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh...
+deepin系统安装后推荐配置
+sudo apt-get install -y git wget curl openss...
 							</p>
 						</div>
 
@@ -609,14 +658,17 @@ deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh..
 								
 部分内容源自网络和grep帮助信息。
 
-用法1grep [参数选项] [模式串] [文件或目录]
-
+用法
+1grep [参数选项] [模式串] [文件或目录]
 常用参数选项说明
+
+
 -o只显示与模式串匹配的内容。
+
 
 -E 使用扩展正则表达式。
 栗子：
-1cat index.html | grep...
+1cat index.html | g...
 							</p>
 						</div>
 
@@ -640,18 +692,19 @@ deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh..
 							</p>
 							<p class="relate-post-content">
 								
-  在MYSQL中查询操作涉及内容
+在MYSQL中查询操作涉及内容
 
 [TOC]
 function
-  对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
+
+对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
 
 
 COUNT ： 统计
 SUM ： 求和
 AVG ： 平均数
 
-more abo...
+more about ...
 							</p>
 						</div>
 
@@ -675,8 +728,9 @@ more abo...
 							</p>
 							<p class="relate-post-content">
 								
+
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头...
 							</p>
 						</div>
 
@@ -700,9 +754,11 @@ more abo...
 							</p>
 							<p class="relate-post-content">
 								
+
 准备知识
 
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
 							</p>
 						</div>
 
@@ -726,7 +782,10 @@ more abo...
 							</p>
 							<p class="relate-post-content">
 								
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
+
+原题目：
+Description
+There is a rectangular room, covered with square tiles. Each tile is colored either red or black. ...
 							</p>
 						</div>
 
@@ -734,38 +793,6 @@ more abo...
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
-								Codeforces-787a			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-题目思路：拓展欧几里德：
-$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
-
-
-代码：
-123456789101112131415161718192021222324252627282930313...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											

@@ -204,6 +204,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -245,7 +257,7 @@
 
 	<a href="/2019/09/02/方便的轻文本处理语言-markdown/" itemprop="url">
 		<time datetime="2019-09-02T08:05:09.000Z" itemprop="dateUpdated">
-	  		2019-09-21
+	  		2019-09-28
 	  </time>
 	</a> 
 
@@ -271,149 +283,81 @@
 
 	<div class="article-content" id="article-content">
 		<blockquote>
-<p>  如果你并不需要word那么复杂的功能，没有极强的专业性需求，那么markdown是你很好的选择。</p>
-</blockquote>
-<blockquote>
-<p>  不同的markdown编辑器对markdown语法的支持与拓展会有一些出入，但是基础语法基本都会支持。</p>
-</blockquote>
-<blockquote>
-<p>  有的效果默认关闭，需要到设置里打开。</p>
-</blockquote>
-<blockquote>
-<p>  本文代码使用typora编辑器。推荐<a href="https://typora.io/" target="_blank" rel="noopener">typora</a>。</p>
-</blockquote>
-<blockquote>
-<p>  一般的markdown编辑器都是可以导出为各种格式的：pdf、html、word以及png等等。</p>
-</blockquote>
-<blockquote>
-<p>  粘贴下面代码框中的代码到你的markdown编辑器中看看效果！</p>
-</blockquote>
-<blockquote>
+<p>如果你并不需要word那么复杂的功能，没有极强的专业性需求，那么markdown是你很好的选择。</p>
+<p>不同的markdown编辑器对markdown语法的支持与拓展会有一些出入，但是基础语法基本都会支持。</p>
+<p>有的效果默认关闭，需要到设置里打开。</p>
+<p>本文代码使用typora编辑器。推荐<a href="https://typora.io/" target="_blank" rel="noopener">typora</a>。</p>
+<p>一般的markdown编辑器都是可以导出为各种格式的：pdf、html、word以及png等等。</p>
+<p>粘贴下面代码框中的代码到你的markdown编辑器中看看效果！</p>
 <p>部分高级用法内容资源来自网络其他博客和wiki。</p>
 </blockquote>
-<ul>
-<li><p>标题</p>
+<h2 id="标题"><a class="header-anchor" href="#标题"></a>标题</h2>
 <p>在文字的开头加上若干<code>#</code>最后跟上空格，这段文字就变成了相应等级的标题。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>引用</p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
 <p>当我们需要加上一段引用文字或者一些声明的时候可以选择使用引用语法</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这是引用</span></span><br><span class="line">&gt;&gt; 这也是引用</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>列表</p>
+<h2 id="列表"><a class="header-anchor" href="#列表"></a>列表</h2>
 <p>当我们需要列举若干项的时候可以选择使用有序、无序列表和任务列表</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>无序列表1</span><br><span class="line"><span class="bullet">* </span>无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>无序列表1</span><br><span class="line"><span class="bullet">- </span>无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>有序列表1</span><br><span class="line"><span class="bullet">2. </span>有序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>[ ] 任务列表，未完成项</span><br><span class="line"><span class="bullet">- </span>[x] 任务列表，已完成项</span><br></pre></td></tr></table></figure>
-
-
-
+<h2 id="插入代码"><a class="header-anchor" href="#插入代码"></a>插入代码</h2>
+<p>当我们需要插入一段代码的时候可以使用代码块语法。</p>
+<ol>
+<li>
+<p>文本中插入一段短的代码可以使用键盘中<code>1</code>左边的点把代码括起来</p>
 </li>
-</ul>
-<ul>
-<li><p>代码块</p>
-<p>当我们需要插入一段代码的时候可以使用代码块语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C语言中使用<span class="code">`#include&lt;&gt;`</span>引入头文件</span><br><span class="line"></span><br><span class="line">​<span class="code">```c</span></span><br><span class="line"><span class="code">	#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code">	int main () &#123;</span></span><br><span class="line"><span class="code">		return 0;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line"><span class="code">​</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* 数学公式</span><br><span class="line"></span><br><span class="line">  当我们需要插入数学公式，并且想要漂亮一些，可以使用数学公式的语法，更多的markdown数学转义符号请自行搜索，很容易搜到的。</span><br><span class="line"></span><br><span class="line">  ```markdown</span><br><span class="line">  在数学中$\sum$ 是求和符号。</span><br><span class="line">  例如：</span><br><span class="line">  $$</span><br><span class="line">  $\sum^&#123;k&#125;_&#123;i = 1&#125;&#123;x / i&#125;$</span><br><span class="line">  $$</span><br></pre></td></tr></table></figure>
-
-
-
+<li>
+<p>长的规范的代码可以适用代码块，使用键盘中<code>1</code>左边的点，输入两行这个点，每行三个，第一行行末输入代码的语言。</p>
 </li>
-</ul>
-<ul>
-<li>文字显示控制​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">flowchat</span><br><span class="line">flow</span><br><span class="line">st=&gt;start: Start</span><br><span class="line">op=&gt;operation: Your Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">我们可能有时候需要对文本加粗、高亮等，这里markdown也提供了支持。</span><br><span class="line"></span><br><span class="line">每种效果可以叠加使用。</span><br><span class="line"></span><br><span class="line">```markdown</span><br><span class="line">*斜体*</span><br><span class="line">**加粗**</span><br><span class="line">==高亮==</span><br><span class="line">~~删除~~</span><br><span class="line">***斜体并加粗***</span><br><span class="line">==*斜体并高亮*==</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li><p>表格</p>
+<li>
+<p>示例</p>
+<p>C语言中使用<code>#include&lt;&gt;</code>引入头文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="数学公式"><a class="header-anchor" href="#数学公式"></a>数学公式</h2>
+<p>当我们需要插入数学公式，并且想要漂亮一些，可以使用数学公式的语法，更多的markdown数学转义符号请自行搜索，很容易搜到的。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在数学中$\sum$ 是求和符号。</span><br><span class="line">例如：</span><br><span class="line">$$</span><br><span class="line">$\sum^&#123;k&#125;_&#123;i = 1&#125;&#123;x / i&#125;$</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<h2 id="文字显示控制"><a class="header-anchor" href="#文字显示控制"></a>文字显示控制</h2>
+<p>我们可能有时候需要对文本加粗、高亮等，这里markdown也提供了支持。</p>
+<p>每种效果可以叠加使用。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**加粗**</span></span><br><span class="line">==高亮==</span><br><span class="line">~~删除~~</span><br><span class="line"><span class="strong">***斜体并加粗**</span>*</span><br><span class="line">==<span class="emphasis">*斜体并高亮*</span>==</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a class="header-anchor" href="#表格"></a>表格</h2>
 <p>当然了， 常用的表格markdown也是支持的。</p>
 <p>通过冒号可以控制对齐方式</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|first head|second head|third head|</span><br><span class="line">|:--|:--:|--:|</span><br><span class="line">|左对齐列|中心对齐列|右侧对齐列|</span><br><span class="line">|asd|fgh|jkl|</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>脚注</p>
+<h2 id="脚注"><a class="header-anchor" href="#脚注"></a>脚注</h2>
 <p>markdown也是支持脚注的。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可以这样使用脚注[^1]</span><br><span class="line">[<span class="symbol">^1</span>]:<span class="link">脚注1的内容</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分割线</p>
+<h2 id="分割线"><a class="header-anchor" href="#分割线"></a>分割线</h2>
 <p>当我们想要分割两段内容的时候可以用分割线</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上面的内容</span><br><span class="line">---</span><br><span class="line">下面的内容</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>引入图像与链接</p>
+<h2 id="引入图像与链接"><a class="header-anchor" href="#引入图像与链接"></a>引入图像与链接</h2>
 <p>引入图像和链接是必不可少的功能。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Linux引入图片</span>](<span class="link">/home/UserName/1.jpg</span>)</span><br><span class="line">![<span class="string">windows引入图片</span>](<span class="link">C:\Users\UserName\Downloads\2.png</span>)</span><br><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)</span><br><span class="line">[<span class="symbol">参考链接</span>]: <span class="link">www.baidu.com</span></span><br><span class="line">&lt;www.baidu.com&gt;</span><br><span class="line">[<span class="string">页内链接</span>](<span class="link">#一级标题</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>目录树</p>
+<h2 id="目录树"><a class="header-anchor" href="#目录树"></a>目录树</h2>
 <p>当文本过长，需要加上目录树。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">文本1</span><br><span class="line"></span><br><span class="line">[TOC]</span><br><span class="line"></span><br><span class="line">文本2</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>emoji表情</p>
+<h2 id="emoji表情"><a class="header-anchor" href="#emoji表情"></a>emoji表情</h2>
 <p>有些markdown编辑器是支持emoji表情插入的。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile:</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>文本折叠</p>
+<h2 id="文本折叠"><a class="header-anchor" href="#文本折叠"></a>文本折叠</h2>
 <p>当我们的某个段落太长需要折叠起来，markdown貌似没有原生语法支持折叠，</p>
 <p>但是有些markdown编辑器是支持HTML语法的，这里可以使用HTML实现。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span>测试标题<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">测试文本</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>注释</p>
+<h2 id="注释"><a class="header-anchor" href="#注释"></a>注释</h2>
 <p>markdown当然也有像C语言中<code>//</code>一样的注释</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--这是注释--&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>流程图</p>
+<h2 id="流程图"><a class="header-anchor" href="#流程图"></a>流程图</h2>
 <p>markdown当然也可以画流程图</p>
+<p>按照上面插入代码的方式，按照下面的例子编写代码插入到代码块中</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">```mermaid</span></span><br><span class="line"><span class="code">flowchat</span></span><br><span class="line"><span class="code">flow</span></span><br><span class="line"><span class="code">st=&gt;start: Start</span></span><br><span class="line"><span class="code">op=&gt;operation: Your Operation</span></span><br><span class="line"><span class="code">cond=&gt;condition: Yes or No?</span></span><br><span class="line"><span class="code">e=&gt;end</span></span><br><span class="line"><span class="code">st-&gt;op-&gt;cond</span></span><br><span class="line"><span class="code">cond(yes)-&gt;e</span></span><br><span class="line"><span class="code">cond(no)-&gt;op</span></span><br><span class="line"><span class="code">​</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* 时序图</span><br><span class="line"></span><br><span class="line">  既然支持流程图，当然也支持时序图</span><br><span class="line"></span><br><span class="line">  ```markdown</span><br><span class="line">  ​```mermaid</span><br><span class="line">  sequenceDiagram</span><br><span class="line">  X-&gt;&gt;Y: 一起去电影院怎么样？</span><br><span class="line">  Note right of Y: 去不去</span><br><span class="line">  Y-&gt;&gt;X: 好的，我等你！</span><br><span class="line">  ​</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* 特殊字符需要使用Unicode编码。</span><br><span class="line"></span><br><span class="line">* 甘特图</span><br><span class="line"></span><br><span class="line">  ```markdown</span><br><span class="line">  ​```mermaid</span><br><span class="line">  	gantt</span><br><span class="line">      	dateFormat  YYYY-MM-DD</span><br><span class="line">          title 软件开发甘特图</span><br><span class="line">          </span><br><span class="line">          section 设计</span><br><span class="line">          	需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">          	原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">          	UI设计                    :         des3, after des2, 5d</span><br><span class="line">      		未来任务                   :         des4, after des3, 5d</span><br><span class="line">      </span><br><span class="line">      	section 开发</span><br><span class="line">              学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">              设计框架                             :crit, done, after des2, 2d</span><br><span class="line">              开发                                 :crit, active, 3d</span><br><span class="line">              未来任务                              :crit, 5d</span><br><span class="line">              耍                                   :2d</span><br><span class="line">      </span><br><span class="line">          section 测试</span><br><span class="line">              功能测试                              :active, a1, after des3, 3d</span><br><span class="line">              压力测试                               :after a1  , 20h</span><br><span class="line">              测试报告                               : 48h</span><br><span class="line">  ​</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 时序图</span><br><span class="line"></span><br><span class="line">既然支持流程图，当然也支持时序图</span><br><span class="line"></span><br><span class="line">```markdown</span><br><span class="line">​```mermaid</span><br><span class="line">sequenceDiagram</span><br><span class="line">X-&gt;&gt;Y: 一起去电影院怎么样？</span><br><span class="line">Note right of Y: 去不去</span><br><span class="line">Y-&gt;&gt;X: 好的，我等你！</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 甘特图</span><br><span class="line"></span><br><span class="line">```markdown</span><br><span class="line">​```mermaid</span><br><span class="line">	gantt</span><br><span class="line">    	dateFormat  YYYY-MM-DD</span><br><span class="line">        title 软件开发甘特图</span><br><span class="line">        </span><br><span class="line">        section 设计</span><br><span class="line">        	需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">        	原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">        	UI设计                    :         des3, after des2, 5d</span><br><span class="line">    		未来任务                   :         des4, after des3, 5d</span><br><span class="line">    </span><br><span class="line">    	section 开发</span><br><span class="line">            学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">            设计框架                             :crit, done, after des2, 2d</span><br><span class="line">            开发                                 :crit, active, 3d</span><br><span class="line">            未来任务                              :crit, 5d</span><br><span class="line">            耍                                   :2d</span><br><span class="line">    </span><br><span class="line">        section 测试</span><br><span class="line">            功能测试                              :active, a1, after des3, 3d</span><br><span class="line">            压力测试                               :after a1  , 20h</span><br><span class="line">            测试报告                               : 48h</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
 <pre><code>
 [来自百度经验](https://jingyan.baidu.com/article/48b558e3035d9a7f38c09aeb.html)
-</code></pre></li>
-</ul>
+
+</code></pre>
 	
 	</div>
 	
@@ -454,6 +398,38 @@
 			
 					<li>
 						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+
+
+概述
+直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
+排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+
+
+适用场景
+插入排序在对几乎...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/16/hexo低成本搭建静态网页博客/" title="hexo低成本搭建静态网页博客">
 								hexo低成本搭建静态网页博客			
 							</a>
@@ -462,9 +438,12 @@
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+								引言
+好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
 准备知识
-github最基本的使用...
+
+github最...
 							</p>
 						</div>
 
@@ -488,8 +467,9 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
+
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头...
 							</p>
 						</div>
 
@@ -513,9 +493,11 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
+
 准备知识
 
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
 							</p>
 						</div>
 
@@ -539,7 +521,10 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
+
+原题目：
+Description
+There is a rectangular room, covered with square tiles. Each tile is colored either red or black. ...
 							</p>
 						</div>
 
@@ -566,12 +551,16 @@ github最基本的使用...
 题目传送
 
 
-题目思路：拓展欧几里德：
-$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
+
+题目思路：
+拓展欧几里德：
+$$
+ax+b=cy+d; &lt;=&gt; ax+cy=d-b;
+$$
 
 
 代码：
-123456789101112131415161718192021222324252627282930313...
+12345678910111213141516171819202122232425262728293...
 							</p>
 						</div>
 
@@ -595,7 +584,11 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 							</p>
 							<p class="relate-post-content">
 								
-题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
+
+题目描述：
+首先输入一个N；代表测试数据的个数;
+然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）
+然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或...
 							</p>
 						</div>
 
@@ -619,10 +612,12 @@ $$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备
 
+
 for循环
-12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------123...
+12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------1...
 							</p>
 						</div>
 
@@ -646,16 +641,20 @@ for循环
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
+
 df:该工具用来获取文件系统挂载信息。
+
 
 awk：该工具用来处理 df的数据。
 
 
 
+
 代码：
-   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" |...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev...
 							</p>
 						</div>
 
@@ -679,14 +678,16 @@ awk：该工具用来处理 df的数据。
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
 ps 该工具用来获取进程信息
 awk该工具用来处理数据
 
 
+
 代码
-1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
+1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -...
 							</p>
 						</div>
 
@@ -694,37 +695,6 @@ awk该工具用来处理数据
 							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5w3l27.jpg" alt="进程信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/内存信息获取/" title="内存信息获取">
-								内存信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-free：该工具用来获取内存信息
-
-grep：该工具用来筛选数据
-
-awk&#39;：该工具用来处理数据
-
-代码：
-123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/内存信息获取/" title="内存信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/xl/wallhaven-xldjkv.jpg" alt="内存信息获取"/>
 							</a>
 						</div>
 					</li>											

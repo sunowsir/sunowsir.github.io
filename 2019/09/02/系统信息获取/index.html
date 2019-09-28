@@ -278,7 +278,8 @@
 <p>欢迎大家转载，转载请注明出处，谢谢！</p>
 </blockquote>
 <ul>
-<li><p>知识准备</p>
+<li>
+<p>知识准备</p>
 <ol>
 <li><code>date</code>：获取当前时间</li>
 <li><code>/etc/issue</code>：系统版本信息</li>
@@ -289,10 +290,9 @@
 <li><code>hostname</code>：主机名</li>
 </ol>
 </li>
-<li><p>代码</p>
+<li>
+<p>代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在时间</span></span><br><span class="line">nowdate=`date +<span class="string">"%Y-%m-%d__%H:%M:%S"</span>`</span><br><span class="line"><span class="comment"># 系统版本</span></span><br><span class="line">os_v=`cat /etc/issue | awk <span class="string">'&#123;printf("%s_%s", $1, $2);&#125;'</span>`</span><br><span class="line"><span class="comment"># 内核版本</span></span><br><span class="line">ker_v=`uname -r`</span><br><span class="line"><span class="comment"># 运行时间和负载信息</span></span><br><span class="line">run_and_load=`uptime -p | tr -s <span class="string">" "</span> <span class="string">"\n"</span> | awk <span class="string">'&#123;printf("_%s", $1)&#125;'</span>``cat /proc/loadavg | awk <span class="string">'&#123; printf(" %s %s %s", $1, $2, $3); &#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 负载信息</span></span><br><span class="line"><span class="comment">#load_info=`uptime | awk '&#123;printf ("%s %s %s", $(NF - 2), $(NF - 1), $NF)&#125;' | tr -s "," " "`</span></span><br><span class="line"></span><br><span class="line">disk_total=`df -m | grep <span class="string">"^/dev/"</span> | awk <span class="string">'BEGIN&#123;t_num=0; u_num = 0&#125;&#123;if (NR &gt; 1) &#123;t_num = t_num + $2; u_num += $3 &#125;&#125;END&#123;printf ("%d:%d", t_num, u_num)&#125;'</span>`</span><br><span class="line">disk_used=`<span class="built_in">echo</span> <span class="variable">$disk_total</span> | cut -d <span class="string">":"</span> -f2`</span><br><span class="line">disk_total=`<span class="built_in">echo</span> <span class="variable">$disk_total</span> | cut -d <span class="string">":"</span> -f1`</span><br><span class="line"></span><br><span class="line"><span class="comment">#内存大小</span></span><br><span class="line">mem_total=`free -m | sed -n <span class="string">"2p"</span> | awk <span class="string">'&#123;printf("%s", $2)&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 磁盘占用百分比</span></span><br><span class="line">per_disk_used=`<span class="built_in">echo</span> <span class="string">"<span class="variable">$disk_total</span> <span class="variable">$disk_used</span>"</span> | awk <span class="string">'&#123;printf("%d", $2/$1 * 100);&#125;'</span>`</span><br><span class="line"><span class="comment"># 内存占用百分比</span></span><br><span class="line">per_memo=`free -m | sed -n <span class="string">"2p"</span> | awk <span class="string">'&#123;printf("%d", $3/$2 * 100);&#125;'</span>`</span><br><span class="line"><span class="comment"># CPU温度</span></span><br><span class="line">cpu_temp=`cat /sys/class/thermal/thermal_zone0/temp | awk <span class="string">'&#123;printf("%d", $1 / 1000);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 磁盘报警级别</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$per_disk_used</span> -ge 0 &amp;&amp; <span class="variable">$per_disk_used</span> -le 80  ]];<span class="keyword">then</span></span><br><span class="line">    disk_warn=<span class="string">"normal"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> [[ <span class="variable">$per_disk_used</span> -ge 81 &amp;&amp; <span class="variable">$per_disk_used</span> -le 90 ]];<span class="keyword">then</span></span><br><span class="line">    disk_warn=<span class="string">"note"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    disk_warn=<span class="string">"warning"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 内存报警级别</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$per_memo</span> -ge 0 &amp;&amp; <span class="variable">$per_memo</span> -le 70  ]];<span class="keyword">then</span></span><br><span class="line">    memo_warn=<span class="string">"normal"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> [[ <span class="variable">$per_memo</span> -ge 71 &amp;&amp; <span class="variable">$per_memo</span> -le 80 ]];<span class="keyword">then</span></span><br><span class="line">    memo_warn=<span class="string">"note"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    memo_warn=<span class="string">"warning"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># CPU温度报警级别</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$cpu_temp</span> -ge 0 &amp;&amp; <span class="variable">$cpu_temp</span> -le 50  ]];<span class="keyword">then</span></span><br><span class="line">    cpu_warn=<span class="string">"normal"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> [[ <span class="variable">$cpu_temp</span> -ge 51 &amp;&amp; <span class="variable">$cpu_temp</span> -le 70 ]];<span class="keyword">then</span></span><br><span class="line">    cpu_warn=<span class="string">"note"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    cpu_warn=<span class="string">"warning"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#主机名</span></span><br><span class="line">hname=`hostname`</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$nowdate</span> <span class="variable">$hname</span> <span class="variable">$os_v</span> <span class="variable">$ker_v</span> <span class="variable">$&#123;run_and_load&#125;</span> <span class="variable">$&#123;disk_total&#125;</span>M <span class="variable">$&#123;per_disk_used&#125;</span>% <span class="variable">$&#123;mem_total&#125;</span>M <span class="variable">$&#123;per_memo&#125;</span>% <span class="variable">$&#123;cpu_temp&#125;</span> <span class="variable">$&#123;disk_warn&#125;</span> <span class="variable">$&#123;memo_warn&#125;</span> <span class="variable">$&#123;cpu_warn&#125;</span>"</span></span><br></pre></td></tr></table></figure>
-
-
 </li>
 </ul>
 	
@@ -348,9 +348,11 @@
 							</p>
 							<p class="relate-post-content">
 								
+
 准备知识
 
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
 							</p>
 						</div>
 
@@ -374,10 +376,12 @@
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备
 
+
 for循环
-12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------123...
+12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------1...
 							</p>
 						</div>
 
@@ -401,16 +405,20 @@ for循环
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
+
 df:该工具用来获取文件系统挂载信息。
+
 
 awk：该工具用来处理 df的数据。
 
 
 
+
 代码：
-   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" |...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev...
 							</p>
 						</div>
 
@@ -434,14 +442,16 @@ awk：该工具用来处理 df的数据。
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
 ps 该工具用来获取进程信息
 awk该工具用来处理数据
 
 
+
 代码
-1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
+1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -...
 							</p>
 						</div>
 
@@ -465,11 +475,15 @@ awk该工具用来处理数据
 							</p>
 							<p class="relate-post-content">
 								
+
 free：该工具用来获取内存信息
+
 
 grep：该工具用来筛选数据
 
-awk&#39;：该工具用来处理数据
+
+awk'：该工具用来处理数据
+
 
 代码：
 123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
@@ -499,6 +513,7 @@ awk&#39;：该工具用来处理数据
 欢迎大家转载，转载请注明出处，谢谢！
 
 
+
 知识准备
 
 w：获取当前登录信息
@@ -510,8 +525,8 @@ head：显示开头几行
 awk：文本处理工具
 
 
-代码
-1...
+
+代码...
 							</p>
 						</div>
 
@@ -538,7 +553,10 @@ awk：文本处理工具
 项目地址
 
 
-简介：使用C语言和bash脚本实现的服务器健康监控系统。服务器端通过执行bash脚本获取健康信息，利用socket即时发送到监控端主机。
+
+简介：
+使用C语言和bash脚本实现的服务器健康监控系统。服务器端通过执行bash脚本获取健康信息，利用socket即时发送到监控端主机。
+
 
 监测数据类型：
 
@@ -548,7 +566,7 @@ awk：文本处理工具
 cpu
 内存
 硬盘
-恶意进...
+...
 							</p>
 						</div>
 
@@ -556,6 +574,38 @@ cpu
 							<a href="/2019/09/02/服务器健康监控/" title="服务器健康监控">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/2e/wallhaven-2eop2x.jpg" alt="服务器健康监控"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+
+
+概述
+直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
+排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+
+
+适用场景
+插入排序在对几乎...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
 							</a>
 						</div>
 					</li>											
@@ -571,9 +621,12 @@ cpu
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+								引言
+好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
 准备知识
-github最基本的使用...
+
+github最...
 							</p>
 						</div>
 
@@ -597,8 +650,9 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
+
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头...
 							</p>
 						</div>
 
@@ -606,30 +660,6 @@ github最基本的使用...
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/POJ-1979/" title="POJ-1979">
-								POJ-1979			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											

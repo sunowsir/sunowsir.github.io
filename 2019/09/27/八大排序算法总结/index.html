@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      服务器健康监控 | Sunow&#39;s Club
+      八大排序算法总结 | Sunow&#39;s Club
     
   </title>
   <meta name="author" content="sunowsir">
@@ -148,7 +148,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《服务器健康监控》
+			当前文章&nbsp;:&nbsp;《八大排序算法总结》
 		
 	</p>
 
@@ -204,6 +204,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -211,8 +223,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/09/02/服务器健康监控/" itemprop="url">
-		服务器健康监控
+	<a href="/2019/09/27/八大排序算法总结/" itemprop="url">
+		八大排序算法总结
 	</a>
 
 	</div>
@@ -225,9 +237,9 @@
 
 	发布于
 
-	<a href="/2019/09/02/服务器健康监控/" itemprop="url">
-		<time datetime="2019-09-02T08:36:30.000Z" itemprop="datePublished">
-	  		2019-09-02
+	<a href="/2019/09/27/八大排序算法总结/" itemprop="url">
+		<time datetime="2019-09-27T06:40:10.000Z" itemprop="datePublished">
+	  		2019-09-27
 	  </time>
 	</a>
 	&nbsp;
@@ -243,9 +255,9 @@
 
 	更新于
 
-	<a href="/2019/09/02/服务器健康监控/" itemprop="url">
-		<time datetime="2019-09-02T08:36:30.000Z" itemprop="dateUpdated">
-	  		2019-09-16
+	<a href="/2019/09/27/八大排序算法总结/" itemprop="url">
+		<time datetime="2019-09-27T06:40:10.000Z" itemprop="dateUpdated">
+	  		2019-09-28
 	  </time>
 	</a> 
 
@@ -256,16 +268,12 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/linux/" class=" ">
-			linux
+		<a href="/tags/note/" class=" ">
+			note
 		</a>
 	
-		<a href="/tags/Project/" class=" ">
-			Project
-		</a>
-	
-		<a href="/tags/C/" class=" ">
-			C
+		<a href="/tags/alogrithm/" class=" ">
+			alogrithm
 		</a>
 	
 		
@@ -278,137 +286,67 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<blockquote>
-<p><a href="https://github.com/sunowsir/SHMS" target="_blank" rel="noopener">项目地址</a></p>
-</blockquote>
+		<h2 id="直接插入排序算法"><a class="header-anchor" href="#直接插入排序算法"></a>直接插入排序算法</h2>
 <ul>
 <li>
-<p>简介：<br>
-使用C语言和bash脚本实现的服务器健康监控系统。服务器端通过执行bash脚本获取健康信息，利用socket即时发送到监控端主机。</p>
+<p>概述</p>
+<p>直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。</p>
+<p>排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。</p>
 </li>
 <li>
-<p>监测数据类型：</p>
+<p>适用场景</p>
+<p>插入排序在对几乎已经排好序的数据操作时，效率高，即可以达到线性排序的效率，</p>
+<p>但插入排序一般来说是低效的，因为插入排序每次只能将数据移动一位 。</p>
+</li>
+<li>
+<p>数据结构</p>
+<p>直接插入排序使用的数据结构是数组 。</p>
+</li>
+<li>
+<p>优化</p>
+<p>在给当前待排序元素在已排序部分找到一个合适的位置并且待排序数据相对较多的时候，由于已排序部分元素是有序的，因此这个过程可以使用二分法，以优化排序的时间复杂度。</p>
+</li>
+<li>
+<p>归类</p>
+<p>in-place（原地算法：基本上不需要额外的空间）、稳定排序算法。</p>
+</li>
+<li>
+<p>空间复杂度</p>
+<p>直接插入排序是in-place，因此其空间复杂度是 O(1) 。</p>
+</li>
+<li>
+<p>时间复杂度</p>
+<ul>
+<li>
+<p>最优</p>
+<p>最优的情况是待排序数据为已排序好的期望顺序，此时每次从待排序部分拿出一个元素只需要与待排序部分中最后一个元素相比较一次，需要比较 $n - 1$ 次，因此其复杂度为 $O(n)$ 。</p>
+</li>
+<li>
+<p>最坏</p>
+<p>最坏的情况是待排序数据为已排序好的，但是其顺序正好与期望顺序相反，此时每次从待排序部分拿出一个元素，该元素需要与其前面的已排序部分中的每一个元素进行比较和交换，其比较或交换的次数为 $0 + 1 + 2 + … + (n - 2) + (n - 1)$ 也就是　$ \frac{n * (n - 1)}{2}$ ，因此其复杂度为 $O(n^{2})$ .</p>
+</li>
+<li>
+<p>平均</p>
+<p>$O(n{2})$</p>
+</li>
+</ul>
+</li>
+<li>
+<p>代码示例</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertion_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j,key;</span><br><span class="line">        <span class="keyword">for</span> (i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">                key = arr[i];</span><br><span class="line">                j=i<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">while</span>((j&gt;=<span class="number">0</span>) &amp;&amp; (arr[j]&gt;key)) &#123;</span><br><span class="line">                        arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">                        j--;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[j+<span class="number">1</span>] = key;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="希尔排序"><a class="header-anchor" href="#希尔排序"></a>希尔排序</h2>
 <blockquote>
-<p>采用bash脚本获取相关信息</p>
+<p>待更新</p>
 </blockquote>
-<ul>
-<li>cpu</li>
-<li>内存</li>
-<li>硬盘</li>
-<li>恶意进程</li>
-<li>系统信息</li>
-<li>登录用户信息</li>
-</ul>
-</li>
-<li>
-<p>技术说明：</p>
-<ul>
-<li>C语言socket编程。</li>
-<li>C语言多线程与多进程编程。</li>
-<li>数据结构实现（链表）。</li>
-<li>linux的bash脚本编程。</li>
-<li>linux systemd 的使用。</li>
-</ul>
-</li>
-<li>
-<p>架构：</p>
-<ul>
-<li>
-<p>监控端（Master）</p>
-<ul>
-<li>
-<p>线程一：</p>
-<p>循环监听：使用socket监听，将收到的连接的套接字存储到长度最短的链表里。</p>
-</li>
-<li>
-<p>线程二：</p>
-<p>数据接收：通过读取配置文件创建若干数据发送的线程，每个线程分配一个链表。</p>
-<p>从链表读取一个套接字，接收六组数据，然后断开连接，将该套接字从链表中删除。</p>
-<p>保证数据的可靠性：六组数据，每组数据接收前，发送约定好的数据类型标志码，通知服务器本组应该发送的数据的类型。然后接收数据，存储到本地。</p>
-</li>
-<li>
-<p>线程三：</p>
-<p>紧急连接：单独开启通道，接受服务器连接，发送紧急报警信息。</p>
-<p>该数据单独存放在发送者目录下。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>服务器端（Server）:</p>
-<ul>
-<li>
-<p>线程一：</p>
-<p>数据监测：运行监测脚本，将监测数据存储到文件。</p>
-</li>
-<li>
-<p>线程二：</p>
-<p>数据发送：根据监控端发来的数据类型读取相应监测数据的日志文件，发送给监控端。</p>
-<p>通过分析监测数据判断是否有警报信息，发送警报信息。</p>
-<p>数据获取与警报信息的即时性：无法做到数据发送的实时性，但是可以保证监测数据的实时性。每次只发送每种类型数据日志文件中的最上面一行，一共六组数据发送完成关闭连接。该方式牺牲一定的资源与数据传输的实时性，来保证线程一的一定程度的实时性。若非如此，只能采用文件锁来避免文件指针的冲突，这将会导致线程一阻塞，从而导致既服务法达到信息传输的实时性又无法达到监测数据与警报信息的实时性。</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>相关文件：</p>
-<ul>
-<li>配置文件：
-<ul>
-<li>监控端：<code>/etc/SHMS-Master/master.conf</code></li>
-<li>服务端；<code>/etc/SHMS-Server/server.conf</code></li>
-</ul>
-</li>
-<li>运行日志文件：
-<ul>
-<li>监控端：<code>/var/log/SHMS-Master/SHMS-Master.log</code></li>
-<li>服务端：<code>/var/log/SHMS-Server/SHMS-Server.log</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>编译安装：</p>
-<ul>
-<li>进入目录：<code>cd ./Server/build/</code>(服务器端)或<code>cd ./Master/build/</code>(监控端)</li>
-<li>清空编译文件：<code>make clean</code></li>
-<li>编译链接生成可执行程序：<code>make</code></li>
-<li>添加到系统服务(使用systemd)：<code>sudo make install</code></li>
-</ul>
-</li>
-<li>
-<p>deb包安装：</p>
-<ul>
-<li>下载deb包：<a href="https://github.com/sunowsir/SHMS/releases" target="_blank" rel="noopener">release页面</a></li>
-<li>安装：<code>sudo dpkg -i xxx.deb</code></li>
-</ul>
-</li>
-<li>
-<p>服务操作：</p>
-<ul>
-<li>服务器端：
-<ul>
-<li>查看服务状态：<code>sudo systemctl status SHMS-Server.service</code></li>
-<li>启动服务：<code>sudo systemctl start SHMS-Server.service</code></li>
-<li>停止服务：<code>sudo systemctl stop SHMS-Server.service</code></li>
-<li>重启服务：<code>sudo systemctl restart SHMS-Server.service</code></li>
-</ul>
-</li>
-<li>监控端：
-<ul>
-<li>查看服务状态：<code>sudo systemctl status SHMS-Master.service</code></li>
-<li>启动服务：<code>sudo systemctl start SHMS-Master.service</code></li>
-<li>停止服务：<code>sudo systemctl stop SHMS-Master.service</code></li>
-<li>重启服务：<code>sudo systemctl restart SHMS-Master.service</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<hr>
+<p>资源引用声明：</p>
+<p><a href="https://zh.wikipedia.org/wiki/" target="_blank" rel="noopener">维基百科</a> : <a href="https://zh.wikipedia.org/wiki/" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/</a></p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/2e/wallhaven-2eop2x.jpg"></div>
+	<div id="current-post-cover" data-scr="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -423,12 +361,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/09/02/HDU-1222/" title="HDU-1222" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/09/02/Linux三剑客之awk的使用/" title="Linux三剑客之awk的使用" rel="next">
+			<a href="/2019/09/16/hexo低成本搭建静态网页博客/" title="hexo低成本搭建静态网页博客" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -446,275 +380,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/CPU信息获取/" title="CPU信息获取">
-								CPU信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-
-准备知识
-
-
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/BASH脚本实现素数线性筛/" title="BASH脚本实现素数线性筛">
-								BASH脚本实现素数线性筛			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-
-知识准备
-
-
-for循环
-12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------1...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/BASH脚本实现素数线性筛/" title="BASH脚本实现素数线性筛">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-8396gk.jpg" alt="BASH脚本实现素数线性筛"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">
-								磁盘信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-
-知识准备：
-
-
-df:该工具用来获取文件系统挂载信息。
-
-
-awk：该工具用来处理 df的数据。
-
-
-
-
-代码：
-   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/磁盘信息获取/" title="磁盘信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5ymwp.jpg" alt="磁盘信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/进程信息获取/" title="进程信息获取">
-								进程信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-
-知识准备：
-
-ps 该工具用来获取进程信息
-awk该工具用来处理数据
-
-
-
-代码
-1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/进程信息获取/" title="进程信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5w3l27.jpg" alt="进程信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/内存信息获取/" title="内存信息获取">
-								内存信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-
-free：该工具用来获取内存信息
-
-
-grep：该工具用来筛选数据
-
-
-awk'：该工具用来处理数据
-
-
-代码：
-123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/内存信息获取/" title="内存信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/xl/wallhaven-xldjkv.jpg" alt="内存信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/系统信息获取/" title="系统信息获取">
-								系统信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-欢迎大家转载，转载请注明出处，谢谢！
-
-
-
-知识准备
-
-date：获取当前时间
-/etc/issue：系统版本信息
-/proc/loadavg：负载信息
-df：获取磁盘信息
-free：内存信息
-/sys/class/thermal/...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/系统信息获取/" title="系统信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/5w/wallhaven-5wm328.jpg" alt="系统信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/用户信息获取/" title="用户信息获取">
-								用户信息获取			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-欢迎大家转载，转载请注明出处，谢谢！
-
-
-
-知识准备
-
-w：获取当前登录信息
-grep：对数据进行筛选
-cut：对字符串进行剪切
-sort：排序
-uniq：统计每个字符串个数
-head：显示开头几行
-awk：文本处理工具
-
-
-
-代码...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/用户信息获取/" title="用户信息获取">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/vg/wallhaven-vgdj1m.jpg" alt="用户信息获取"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
-								八大排序算法总结			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 27日, 2019				
-							</p>
-							<p class="relate-post-content">
-								直接插入排序算法
-
-
-概述
-直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
-排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
-
-
-适用场景
-插入排序在对几乎...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -746,6 +411,205 @@ github最...
 			
 					<li>
 						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">
+								进程、线程及共享内存学习笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								进程、线程及共享内存学习笔记
+
+系统环境：deepin Linux，语言环境：Linux C
+欢迎大家转载，转载请注明出处，谢谢！
+
+
+
+理论基础：
+
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/进程、线程及共享内存学习笔记/" title="进程、线程及共享内存学习笔记">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym233x.jpg" alt="进程、线程及共享内存学习笔记"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux常见配置文件/" title="Linux常见配置文件">
+								Linux常见配置文件			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+转载自CoderZhuang，对CoderZhuang先生的博客进行补充和整理。
+
+
+/etc 配置文件
+
+/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息
+
+/etc/group...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux常见配置文件/" title="Linux常见配置文件">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/2e/wallhaven-2eod59.jpg" alt="Linux常见配置文件"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/deepin系统使用笔记/" title="deepin系统使用笔记">
+								deepin系统使用笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+
+如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。
+图形界面相关的东西自行探索。
+
+
+deepin系统安装后推荐配置
+sudo apt-get install -y git wget curl openss...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/deepin系统使用笔记/" title="deepin系统使用笔记">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5yerq.jpg" alt="deepin系统使用笔记"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux三剑客之awk的使用/" title="Linux三剑客之awk的使用">
+								Linux三剑客之awk的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易
+内置变量与运算符数据来自RUNOOB
+
+
+
+简单用法
+12awk [参数] 'awk代码'awk [参数] -f awk脚本文件
+
+
+常用参数
+1234...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux三剑客之awk的使用/" title="Linux三剑客之awk的使用">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/g8/wallhaven-g8md6l.jpg" alt="Linux三剑客之awk的使用"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/linux三剑客之grep的使用/" title="linux三剑客之grep的使用">
+								linux三剑客之grep的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+部分内容源自网络和grep帮助信息。
+
+用法
+1grep [参数选项] [模式串] [文件或目录]
+常用参数选项说明
+
+
+-o只显示与模式串匹配的内容。
+
+
+-E 使用扩展正则表达式。
+栗子：
+1cat index.html | g...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/linux三剑客之grep的使用/" title="linux三剑客之grep的使用">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/39/wallhaven-392lk9.jpg" alt="linux三剑客之grep的使用"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/MYSQL-笔记1/" title="MYSQL-笔记1">
+								MYSQL-笔记1			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+在MYSQL中查询操作涉及内容
+
+[TOC]
+function
+
+对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
+
+
+COUNT ： 统计
+SUM ： 求和
+AVG ： 平均数
+
+more about ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/MYSQL-笔记1/" title="MYSQL-笔记1">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/6k/wallhaven-6kyk9w.jpg" alt="MYSQL-笔记1"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/02/HDU-1276/" title="HDU-1276">
 								HDU-1276			
 							</a>
@@ -765,6 +629,61 @@ github最...
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/CPU信息获取/" title="CPU信息获取">
+								CPU信息获取			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+
+准备知识
+
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/CPU信息获取/" title="CPU信息获取">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wyd5jx.jpg" alt="CPU信息获取"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/POJ-1979/" title="POJ-1979">
+								POJ-1979			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+
+原题目：
+Description
+There is a rectangular room, covered with square tiles. Each tile is colored either red or black. ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											

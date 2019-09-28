@@ -275,18 +275,21 @@
 
 	<div class="article-content" id="article-content">
 		<ul>
-<li><p>准备知识</p>
+<li>
+<p>准备知识</p>
 <ol>
-<li><p><code>/proc</code>文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是<code>/proc</code>目录不是真实存储在硬盘中的，它的数据存储在内存中，但是由于它和其他目录一样把自己注册到虚拟文件系统层了，所以我们还是能看到这个目录相关信息，然而只有虚拟文件系统层调用它的时候，他才会建立相关文件和目录并与内核沟通获取相关信息。</p>
+<li>
+<p><code>/proc</code>文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是<code>/proc</code>目录不是真实存储在硬盘中的，它的数据存储在内存中，但是由于它和其他目录一样把自己注册到虚拟文件系统层了，所以我们还是能看到这个目录相关信息，然而只有虚拟文件系统层调用它的时候，他才会建立相关文件和目录并与内核沟通获取相关信息。</p>
 </li>
-<li><p>上面我们说道<code>/proc</code> 文件系统存储着内核控制相关信息的目录，该目录下的<code>/proc/stat</code>文件存储的是<code>CPU</code>相关信息，我们想要获取<code>CPU</code>相关信息最直接和最快速的方式就是读取该文件，其实<code>Linux下</code>很多的工具都是读取的这个文件。在这个文件中包含了所有的<code>CPU</code>活动信息，并且该文件中所有值都是从系统启动算起直到访问文件的这一刻的数据。如下就是某一刻<code>/proc/stat</code>文件中的数据：</p>
+<li>
+<p>上面我们说道<code>/proc</code> 文件系统存储着内核控制相关信息的目录，该目录下的<code>/proc/stat</code>文件存储的是<code>CPU</code>相关信息，我们想要获取<code>CPU</code>相关信息最直接和最快速的方式就是读取该文件，其实<code>Linux下</code>很多的工具都是读取的这个文件。在这个文件中包含了所有的<code>CPU</code>活动信息，并且该文件中所有值都是从系统启动算起直到访问文件的这一刻的数据。如下就是某一刻<code>/proc/stat</code>文件中的数据：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cpu  499312 1086 227835 10498412 3803 0 10904 0 0 0</span><br><span class="line">cpu0 125361 278 56675 2626355 450 0 2242 0 0 0</span><br><span class="line">cpu1 124704 288 57768 2627741 350 0 2168 0 0 0</span><br><span class="line">cpu2 130284 261 55543 2620559 2442 0 1762 0 0 0</span><br><span class="line">cpu3 118961 258 57848 2623755 560 0 4731 0 0 0</span><br><span class="line">intr 46393945 9 924 0 0 0 0 0 0 1 14751 0 0 215 0 0 0 139800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4476 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 408029 0 283839 7963609 40 945 1535489 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span><br><span class="line">ctxt 124171702</span><br><span class="line">btime 1539737966</span><br><span class="line">processes 626819</span><br><span class="line">procs_running 4</span><br><span class="line">procs_blocked 0</span><br><span class="line">softirq 27922585 9163685 6158929 26 485 278010 0 160301 6495615 0 5665534</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>数据单位：jiffies</p>
 </blockquote>
 <ul>
-<li><p>如上数据中从cpu到cpu3五行（从左到右按顺序）每一列的含义如下：</p>
+<li>
+<p>如上数据中从cpu到cpu3五行（从左到右按顺序）每一列的含义如下：</p>
 <ol>
 <li><code>user</code>：如上<strong>499312</strong>、<strong>125361</strong>、<strong>124704</strong>等，用户态时间。</li>
 <li><code>nice</code>：如上<strong>1086</strong>等第二列数据，<code>nice</code>值为负数的进程所占时间。</li>
@@ -296,9 +299,12 @@
 <li><code>irq</code>：如上第六列数据，硬中断时间。</li>
 <li><code>softirq</code>如上第七列数据，软中断时间。</li>
 </ol>
-<p>$$<br>CPU_{time}=user_{line:1} +nice_{line:2} + system_{line:3} + idle_{line:4} + iowait_{line:5} + irq_{line:6} + sortirq_{line:7}<br>$$</p>
+<p>$$<br>
+CPU_{time}=user_{line:1} +nice_{line:2} + system_{line:3} + idle_{line:4} + iowait_{line:5} + irq_{line:6} + sortirq_{line:7}<br>
+$$</p>
 </li>
-<li><p>剩下的几行：</p>
+<li>
+<p>剩下的几行：</p>
 <ol>
 <li><code>initr</code>：中断次数</li>
 <li><code>ctxt</code>：交换次数</li>
@@ -308,15 +314,20 @@
 <li><code>procs_blocked</code>：当前被阻塞的任务数。</li>
 </ol>
 </li>
-<li><p><code>CPU</code>利用率计算可以采用两点采样取差值的方式：</p>
-<p>$$<br>CPU_{usage} = (idle_{第二次采样} - idle_{第一次采样}) / (CPU_{time第二次采样} - CPU_{time第一次采样}) * 100<br>$$</p>
+<li>
+<p><code>CPU</code>利用率计算可以采用两点采样取差值的方式：</p>
+<p>$$<br>
+CPU_{usage} = (idle_{第二次采样} - idle_{第一次采样}) / (CPU_{time第二次采样} - CPU_{time第一次采样}) * 100<br>
+$$</p>
 </li>
 </ul>
 </li>
-<li><p>CPU温度的获取：</p>
+<li>
+<p>CPU温度的获取：</p>
 <p>cpu温度存储在<code>/sys/class/thermal/thermal_zone0/temp</code>中，读取出的数值需要除以1000。</p>
 </li>
-<li><p>bash 工具：</p>
+<li>
+<p>bash 工具：</p>
 <ol>
 <li><code>cat</code>：工具用来强制读取一个文件。</li>
 <li><code>gerp</code>：工具用来筛选数据。</li>
@@ -324,17 +335,18 @@
 <li><code>uptime</code>：获取cpu负载信息</li>
 </ol>
 </li>
-<li><p>bash 数值计算：</p>
+<li>
+<p>bash 数值计算：</p>
 <p>bash中的数值计算比较方便的方式是双小括号：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">num=0</span><br><span class="line">((num++)) <span class="comment"># 在双小括号中可以正常使用C语言的数值计算语法</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;num&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 结果输出---------------</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
-<li><p>代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">time_and_load=`date +<span class="string">"%Y-%m-%d__%H:%M:%S "</span>``uptime | tr -s <span class="string">" "</span> <span class="string">"\n"</span> | tr -s <span class="string">","</span> <span class="string">" "</span> | awk NF | tail -3 | tr -s <span class="string">"\n"</span> <span class="string">" "</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 前</span></span><br><span class="line"><span class="comment"># 开机后总时间</span></span><br><span class="line">cpu_local1=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $2 + $3 + $4 + $5 + $6 + $7 + 8);&#125;'</span>`</span><br><span class="line"><span class="comment"># 开机后累计空闲</span></span><br><span class="line">cpu_idle1=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $5);&#125;'</span>`</span><br><span class="line"></span><br><span class="line">sleep 0.5s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 后</span></span><br><span class="line"><span class="comment"># 开机后总时间</span></span><br><span class="line">cpu_local2=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $2 + $3 + $4 + $5 + $6 + $7 + 8);&#125;'</span>`</span><br><span class="line"><span class="comment"># 开机后累计空闲</span></span><br><span class="line">cpu_idle2=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $5);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 内</span></span><br><span class="line">((cpu_local = <span class="variable">$cpu_local2</span> - <span class="variable">$cpu_local1</span>))</span><br><span class="line">((cpu_idle = <span class="variable">$cpu_idle2</span> - <span class="variable">$cpu_idle1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算cpu占用率</span></span><br><span class="line">cpu_occu=`<span class="built_in">echo</span> <span class="string">"<span class="variable">$cpu_local</span> <span class="variable">$cpu_idle</span>"</span> | awk <span class="string">'&#123;printf("%.2f%%", (1 - $2 / $1) * 100);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># CPU温度</span></span><br><span class="line">cpu_temp_info=`cat /sys/class/thermal/thermal_zone0/temp | awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">        if ($1 &gt;= 1000 &amp;&amp; $1 &lt; 50000) &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f normal", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        else if ($1 &gt;= 50000 &amp;&amp; $1 &lt;= 70000) &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f note", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        else &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f warning", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;'</span>`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;time_and_load&#125;</span><span class="variable">$&#123;cpu_occu&#125;</span> <span class="variable">$&#123;cpu_temp_info&#125;</span>"</span></span><br></pre></td></tr></table></figure>
-
+<li>
+<p>代码</p>
 </li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">time_and_load=`date +<span class="string">"%Y-%m-%d__%H:%M:%S "</span>``uptime | tr -s <span class="string">" "</span> <span class="string">"\n"</span> | tr -s <span class="string">","</span> <span class="string">" "</span> | awk NF | tail -3 | tr -s <span class="string">"\n"</span> <span class="string">" "</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 前</span></span><br><span class="line"><span class="comment"># 开机后总时间</span></span><br><span class="line">cpu_local1=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $2 + $3 + $4 + $5 + $6 + $7 + 8);&#125;'</span>`</span><br><span class="line"><span class="comment"># 开机后累计空闲</span></span><br><span class="line">cpu_idle1=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $5);&#125;'</span>`</span><br><span class="line"></span><br><span class="line">sleep 0.5s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 后</span></span><br><span class="line"><span class="comment"># 开机后总时间</span></span><br><span class="line">cpu_local2=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $2 + $3 + $4 + $5 + $6 + $7 + 8);&#125;'</span>`</span><br><span class="line"><span class="comment"># 开机后累计空闲</span></span><br><span class="line">cpu_idle2=`cat /proc/<span class="built_in">stat</span> | grep  -w <span class="string">"cpu"</span> | awk <span class="string">'&#123;printf("%d", $5);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0.5s 内</span></span><br><span class="line">((cpu_local = <span class="variable">$cpu_local2</span> - <span class="variable">$cpu_local1</span>))</span><br><span class="line">((cpu_idle = <span class="variable">$cpu_idle2</span> - <span class="variable">$cpu_idle1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算cpu占用率</span></span><br><span class="line">cpu_occu=`<span class="built_in">echo</span> <span class="string">"<span class="variable">$cpu_local</span> <span class="variable">$cpu_idle</span>"</span> | awk <span class="string">'&#123;printf("%.2f%%", (1 - $2 / $1) * 100);&#125;'</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># CPU温度</span></span><br><span class="line">cpu_temp_info=`cat /sys/class/thermal/thermal_zone0/temp | awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">        if ($1 &gt;= 1000 &amp;&amp; $1 &lt; 50000) &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f normal", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        else if ($1 &gt;= 50000 &amp;&amp; $1 &lt;= 70000) &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f note", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        else &#123;</span></span><br><span class="line"><span class="string">            printf("%.2f warning", $1 / 1000);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;'</span>`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;time_and_load&#125;</span><span class="variable">$&#123;cpu_occu&#125;</span> <span class="variable">$&#123;cpu_temp_info&#125;</span>"</span></span><br></pre></td></tr></table></figure>
 	
 	</div>
 	
@@ -388,10 +400,12 @@
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备
 
+
 for循环
-12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------123...
+12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------1...
 							</p>
 						</div>
 
@@ -415,16 +429,20 @@ for循环
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
+
 df:该工具用来获取文件系统挂载信息。
+
 
 awk：该工具用来处理 df的数据。
 
 
 
+
 代码：
-   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" |...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev...
 							</p>
 						</div>
 
@@ -448,14 +466,16 @@ awk：该工具用来处理 df的数据。
 							</p>
 							<p class="relate-post-content">
 								
+
 知识准备：
 
 ps 该工具用来获取进程信息
 awk该工具用来处理数据
 
 
+
 代码
-1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -au...
+1234567891011121314151617181920#!/bin/bashps -aux | awk -v last_all=$(ps -...
 							</p>
 						</div>
 
@@ -479,11 +499,15 @@ awk该工具用来处理数据
 							</p>
 							<p class="relate-post-content">
 								
+
 free：该工具用来获取内存信息
+
 
 grep：该工具用来筛选数据
 
-awk&#39;：该工具用来处理数据
+
+awk'：该工具用来处理数据
+
 
 代码：
 123456#!/bin/bashfree -m | grep "^Mem" | awk -v last_per=$...
@@ -513,6 +537,7 @@ awk&#39;：该工具用来处理数据
 欢迎大家转载，转载请注明出处，谢谢！
 
 
+
 知识准备
 
 date：获取当前时间
@@ -520,7 +545,7 @@ date：获取当前时间
 /proc/loadavg：负载信息
 df：获取磁盘信息
 free：内存信息
-/sys/class/thermal/t...
+/sys/class/thermal/...
 							</p>
 						</div>
 
@@ -547,6 +572,7 @@ free：内存信息
 欢迎大家转载，转载请注明出处，谢谢！
 
 
+
 知识准备
 
 w：获取当前登录信息
@@ -558,8 +584,8 @@ head：显示开头几行
 awk：文本处理工具
 
 
-代码
-1...
+
+代码...
 							</p>
 						</div>
 
@@ -586,7 +612,10 @@ awk：文本处理工具
 项目地址
 
 
-简介：使用C语言和bash脚本实现的服务器健康监控系统。服务器端通过执行bash脚本获取健康信息，利用socket即时发送到监控端主机。
+
+简介：
+使用C语言和bash脚本实现的服务器健康监控系统。服务器端通过执行bash脚本获取健康信息，利用socket即时发送到监控端主机。
+
 
 监测数据类型：
 
@@ -596,7 +625,7 @@ awk：文本处理工具
 cpu
 内存
 硬盘
-恶意进...
+...
 							</p>
 						</div>
 
@@ -604,6 +633,38 @@ cpu
 							<a href="/2019/09/02/服务器健康监控/" title="服务器健康监控">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/2e/wallhaven-2eop2x.jpg" alt="服务器健康监控"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+
+
+概述
+直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
+排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+
+
+适用场景
+插入排序在对几乎...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
 							</a>
 						</div>
 					</li>											
@@ -619,9 +680,12 @@ cpu
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+								引言
+好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
 准备知识
-github最基本的使用...
+
+github最...
 							</p>
 						</div>
 
@@ -645,8 +709,9 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								
+
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头...
 							</p>
 						</div>
 
@@ -654,30 +719,6 @@ github最基本的使用...
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ym/wallhaven-ym28eg.jpg" alt="HDU-1276"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/POJ-1979/" title="POJ-1979">
-								POJ-1979			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
 							</a>
 						</div>
 					</li>											

@@ -283,11 +283,12 @@
 
 	<div class="article-content" id="article-content">
 		<blockquote>
-<p>  在MYSQL中查询操作涉及内容</p>
+<p>在MYSQL中查询操作涉及内容</p>
 </blockquote>
 <p>[TOC]</p>
-<h2 id="function"><a href="#function" class="headerlink" title="function"></a>function</h2><blockquote>
-<p>  对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。</p>
+<h2 id="function"><a class="header-anchor" href="#function"></a>function</h2>
+<blockquote>
+<p>对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。</p>
 </blockquote>
 <ul>
 <li><code>COUNT</code> ： 统计</li>
@@ -295,144 +296,150 @@
 <li><code>AVG</code> ： 平均数</li>
 </ul>
 <p><a href="https://www.runoob.com/mysql/mysql-functions.html" target="_blank" rel="noopener">more about info</a></p>
-<h2 id="sentence"><a href="#sentence" class="headerlink" title="sentence"></a>sentence</h2><blockquote>
-<p>  各个语句执行顺序：select –&gt;where –&gt; group by–&gt; having–&gt;order by。</p>
+<h2 id="sentence"><a class="header-anchor" href="#sentence"></a>sentence</h2>
+<blockquote>
+<p>各个语句执行顺序：select –&gt;where –&gt; group by–&gt; having–&gt;order by。</p>
 </blockquote>
-<h3 id="常用语句"><a href="#常用语句" class="headerlink" title="常用语句"></a>常用语句</h3><ul>
-<li><p><code>limit</code> </p>
-<p> 限定查找记录的条数。</p>
+<h3 id="常用语句"><a class="header-anchor" href="#常用语句"></a>常用语句</h3>
+<ul>
+<li>
+<p><code>limit</code></p>
+<p>限定查找记录的条数。</p>
 </li>
-<li><p><code>offset</code></p>
-<p> 查找偏移量，即前n条跳过，从n+1开始查询。</p>
+<li>
+<p><code>offset</code></p>
+<p>查找偏移量，即前n条跳过，从n+1开始查询。</p>
 </li>
-<li><p><code>with rollup</code> </p>
-<p> 进一步得到<code>group by</code>信息的汇总信息。</p>
+<li>
+<p><code>with rollup</code></p>
+<p>进一步得到<code>group by</code>信息的汇总信息。</p>
 </li>
-<li><p><code>having</code> </p>
-<p> 功能类似<code>where</code>，不同的是，<code>where</code>是筛选已存在的数据，<code>having</code>用来对前面的筛选进行进一步筛选。</p>
+<li>
+<p><code>having</code></p>
+<p>功能类似<code>where</code>，不同的是，<code>where</code>是筛选已存在的数据，<code>having</code>用来对前面的筛选进行进一步筛选。</p>
 <p>例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	name,</span><br><span class="line">	SUM(sign), </span><br><span class="line">	SUM(score) </span><br><span class="line">from </span><br><span class="line">	games </span><br><span class="line">group by </span><br><span class="line">	name </span><br><span class="line">having </span><br><span class="line">	SUM(score) &gt; 80</span><br><span class="line">;</span><br><span class="line">-- SUM(score)在games表中不存在，是待筛数据。</span><br><span class="line">-- 通过having可以对其进行进一步筛选。</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
-</ul>
-<ul>
-<li><p><code>link</code></p>
+<li>
+<p><code>link</code></p>
 <p>常与<code>where配合使用</code>，使用<code>link</code>子句匹配模式串，可以将<code>link</code>看作<code>=</code>。</p>
 <p>可以使用正则表达式中的<code>%</code>来匹配任意字符。</p>
 <p>例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	* </span><br><span class="line">from </span><br><span class="line">	Computer </span><br><span class="line">where </span><br><span class="line">	Model link &apos;Mac%&apos;</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 查找Computer表中Model字段中含有&apos;Mac&apos;的记录。</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
-</ul>
-<ul>
-<li><p><code>order by</code></p>
+<li>
+<p><code>order by</code></p>
 <p>排序子句，给查找出来的记录排序，可以选择按照一个或多个字段为记录排序，</p>
 <p>当然也可以设置升序(asc)还是降序(desc)，默认是升序。</p>
 <p>当然也可以添加<code>where...link...</code>来设置更加复杂的排序规则。</p>
 <p>例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	*</span><br><span class="line">from </span><br><span class="line">	Computer</span><br><span class="line">order by </span><br><span class="line">	Sales_volume</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 按照Sales_volume字段排序输出Computer表。</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
-</ul>
-<ul>
-<li><p><code>select ... into outfile &#39;filename&#39;</code></p>
+<li>
+<p><code>select ... into outfile 'filename'</code></p>
 <p>导出查询结果到文件。</p>
 </li>
-<li><p><code>union</code></p>
+<li>
+<p><code>union</code></p>
 <p>用来连接多个<code>select</code>语句，将结果合并输出，可选是(all)否(默认删除重复数据)删除重复数据。</p>
 <p>例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	Sales_volume</span><br><span class="line">from </span><br><span class="line">	Computer</span><br><span class="line">union all</span><br><span class="line">select </span><br><span class="line">	Sales_volume</span><br><span class="line">from </span><br><span class="line">	Mobile_Phone</span><br><span class="line">order by </span><br><span class="line">	Sales_volume</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 查找Computer表和Mobile_Phone表中的Sales_volume字段数据，</span><br><span class="line">-- 按照Sales_volume以默认方式排序，</span><br><span class="line">-- 而且不删除重复数据。</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
-<h3 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h3><blockquote>
-<p>  用于连接两个或多个表，从多个表中查询数据。</p>
-<p>  …  tableA [join语句] tableB …  on [条件]</p>
+<h3 id="join"><a class="header-anchor" href="#join"></a>JOIN</h3>
+<blockquote>
+<p>用于连接两个或多个表，从多个表中查询数据。</p>
+<p>…  tableA [join语句] tableB …  on [条件]</p>
 </blockquote>
 <ul>
 <li><code>inner join</code>：语句两端的两个表的交集。</li>
 <li><code>left join</code>：读取左边表中所有的匹配数据，即使右侧表中无匹配数据。</li>
-<li><code>righe join</code>：与<code>lefr join</code>正好相反。</li>
+<li><code>righe join </code>：与<code>lefr join</code>正好相反。</li>
 </ul>
-<h3 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h3><p>在MYSQL中判断空值使用<code>=</code>和<code>!=</code>是无效的，</p>
+<h3 id="null"><a class="header-anchor" href="#null"></a>NULL</h3>
+<p>在MYSQL中判断空值使用<code>=</code>和<code>!=</code>是无效的，</p>
 <p><code>NULL</code>与任何其他值的比较结果一定是<code>false</code>，需要使用<code>NULL</code>和<code>IS NULL</code>。</p>
 <p>在创建表的时候使用<code>NULL</code>和<code>NOT NULL</code>来设置完整性约束。</p>
-<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><blockquote>
-<p>  MYSQL也是支持正则表达式匹配的，例如<code>link</code>子句中可以使用<code>%</code>来匹配任意字符。</p>
+<h3 id="正则表达式"><a class="header-anchor" href="#正则表达式"></a>正则表达式</h3>
+<blockquote>
+<p>MYSQL也是支持正则表达式匹配的，例如<code>link</code>子句中可以使用<code>%</code>来匹配任意字符。</p>
 </blockquote>
-<p>在MYSQL中使用正则表达式需要使用<code>REGEXP</code>子句来连接待查找字段和模式串。</p>
+<p>在MYSQL中使用正则表达式需要使用<code> REGEXP</code>子句来连接待查找字段和模式串。</p>
 <p>常用模式：</p>
 <table>
 <thead>
 <tr>
-<th align="left">模式</th>
-<th align="left">描述</th>
+<th style="text-align:left">模式</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">^</td>
-<td align="left">匹配输入字符串的开始位置。如果设置了 RegExp 对象的 Multiline 属性，^ 也匹配 ‘\n’ 或 ‘\r’ 之后的位置。</td>
+<tbody>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">匹配输入字符串的开始位置。如果设置了 RegExp 对象的 Multiline 属性，^ 也匹配 ‘\n’ 或 ‘\r’ 之后的位置。</td>
 </tr>
 <tr>
-<td align="left">$</td>
-<td align="left">匹配输入字符串的结束位置。如果设置了RegExp 对象的 Multiline 属性，$ 也匹配 ‘\n’ 或 ‘\r’ 之前的位置。</td>
+<td style="text-align:left">$</td>
+<td style="text-align:left">匹配输入字符串的结束位置。如果设置了RegExp 对象的 Multiline 属性，$ 也匹配 ‘\n’ 或 ‘\r’ 之前的位置。</td>
 </tr>
 <tr>
-<td align="left">.</td>
-<td align="left">匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式。</td>
+<td style="text-align:left">.</td>
+<td style="text-align:left">匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式。</td>
 </tr>
 <tr>
-<td align="left">[…]</td>
-<td align="left">字符集合。匹配所包含的任意一个字符。例如， ‘[abc]’ 可以匹配 “plain” 中的 ‘a’。</td>
+<td style="text-align:left">[…]</td>
+<td style="text-align:left">字符集合。匹配所包含的任意一个字符。例如， ‘[abc]’ 可以匹配 “plain” 中的 ‘a’。</td>
 </tr>
 <tr>
-<td align="left">[^…]</td>
-<td align="left">负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]’ 可以匹配 “plain” 中的’p’。</td>
+<td style="text-align:left">[^…]</td>
+<td style="text-align:left">负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]’ 可以匹配 “plain” 中的’p’。</td>
 </tr>
 <tr>
-<td align="left">p1|p2|p3</td>
-<td align="left">匹配 p1 或 p2 或 p3。例如，’z|food’ 能匹配 “z” 或 “food”。’(z|f)ood’ 则匹配 “zood” 或 “food”。</td>
+<td style="text-align:left">p1|p2|p3</td>
+<td style="text-align:left">匹配 p1 或 p2 或 p3。例如，‘z|food’ 能匹配 “z” 或 “food”。’(z|f)ood’ 则匹配 “zood” 或 “food”。</td>
 </tr>
 <tr>
-<td align="left">*</td>
-<td align="left">匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。* 等价于{0,}。</td>
+<td style="text-align:left">*</td>
+<td style="text-align:left">匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。* 等价于{0,}。</td>
 </tr>
 <tr>
-<td align="left">+</td>
-<td align="left">匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
+<td style="text-align:left">+</td>
+<td style="text-align:left">匹配前面的子表达式一次或多次。例如，‘zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
 </tr>
 <tr>
-<td align="left">{n}</td>
-<td align="left">n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+<td style="text-align:left">{n}</td>
+<td style="text-align:left">n 是一个非负整数。匹配确定的 n 次。例如，‘o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
 </tr>
 <tr>
-<td align="left">{n,m}</td>
-<td align="left">m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。</td>
+<td style="text-align:left">{n,m}</td>
+<td style="text-align:left">m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">上表引自RUNOOB</a></p>
-<h3 id="临时表"><a href="#临时表" class="headerlink" title="临时表"></a>临时表</h3><p>临时表的生命周期与当前账号登陆时间等同，退出登陆时，该表空间释放。</p>
+<h3 id="临时表"><a class="header-anchor" href="#临时表"></a>临时表</h3>
+<p>临时表的生命周期与当前账号登陆时间等同，退出登陆时，该表空间释放。</p>
 <p>创建临时表需要使用<code>TEMPORARY</code>子句修饰<code>table</code>。</p>
 <p>手动删除使用<code>drop</code>子句。</p>
-<h3 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h3><p>当需要完全的克隆一个已存在的表，只需要找出建表记录，使用该建表记录创建新表，然后将数据 拷贝拷贝进入即可。</p>
+<h3 id="复制表"><a class="header-anchor" href="#复制表"></a>复制表</h3>
+<p>当需要完全的克隆一个已存在的表，只需要找出建表记录，使用该建表记录创建新表，然后将数据 拷贝拷贝进入即可。</p>
 <ol>
-<li><p>找出建表记录</p>
+<li>
+<p>找出建表记录</p>
 <p><code>show create table 表名</code></p>
 </li>
-<li><p>更改表名创建科隆表</p>
+<li>
+<p>更改表名创建科隆表</p>
 </li>
-<li><p>克隆数据</p>
+<li>
+<p>克隆数据</p>
 <p><code>insert into ... select...</code></p>
 </li>
 </ol>
-<h3 id="重复数据处理"><a href="#重复数据处理" class="headerlink" title="重复数据处理"></a>重复数据处理</h3><ul>
-<li><p>创建表时设置约束</p>
+<h3 id="重复数据处理"><a class="header-anchor" href="#重复数据处理"></a>重复数据处理</h3>
+<ul>
+<li>
+<p>创建表时设置约束</p>
 <p>使用<code>primary key</code>将不可重复字段设置为主键。</p>
 <ol>
 <li>在设置了主键或者唯一索引后使用通常的<code>insert into</code>插入重复数据将会报错</li>
@@ -440,7 +447,8 @@
 <li>使用<code>replace into</code>插入重复数据将使用带插入数据更新旧的数据。</li>
 </ol>
 </li>
-<li><p>筛选</p>
+<li>
+<p>筛选</p>
 <ol>
 <li>在<code>select</code>的时候使用<code>distinct</code>筛掉重复数据。</li>
 <li>使用<code>group by</code> 对不需要重复的字段进行读取不重复的字段。</li>
@@ -449,7 +457,10 @@
 </ul>
 <hr>
 <p>参考：</p>
-<p><a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener">RUNOOB.COM</a><br><a href="https://blog.csdn.net/jiangnan2014/article/details/17229713" target="_blank" rel="noopener">CSDN Blog </a><br><a href="https://blog.csdn.net/AinUser/article/details/72803175" target="_blank" rel="noopener">CSDN Blog</a><br><a href="https://blog.csdn.net/love_xsq/article/details/42417917" target="_blank" rel="noopener">CSDN Blog</a></p>
+<p><a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener">RUNOOB.COM</a><br>
+<a href="https://blog.csdn.net/jiangnan2014/article/details/17229713" target="_blank" rel="noopener">CSDN Blog </a>	<br>
+<a href="https://blog.csdn.net/AinUser/article/details/72803175" target="_blank" rel="noopener">CSDN Blog</a><br>
+<a href="https://blog.csdn.net/love_xsq/article/details/42417917" target="_blank" rel="noopener">CSDN Blog</a></p>
 	
 	</div>
 	
@@ -494,6 +505,38 @@
 			
 					<li>
 						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+
+
+概述
+直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。
+排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+
+
+适用场景
+插入排序在对几乎...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/八大排序算法总结/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/ox/wallhaven-oxj7mm.jpg" alt="八大排序算法总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/16/hexo低成本搭建静态网页博客/" title="hexo低成本搭建静态网页博客">
 								hexo低成本搭建静态网页博客			
 							</a>
@@ -502,9 +545,12 @@
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+								引言
+好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
 准备知识
-github最基本的使用...
+
+github最...
 							</p>
 						</div>
 
@@ -528,12 +574,15 @@ github最基本的使用...
 							</p>
 							<p class="relate-post-content">
 								进程、线程及共享内存学习笔记
-系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
+
+系统环境：deepin Linux，语言环境：Linux C
+欢迎大家转载，转载请注明出处，谢谢！
+
 
 
 理论基础：
 
-进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程...
 							</p>
 						</div>
 
@@ -561,8 +610,10 @@ github最基本的使用...
 
 
 /etc 配置文件
-/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 
-/etc/group ...
+
+/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息
+
+/etc/group...
 							</p>
 						</div>
 
@@ -591,7 +642,8 @@ github最基本的使用...
 图形界面相关的东西自行探索。
 
 
-deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh...
+deepin系统安装后推荐配置
+sudo apt-get install -y git wget curl openss...
 							</p>
 						</div>
 
@@ -615,14 +667,17 @@ deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh..
 							</p>
 							<p class="relate-post-content">
 								
-awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易 内置变量与运算符数据来自RUNOOB
+awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易
+内置变量与运算符数据来自RUNOOB
+
 
 
 简单用法
 12awk [参数] 'awk代码'awk [参数] -f awk脚本文件
 
+
 常用参数
-123456...
+1234...
 							</p>
 						</div>
 
@@ -648,14 +703,17 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 								
 部分内容源自网络和grep帮助信息。
 
-用法1grep [参数选项] [模式串] [文件或目录]
-
+用法
+1grep [参数选项] [模式串] [文件或目录]
 常用参数选项说明
+
+
 -o只显示与模式串匹配的内容。
+
 
 -E 使用扩展正则表达式。
 栗子：
-1cat index.html | grep...
+1cat index.html | g...
 							</p>
 						</div>
 
@@ -679,8 +737,9 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 							</p>
 							<p class="relate-post-content">
 								
+
 题目描述
-某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头...
 							</p>
 						</div>
 
@@ -704,9 +763,11 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 							</p>
 							<p class="relate-post-content">
 								
+
 准备知识
 
-/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在...
 							</p>
 						</div>
 
@@ -730,7 +791,10 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 							</p>
 							<p class="relate-post-content">
 								
-原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
+
+原题目：
+Description
+There is a rectangular room, covered with square tiles. Each tile is colored either red or black. ...
 							</p>
 						</div>
 
@@ -738,38 +802,6 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/wy/wallhaven-wydj37.jpg" alt="POJ-1979"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
-								Codeforces-787a			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-题目传送
-
-
-题目思路：拓展欧几里德：
-$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
-
-
-代码：
-123456789101112131415161718192021222324252627282930313...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://w.wallhaven.cc/full/83/wallhaven-839voo.jpg" alt="Codeforces-787a"/>
 							</a>
 						</div>
 					</li>											
