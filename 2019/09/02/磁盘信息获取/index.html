@@ -288,7 +288,7 @@
 </li>
 <li>
 <p>代码：</p>
-   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">df -m | grep <span class="string">"^/dev/"</span> | awk -v ntime=$(date +<span class="string">"%Y-%m-%d__%H:%M:%S"</span>) <span class="string">'</span></span><br><span class="line"><span class="string">BEGIN&#123;</span></span><br><span class="line"><span class="string">    num = 0; </span></span><br><span class="line"><span class="string">    unum = 0; </span></span><br><span class="line"><span class="string">    hnum = 0;</span></span><br><span class="line"><span class="string">&#125; </span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">    num += $2; </span></span><br><span class="line"><span class="string">    unum += $3; </span></span><br><span class="line"><span class="string">    hnum += $4;</span></span><br><span class="line"><span class="string">    printf("%s 1 %s %sM %sM %s\n", ntime, $6, $2, $4, $5);</span></span><br><span class="line"><span class="string">&#125; </span></span><br><span class="line"><span class="string">END&#123;</span></span><br><span class="line"><span class="string">    printf("%s 0 disk %dM %dM %.2f%%\n", ntime, num, hnum, unum / num * 100);</span></span><br><span class="line"><span class="string">&#125;'</span></span><br></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">df -m | grep <span class="string">"^/dev/"</span> | awk -v ntime=$(date +<span class="string">"%Y-%m-%d__%H:%M:%S"</span>) <span class="string">'</span></span><br><span class="line"><span class="string">BEGIN&#123;</span></span><br><span class="line"><span class="string">    num = 0; </span></span><br><span class="line"><span class="string">    unum = 0; </span></span><br><span class="line"><span class="string">    hnum = 0;</span></span><br><span class="line"><span class="string">&#125; </span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">    num += $2; </span></span><br><span class="line"><span class="string">    unum += $3; </span></span><br><span class="line"><span class="string">    hnum += $4;</span></span><br><span class="line"><span class="string">    printf("%s 1 %s %sM %sM %s\n", ntime, $6, $2, $4, $5);</span></span><br><span class="line"><span class="string">&#125; </span></span><br><span class="line"><span class="string">END&#123;</span></span><br><span class="line"><span class="string">    printf("%s 0 disk %dM %dM %.2f%%\n", ntime, num, hnum, unum / num * 100);</span></span><br><span class="line"><span class="string">&#125;'</span></span><br></pre></td></tr></table></figure></p>
 </li>
 </ul>
 	
@@ -583,7 +583,7 @@ cpu
 								九月 27日, 2019				
 							</p>
 							<p class="relate-post-content">
-								 直接插入排序算法
+								直接插入排序算法
 
 
 概述
@@ -592,7 +592,7 @@ cpu
 
 
 适用场景
-插入排序在对几...
+插入排序在对几乎...
 							</p>
 						</div>
 
@@ -615,12 +615,12 @@ cpu
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								 引言
+								引言
 好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
 但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
- 准备知识
+准备知识
 
-githu...
+github最...
 							</p>
 						</div>
 

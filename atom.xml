@@ -29,7 +29,12 @@
       
         
         
-          &lt;h2 id=&quot;直接插入排序算法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#直接插入排序算法&quot;&gt;&lt;/a&gt;
+          &lt;h2&gt;直接插入排序算法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概述&lt;/p&gt;
+&lt;p&gt;直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。&lt;/p&gt;
+&lt;p&gt;排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置
         
       
     
@@ -55,7 +60,12 @@
       
         
         
-          &lt;h2 id=&quot;引言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#引言&quot;&gt;&lt;/a&gt;
+          &lt;h2&gt;引言&lt;/h2&gt;
+&lt;p&gt;好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
+但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。&lt;/p&gt;
+&lt;h2&gt;准备知识&lt;/h2&gt;
+&lt;ol&gt;
+&lt;
         
       
     
@@ -141,9 +151,9 @@
         
           &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;原题目：&lt;br&gt;
-Description&lt;br&gt;
-There is a rectangular room, covered with square tiles. Each tile is colored either red or black. A
+&lt;p&gt;原题目：
+Description
+There is a rectangular room, covered with square tiles. Each tile is colored either red or black. A man is
         
       
     
@@ -198,10 +208,10 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
         
           &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;题目描述：&lt;br&gt;
-首先输入一个N；代表测试数据的个数;&lt;br&gt;
-然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&amp;lt;就是先进先出或先进后出&amp;gt;）&lt;br&gt;
-然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或
+&lt;p&gt;题目描述：
+首先输入一个N；代表测试数据的个数;
+然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&amp;lt;就是先进先出或先进后出&amp;gt;）
+然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“OUT”（代表出
         
       
     
@@ -233,7 +243,7 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;for&lt;/code&gt;循环&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+&lt;p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
         
       
     
@@ -305,7 +315,7 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;代码&lt;/p&gt;
-&lt;figure
+&lt;p&gt;&lt;figure
         
       
     
@@ -434,9 +444,9 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
       
         
         
-          &lt;h2 id=&quot;进程-线程及共享内存学习笔记&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#进程-线程及共享内存学习笔记&quot;&gt;&lt;/a&gt; 进程、线程及共享内存学习笔记&lt;/h2&gt;
+          &lt;h2&gt;进程、线程及共享内存学习笔记&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;系统环境：deepin
+&lt;p&gt;系统环境：deepin Linux，语言环境：Linux
         
       
     
@@ -493,7 +503,8 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
 &lt;li&gt;图形界面相关的东西自行探索。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;deepin系统安装后推荐配置&quot;&gt;&lt;a
+&lt;h2&gt;deepin系统安装后推荐配置&lt;/h2&gt;
+&lt;p&gt;&lt;co
         
       
     
@@ -574,7 +585,7 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
         
         
           &lt;blockquote&gt;
-&lt;p&gt;awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易&lt;br&gt;
+&lt;p&gt;awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易
 内置变量与运算符数据来自&lt;a href=&quot;https://www.runoob.com/linux/linux-comm-awk.html&quot;
         
       
@@ -602,8 +613,8 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
           &lt;blockquote&gt;
 &lt;p&gt;部分内容源自网络和grep帮助信息。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;用法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#用法&quot;&gt;&lt;/a&gt; 用法&lt;/h2&gt;
-&lt;figure
+&lt;h2&gt;用法&lt;/h2&gt;
+&lt;p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
         
       
     
