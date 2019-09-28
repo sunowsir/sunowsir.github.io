@@ -8,7 +8,7 @@
 		
 
 <head><meta name="generator" content="Hexo 3.9.0">
-	<meta charset="utf-8">
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
@@ -31,10 +31,10 @@
 
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script src="/js/leancloud.js"></script>
+<script src="/js/leancloud.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 	<body>
-		<!-- Preloader -->
+		<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Preloader -->
 
 	<div id="preloader">
 		<div class="pre-container">
@@ -286,9 +286,9 @@
 <li><code>/etc/inittab</code> init 的配置文件</li>
 <li><code>/etc/issue</code> 在登录提示符前的输出信息。通常包括系统的一段短说明或欢迎信息。内容由系统管理员确定。</li>
 <li><code>/etc/motd</code> 成功登录后自动输出，内容由系统管理员确定，经常用于通告信息，如计划关时间的警告。</li>
-<li><code>/etc/mtab</code> 当前安装的文件系统列表。由<code>scripts</code> 初始化，并由<code>mount</code> 命令自动更新。需要一个当前
+<li><code>/etc/mtab</code> 当前安装的文件系统列表。由<code>scripts</code> 初始化，并由<code>mount</code> 命令自动更新。需要一个当前<br>
 安装的文件系统的列表时使用，例如df 命令，当<code>df –a</code> 时，查看到的信息应和其一致。</li>
-<li><code>/etc/shadow</code> 在安装了影子口令软件的系统上的影子口令文件。影子口令文件将<code>/etc/passwd</code> 文件中的
+<li><code>/etc/shadow</code> 在安装了影子口令软件的系统上的影子口令文件。影子口令文件将<code>/etc/passwd</code> 文件中的<br>
 加密口令移动到<code>/etc/shadow</code> 中，而后者只对<strong>root</strong> 可读。这使破译口令更困难。</li>
 </ul>
 </li>
@@ -296,13 +296,13 @@
 <ul>
 <li><code>/etc/profile</code> , <code>/etc/csh.login</code> , <code>/etc/csh.cshrc</code> 登录或启动（cshell）时读取的文件（shell不同，文件名称不同，具体查看man手册）。</li>
 <li><code>/etc/printcap</code> 类似<code>/etc/termcap</code> ，但针对打印机。语法不同。</li>
-<li><code>/etc/securetty</code> 确认安全终端，即哪个终端允许<strong>root</strong>登录。一般只列出虚拟控制台，这样就不可能
+<li><code>/etc/securetty</code> 确认安全终端，即哪个终端允许<strong>root</strong>登录。一般只列出虚拟控制台，这样就不可能<br>
 (至少很困难)通过modem 或网络闯入系统并得到超级用户特权。</li>
-<li><code>/etc/shells</code> 列出可信任的shell。chsh命令允许用户在本文件指定范围内改变登录shell。提供一
-台机器FTP 服务的服务进程ftpd 检查用户shell 是否列在 <code>/etc/shells</code>
+<li><code>/etc/shells</code> 列出可信任的shell。chsh命令允许用户在本文件指定范围内改变登录shell。提供一<br>
+台机器FTP 服务的服务进程ftpd 检查用户shell 是否列在 <code>/etc/shells</code><br>
 文件中，如果不是将不允许该用户登录。</li>
-<li><code>/etc/termcap</code>终端性能数据库。说明不同的终端用什么&quot;转义序列&quot;控制。写程序时不直接输出转义序列(这样
-只能工作于特定品牌的终端)，而是从<code>/etc/termcap</code>中查找要做的工作的正确序列。这样，多数的
+<li><code>/etc/termcap</code>终端性能数据库。说明不同的终端用什么&quot;转义序列&quot;控制。写程序时不直接输出转义序列(这样<br>
+只能工作于特定品牌的终端)，而是从<code>/etc/termcap</code>中查找要做的工作的正确序列。这样，多数的<br>
 程序可以在多数终端上运行。</li>
 <li><code>/etc/inputrc</code> 输入设备配置文件</li>
 <li><code>/etc/default/useradd</code> 添加用户的默认信息的文件</li>
@@ -318,22 +318,22 @@
 <li><code>/etc/fstab</code> 系统启动时自动加载的设备，（用于配置自动挂载设备）</li>
 <li><code>/etc/selinux</code> 安全Linux设定</li>
 <li><code>/etc/sysconfig/network</code> 可以更改<code>hostname</code>（主机名）以及网卡工作状态</li>
-<li><code>/etc/hosts</code> 更改主机名和IP 地址的对应关系，请注意其格式为<code>hostname.domain</code> <code>hostname</code> <code>localhost</code>
+<li><code>/etc/hosts</code> 更改主机名和IP 地址的对应关系，请注意其格式为<code>hostname.domain</code> <code>hostname</code> <code>localhost</code><br>
 <code>localhost.domian</code>，当修改主机名后必须修改该文件</li>
 <li><code>/etc/resolv.conf</code> 可配置DNS 地址，即第一DNS，第二DNS 以及DNS 的默认搜索路径</li>
-<li><code>/etc/sysconfig/networking/profiles/default</code> 内含数个文件，可配置hosts、网卡、DNS 地址及
+<li><code>/etc/sysconfig/networking/profiles/default</code> 内含数个文件，可配置hosts、网卡、DNS 地址及<br>
 DNS 搜索路径等</li>
 <li><code>/etc/sysconfig/network-scripts/ifcfg-eth0</code> 配置网卡eth0(具体名称请使用<code>ifconfig</code>查看)</li>
 <li><code>/etc/rc.d/init.d/network restart</code> 重启网络</li>
 <li><code>/etc/rc.d/init.d</code> 用于放置几乎所有服务的启动脚本</li>
-<li><code>/etc/sysctl.conf</code> 内核参数配置文件
+<li><code>/etc/sysctl.conf</code> 内核参数配置文件<br>
 <code>/etc/sysconfig/i18n</code>	设置系统语言和字符类型</li>
 <li><code>/etc/crontab</code> 系统定义的任务计划</li>
 <li><code>/etc/anacrontab</code> 实现检查过期和未完成的crontab的任务的配置文件</li>
 <li><code>/etc/rc.d/init.d/functions</code> 定义功能的配置文件</li>
 <li><code>/etc/rc.d/rc.sysinit</code> 系统启动设置配置文件</li>
-<li><code>/etc/sysconfig/system-config-firewall</code>配置防火墙的信任端口，以及防火墙的工作状态。图形化配置防火
-墙的存档文件，具体讲只保存图形界面的otherport里面设置的项目，如果主配置
+<li><code>/etc/sysconfig/system-config-firewall</code>配置防火墙的信任端口，以及防火墙的工作状态。图形化配置防火<br>
+墙的存档文件，具体讲只保存图形界面的otherport里面设置的项目，如果主配置<br>
 文件存在相应的配置条目，那么它里面的配置条目存在与否并不重要。</li>
 <li><code>/etc/sysconfig/iptables</code> 防火墙主配置文件</li>
 <li><code>/etc/sysconfig/system-config-securitylevel</code> 系统安全等级文件，在防火墙配置中不会涉及</li>
@@ -348,29 +348,29 @@ DNS 搜索路径等</li>
 <li><code>/etc/dhcpd.conf</code> DHCP 的配置文件</li>
 <li><code>/etc/rc.d/init.d/dhcpd stop</code> 停止DHCP</li>
 <li><code>/etc/access</code> 可以对sendmail 的邮件流进行控制</li>
-<li><code>/etc/udev/rules.d</code> 系统初始化时将硬件探测信息输出成设备配置文件，是一个程序。
+<li><code>/etc/udev/rules.d</code> 系统初始化时将硬件探测信息输出成设备配置文件，是一个程序。<br>
 让用户定义udev的规则，从而实现在创建设备文件使用不同的设备文件名</li>
-<li>注：<code>/etc/passwd</code> 存放用户的账号，存放形式 ：
-<code>root:x:0:0:root:/root:/bin/bash</code> :
+<li>注：<code>/etc/passwd</code> 存放用户的账号，存放形式 ：<br>
+<code>root:x:0:0:root:/root:/bin/bash</code> :<br>
 <code>用户名：密码位：UID：GID：CECOS(注释)：diectory（家目录）:shell</code></li>
-<li>注：<code>/etc/shadow</code> 存放用户的密码
-<code>slaceware:$1$12345678$0ME5N6oDyoEAwUp7b5UDM/:15355:0:99999:7:::</code>
-用户名：加密后的密码：时间1：时间2：时间3：时间4：时间5：时间6：预留段`	
-加密后的密码：以$分开，第一个$后是1，说明加密算法是md5，第二个$后是加的sail，第三个$后是加的密码。
-时间1：从1970年1月1日起到最近的修改的天数
-时间2：密码的最短使用期限
-时间3：密码最长使用期限
-时间4：在密码过期之前多少天开始警告
-时间5：在密码过期多少天用户禁用
+<li>注：<code>/etc/shadow</code> 存放用户的密码<br>
+<code>slaceware:$1$12345678$0ME5N6oDyoEAwUp7b5UDM/:15355:0:99999:7:::</code><br>
+用户名：加密后的密码：时间1：时间2：时间3：时间4：时间5：时间6：预留段`	<br>
+加密后的密码：以分开，第一个后是1，说明加密算法是md5，第二个后是加的sail，第三个后是加的密码。<br>
+时间1：从1970年1月1日起到最近的修改的天数<br>
+时间2：密码的最短使用期限<br>
+时间3：密码最长使用期限<br>
+时间4：在密码过期之前多少天开始警告<br>
+时间5：在密码过期多少天用户禁用<br>
 时间6：自1970年1月1日起多长时间用户被禁用</li>
-<li>注：<code>/etc/group</code> 存放组的账号，存放形式：
+<li>注：<code>/etc/group</code> 存放组的账号，存放形式：<br>
 <code>slackware:x:5000</code> : <code>Name：passwd位置：GID：附加组的用户列表</code>。</li>
 <li>注：</li>
-<li>交互式登陆的用户：
+<li>交互式登陆的用户：<br>
 <code>/etc/profile --&gt;/etc/profile.d/* --&gt;~/.bash_profile --&gt;~/.bashrc --&gt;/etc/bashrc</code></li>
 </ul>
 </li>
-<li>非交互式登录：
+<li>非交互式登录：<br>
 /.bashrc --&gt;/etc/bashrc --&gt;.etc/profile.d/*`</li>
 </ul>
 </li>
@@ -381,8 +381,8 @@ DNS 搜索路径等</li>
 <li><code>/proc/filesystems</code> 核心配置的文件系统。</li>
 <li><code>/proc/interrupts</code> 显示使用的中断，and how many of each there have been.</li>
 <li><code>/proc/ioports</code> 当前使用的I/O 端口。</li>
-<li><code>/proc/kcore</code> 系统物理内存映象。与物理内存大小完全一样，但不实际占用这么多内存；
-it is generated on the fly as programs access it.
+<li><code>/proc/kcore</code> 系统物理内存映象。与物理内存大小完全一样，但不实际占用这么多内存；<br>
+it is generated on the fly as programs access it.<br>
 (记住：除非你把它拷贝到什么地方，<code>/proc</code> 下没有任何东西占用任何磁盘空间。）</li>
 <li><code>/proc/kmsg</code> 核心输出的消息。也被送到syslog</li>
 <li><code>/proc/ksyms</code> 核心符号表</li>
@@ -390,7 +390,7 @@ it is generated on the fly as programs access it.
 <li><code>/proc/meminfo</code> 存储器使用信息，包括物理内存和swap。</li>
 <li><code>/proc/modules</code> 当前加载了哪些核心模块。</li>
 <li><code>/proc/net</code> 网络协议状态信息。</li>
-<li><code>/proc/self</code> 到查看<code>/proc</code> 的程序的进程目录的符号连接。当2 个进程查看<code>/proc</code>
+<li><code>/proc/self</code> 到查看<code>/proc</code> 的程序的进程目录的符号连接。当2 个进程查看<code>/proc</code><br>
 时，是不同的连接。这主要便于程序得到它自己的进程目录。</li>
 <li><code>/proc/stat</code> 系统的不同状态，such as the number of page faults since the system was booted.</li>
 <li><code>/proc/uptime</code> 系统启动的时间长度。</li>
@@ -407,7 +407,7 @@ it is generated on the fly as programs access it.
 <li><code>/proc/mounts</code> 挂载的所有文件系统</li>
 <li><code>/proc/swaps</code> 交换分区信息</li>
 <li><code>/proc/uptime</code> 启动系统运行时长</li>
-<li><code>/proc/sys</code> (具有写权限)定义内核参数的值来定义内核的功能
+<li><code>/proc/sys</code> (具有写权限)定义内核参数的值来定义内核的功能<br>
 <code>/proc/sys/kernel/hostname</code> 主机名的设定</li>
 </ul>
 </li>
@@ -429,7 +429,7 @@ it is generated on the fly as programs access it.
 <li><code>/usr/share/fonts</code> 字体文件</li>
 <li><code>/usr/share/doc</code> 各种文档文件</li>
 <li><code>/usr/share/man</code> 系统手册页</li>
-<li><code>/usr/local/apache/man</code> 定义man目录文集
+<li><code>/usr/local/apache/man</code> 定义man目录文集<br>
 其它目录配置文件</li>
 <li><code>/dev/null</code> 没有用的文件所放的位置，相当于回收站，吞噬设备</li>
 <li><code>/dev/zero</code> 初始化磁盘（吐零）</li>
@@ -445,33 +445,33 @@ it is generated on the fly as programs access it.
 </li>
 <li>目录结构：
 <ul>
-<li><code>/boot</code> 用于自举加载程序（LILO 或GRUB）的文件。当计算机启动时（如果有多个操作系统，
-有可能允许你选择启动哪一个操作系统），这些文件首先被装载。这个目录也会包含LINUX 核（压缩文件
+<li><code>/boot</code> 用于自举加载程序（LILO 或GRUB）的文件。当计算机启动时（如果有多个操作系统，<br>
+有可能允许你选择启动哪一个操作系统），这些文件首先被装载。这个目录也会包含LINUX 核（压缩文件<br>
 vmlinuz），但LINUX 核也可以存在别处，只要配置LILO 并且LILO 知道LINUX 核在哪儿。
 <ul>
 <li><code>/bin</code> 系统启动时需要的引导程序(二进制执行文件)，这些文件可以被普通用户使用</li>
-<li><code>/dev</code> 代表硬件组件的设备文件目录。LINUX 下设备被当成文件，这样一来硬件被抽象化，便
-于读写、网络共享以及需要临时装载到文件系统中。正常情况下，设备会有一个独立的子目录。这些设备
+<li><code>/dev</code> 代表硬件组件的设备文件目录。LINUX 下设备被当成文件，这样一来硬件被抽象化，便<br>
+于读写、网络共享以及需要临时装载到文件系统中。正常情况下，设备会有一个独立的子目录。这些设备<br>
 的内容会出现在独立的子目录下。LINUX 没有所谓的驱动符。</li>
 <li><code>/etc</code> 存放各种配置文件</li>
 <li><code>/etc/rc.d</code> 启动的配置文件和脚本</li>
 <li><code>/home</code> 用户主目录，包含参数设置文件、个性化文件、文档、数据、EMAIL、缓存数据等</li>
 <li><code>/lib</code> 标准程序设计库，又叫动态链接共享库，作用类似windows 里的.dll 文件</li>
-<li><code>/sbin</code> 为系统管理员保留的用于系统启动时的引导程序(二进制执行文件)，这些文件不打算被
+<li><code>/sbin</code> 为系统管理员保留的用于系统启动时的引导程序(二进制执行文件)，这些文件不打算被<br>
 普通用户使用(普通用户仍然可以使用它们，但要指定目录)</li>
 <li><code>/tmp</code> 公用的临时文件存储点，该目录会被自动清理干净</li>
 <li><code>/root</code> 系统管理员的主目录</li>
 <li><code>/mnt</code> 系统提供这个目录是让用户临时挂载其他的文件系统。</li>
 <li><code>/lost+found</code>这个目录平时是空的，系统非正常关机而留下“无家可归”的文件。</li>
-<li><code>/proc</code> 虚拟的目录，是系统内存的映射，可直接访问这个目录来获取系统信息。目录整个包含
-虚幻的文件。它们实际上并不存在磁盘上，也不占用任何空间。（用<code>ls –l</code> 可以显示它们的大小）当查看
+<li><code>/proc</code> 虚拟的目录，是系统内存的映射，可直接访问这个目录来获取系统信息。目录整个包含<br>
+虚幻的文件。它们实际上并不存在磁盘上，也不占用任何空间。（用<code>ls –l</code> 可以显示它们的大小）当查看<br>
 这些文件时，实际上是在访问存在内存中的信息，这些信息用于访问系统</li>
 <li><code>/proc/1</code> 关于进程1 的信息目录。每个进程在<code>/proc</code> 下有一个名为其进程号的目录。</li>
-<li><code>/var</code> 某些大文件的溢出区，比方说各种服务的日志文件，包含在正常操作中被改变的文件：
+<li><code>/var</code> 某些大文件的溢出区，比方说各种服务的日志文件，包含在正常操作中被改变的文件：<br>
 假脱机文件、记录文件、加锁文件、临时文件和页格式化文件等</li>
-<li><code>/var/spool mail, news</code>, 打印队列和其他队列工作的目录。每个不同的spool 在<code>/var/spool</code> 下有自己的
+<li><code>/var/spool mail, news</code>, 打印队列和其他队列工作的目录。每个不同的spool 在<code>/var/spool</code> 下有自己的<br>
 子目录，例如，用户的邮箱在<code>/var/spool/mail</code> 中。</li>
-<li><code>/opt</code> 可选的应用程序，譬如，REDHAT 5.2 下的KDE （REDHAT 6.0 下，KDE 放在其它的
+<li><code>/opt</code> 可选的应用程序，譬如，REDHAT 5.2 下的KDE （REDHAT 6.0 下，KDE 放在其它的<br>
 XWINDOWS 应用程序中，主执行程序在<code>/usr/bin</code> 目录下）</li>
 <li><code>/usr</code> 最庞大的目录，要用到的应用程序和文件几乎都在这个目录。</li>
 <li><code>/home /var /usr/local</code> 经常是单独分区，因为经常会操作，容易产生碎片</li>
@@ -533,7 +533,7 @@ XWINDOWS 应用程序中，主执行程序在<code>/usr/bin</code> 目录下）<
 								九月 27日, 2019				
 							</p>
 							<p class="relate-post-content">
-								直接插入排序算法
+								 直接插入排序算法
 
 
 概述
@@ -542,7 +542,7 @@ XWINDOWS 应用程序中，主执行程序在<code>/usr/bin</code> 目录下）<
 
 
 适用场景
-插入排序在对几乎...
+插入排序在对几...
 							</p>
 						</div>
 
@@ -565,12 +565,12 @@ XWINDOWS 应用程序中，主执行程序在<code>/usr/bin</code> 目录下）<
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言
+								 引言
 好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
 但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
-准备知识
+ 准备知识
 
-github最...
+githu...
 							</p>
 						</div>
 
@@ -593,7 +593,7 @@ github最...
 								九月 2日, 2019				
 							</p>
 							<p class="relate-post-content">
-								进程、线程及共享内存学习笔记
+								 进程、线程及共享内存学习笔记
 
 系统环境：deepin Linux，语言环境：Linux C
 欢迎大家转载，转载请注明出处，谢谢！
@@ -602,7 +602,7 @@ github最...
 
 理论基础：
 
-进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程...
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进...
 							</p>
 						</div>
 
@@ -631,8 +631,8 @@ github最...
 图形界面相关的东西自行探索。
 
 
-deepin系统安装后推荐配置
-sudo apt-get install -y git wget curl openss...
+ deepin系统安装后推荐配置
+sudo apt-get install -y git wget curl opens...
 							</p>
 						</div>
 
@@ -692,9 +692,9 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 								
 部分内容源自网络和grep帮助信息。
 
-用法
+ 用法
 1grep [参数选项] [模式串] [文件或目录]
-常用参数选项说明
+ 常用参数选项说明
 
 
 -o只显示与模式串匹配的内容。
@@ -702,7 +702,7 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 
 -E 使用扩展正则表达式。
 栗子：
-1cat index.html | g...
+1cat index.html |...
 							</p>
 						</div>
 
@@ -729,7 +729,7 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 在MYSQL中查询操作涉及内容
 
 [TOC]
-function
+ function
 
 对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
 
@@ -738,7 +738,7 @@ COUNT ： 统计
 SUM ： 求和
 AVG ： 平均数
 
-more about ...
+more about...
 							</p>
 						</div>
 
@@ -1171,6 +1171,6 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
 <script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
 <script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
 <script src="/js/resizediv.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/main.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 	</body>	
 </html>

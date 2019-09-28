@@ -8,7 +8,7 @@
 		
 
 <head><meta name="generator" content="Hexo 3.9.0">
-	<meta charset="utf-8">
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
@@ -31,10 +31,10 @@
 
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script src="/js/leancloud.js"></script>
+<script src="/js/leancloud.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 	<body>
-		<!-- Preloader -->
+		<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Preloader -->
 
 	<div id="preloader">
 		<div class="pre-container">
@@ -286,7 +286,7 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h2>直接插入排序算法</h2>
+		<h2 id="直接插入排序算法"><a class="markdownIt-Anchor" href="#直接插入排序算法"></a> 直接插入排序算法</h2>
 <ul>
 <li>
 <p>概述</p>
@@ -319,30 +319,30 @@
 <ul>
 <li>
 <p>最优</p>
-<p>最优的情况是待排序数据为已排序好的期望顺序，此时每次从待排序部分拿出一个元素只需要与待排序部分中最后一个元素相比较一次，需要比较 $n - 1$ 次，因此其复杂度为 $O(n)$ 。</p>
+<p>最优的情况是待排序数据为已排序好的期望顺序，此时每次从待排序部分拿出一个元素只需要与待排序部分中最后一个元素相比较一次，需要比较 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> 次，因此其复杂度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> 。</p>
 </li>
 <li>
 <p>最坏</p>
-<p>最坏的情况是待排序数据为已排序好的，但是其顺序正好与期望顺序相反，此时每次从待排序部分拿出一个元素，该元素需要与其前面的已排序部分中的每一个元素进行比较和交换，其比较或交换的次数为 $0 + 1 + 2 + ... + (n - 2) + (n - 1)$ 也就是　$ \frac{n * (n - 1)}{2}$ ，因此其复杂度为 $O(n^{2})$ .</p>
+<p>最坏的情况是待排序数据为已排序好的，但是其顺序正好与期望顺序相反，此时每次从待排序部分拿出一个元素，该元素需要与其前面的已排序部分中的每一个元素进行比较和交换，其比较或交换的次数为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mo>(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo>)</mo><mo>+</mo><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">0 + 1 + 2 + ... + (n - 2) + (n - 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mbin">+</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span> 也就是　$ \frac{n * (n - 1)}{2}$ ，因此其复杂度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span> .</p>
 </li>
 <li>
 <p>平均</p>
-<p>$O(n^{2})$</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></p>
 </li>
 </ul>
 </li>
 <li>
 <p>代码示例</p>
-<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertion_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j,key;</span><br><span class="line">        <span class="keyword">for</span> (i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">                key = arr[i];</span><br><span class="line">                j=i<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">while</span>((j&gt;=<span class="number">0</span>) &amp;&amp; (arr[j]&gt;key)) &#123;</span><br><span class="line">                        arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">                        j--;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[j+<span class="number">1</span>] = key;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertion_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j,key;</span><br><span class="line">        <span class="keyword">for</span> (i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">                key = arr[i];</span><br><span class="line">                j=i<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">while</span>((j&gt;=<span class="number">0</span>) &amp;&amp; (arr[j]&gt;key)) &#123;</span><br><span class="line">                        arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">                        j--;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[j+<span class="number">1</span>] = key;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2>希尔排序</h2>
+<h2 id="希尔排序"><a class="markdownIt-Anchor" href="#希尔排序"></a> 希尔排序</h2>
 <blockquote>
 <p>待更新</p>
 </blockquote>
 <hr>
 <p>资源引用声明：</p>
-<p><a href="https://zh.wikipedia.org/wiki/" target="_blank" rel="noopener">维基百科</a> : https://zh.wikipedia.org/wiki/</p>
+<p><a href="https://zh.wikipedia.org/wiki/" target="_blank" rel="noopener">维基百科</a> : <a href="https://zh.wikipedia.org/wiki/" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/</a></p>
 	
 	</div>
 	
@@ -391,12 +391,12 @@
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言
+								 引言
 好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
 但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
-准备知识
+ 准备知识
 
-github最...
+githu...
 							</p>
 						</div>
 
@@ -419,7 +419,7 @@ github最...
 								九月 2日, 2019				
 							</p>
 							<p class="relate-post-content">
-								进程、线程及共享内存学习笔记
+								 进程、线程及共享内存学习笔记
 
 系统环境：deepin Linux，语言环境：Linux C
 欢迎大家转载，转载请注明出处，谢谢！
@@ -428,7 +428,7 @@ github最...
 
 理论基础：
 
-进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程...
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进...
 							</p>
 						</div>
 
@@ -488,8 +488,8 @@ github最...
 图形界面相关的东西自行探索。
 
 
-deepin系统安装后推荐配置
-sudo apt-get install -y git wget curl openss...
+ deepin系统安装后推荐配置
+sudo apt-get install -y git wget curl opens...
 							</p>
 						</div>
 
@@ -549,9 +549,9 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 								
 部分内容源自网络和grep帮助信息。
 
-用法
+ 用法
 1grep [参数选项] [模式串] [文件或目录]
-常用参数选项说明
+ 常用参数选项说明
 
 
 -o只显示与模式串匹配的内容。
@@ -559,7 +559,7 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 
 -E 使用扩展正则表达式。
 栗子：
-1cat index.html | g...
+1cat index.html |...
 							</p>
 						</div>
 
@@ -586,7 +586,7 @@ awk 是一款极其强大的文本处理工具，其语言于c语言的语法极
 在MYSQL中查询操作涉及内容
 
 [TOC]
-function
+ function
 
 对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
 
@@ -595,7 +595,7 @@ COUNT ： 统计
 SUM ： 求和
 AVG ： 平均数
 
-more about ...
+more about...
 							</p>
 						</div>
 
@@ -1028,6 +1028,6 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
 <script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
 <script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
 <script src="/js/resizediv.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/main.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 	</body>	
 </html>

@@ -8,7 +8,7 @@
 		
 
 <head><meta name="generator" content="Hexo 3.9.0">
-	<meta charset="utf-8">
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
@@ -31,10 +31,10 @@
 
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script src="/js/leancloud.js"></script>
+<script src="/js/leancloud.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 	<body>
-		<!-- Preloader -->
+		<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Preloader -->
 
 	<div id="preloader">
 		<div class="pre-container">
@@ -280,11 +280,11 @@
 <ul>
 <li>
 <p>Sample Input</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you are my friend #</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you are my friend #</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>Sample Output
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure></p>
+<p>Sample Output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>思路：</p>
@@ -295,7 +295,7 @@
 <p>代码：</p>
 </li>
 </ul>
-<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; se;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">word</span><span class="params">(<span class="built_in">string</span> str)</span></span>&#123;</span><br><span class="line">    se.clear();</span><br><span class="line">    <span class="built_in">string</span> tmp=<span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=str.size();i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(str[i]==<span class="string">' '</span>||i==str.size())&#123;</span><br><span class="line">            <span class="keyword">if</span>(tmp==<span class="string">""</span>)  <span class="keyword">continue</span>;</span><br><span class="line">            se.insert(tmp);</span><br><span class="line">            tmp=<span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  tmp+=str[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;se.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> str;</span><br><span class="line">    <span class="keyword">while</span>(getline(<span class="built_in">cin</span>,str)&amp;&amp;str[<span class="number">0</span>]!=<span class="string">'#'</span>)</span><br><span class="line">        word(str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; se;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">word</span><span class="params">(<span class="built_in">string</span> str)</span></span>&#123;</span><br><span class="line">    se.clear();</span><br><span class="line">    <span class="built_in">string</span> tmp=<span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=str.size();i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(str[i]==<span class="string">' '</span>||i==str.size())&#123;</span><br><span class="line">            <span class="keyword">if</span>(tmp==<span class="string">""</span>)  <span class="keyword">continue</span>;</span><br><span class="line">            se.insert(tmp);</span><br><span class="line">            tmp=<span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  tmp+=str[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;se.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> str;</span><br><span class="line">    <span class="keyword">while</span>(getline(<span class="built_in">cin</span>,str)&amp;&amp;str[<span class="number">0</span>]!=<span class="string">'#'</span>)</span><br><span class="line">        word(str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>该代码来源于杭电讨论区的朋友（ 喜欢你的笑声）。</p>
 	
@@ -410,13 +410,8 @@ There is a rectangular room, covered with square tiles. Each tile is colored eit
 
 题目思路：
 拓展欧几里德：
-$$
-ax+b=cy+d; &lt;=&gt; ax+cy=d-b;
-$$
-
-
-代码：
-12345678910111213141516171819202122232425262728293...
+a∗x+b=c∗y+d;&lt;=&gt;a∗x+c∗y=d−b;a*x+b=c*y+d; &lt;=&gt; a*x+c*y=d-b;
+a∗x+b=c∗y+d;&lt;=&gt;a∗x+...
 							</p>
 						</div>
 
@@ -497,7 +492,7 @@ A rabbit must hide in one of ...
 								九月 27日, 2019				
 							</p>
 							<p class="relate-post-content">
-								直接插入排序算法
+								 直接插入排序算法
 
 
 概述
@@ -506,7 +501,7 @@ A rabbit must hide in one of ...
 
 
 适用场景
-插入排序在对几乎...
+插入排序在对几...
 							</p>
 						</div>
 
@@ -529,12 +524,12 @@ A rabbit must hide in one of ...
 								九月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								引言
+								 引言
 好多同学有写博客的习惯，也有各大例如csd*、简*等博客平台。
 但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
-准备知识
+ 准备知识
 
-github最...
+githu...
 							</p>
 						</div>
 
@@ -628,7 +623,7 @@ awk：该工具用来处理 df的数据。
 
 
 代码：
-1234567891011121314151617#!/bin/bashdf -m | grep "^/dev/" ...
+   1234567891011121314151617#!/bin/bashdf -m | grep "^/dev...
 							</p>
 						</div>
 
@@ -980,6 +975,6 @@ awk：该工具用来处理 df的数据。
 <script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
 <script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
 <script src="/js/resizediv.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/main.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 	</body>	
 </html>
