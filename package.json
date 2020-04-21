@@ -1,0 +1,41 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.9.0"
+  },
+  "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^3.1.0",
+    "hexo": "^3.9.0",
+    "hexo-deployer-git": "^2.0.0",
+    "hexo-generator-archive": "^0.1.5",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-feed": "^1.2.2",
+    "hexo-generator-index-pin-top": "^0.2.2",
+    "hexo-generator-search-zip": "0.0.1",
+    "hexo-generator-searchdb": "^1.0.8",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-inject": "^1.0.0",
+    "hexo-math": "^3.0.4",
+    "hexo-renderer-ejs": "^0.3.1",
+    "hexo-renderer-markdown-it-plus": "^1.0.4",
+    "hexo-renderer-pug": "^1.0.0",
+    "hexo-renderer-stylus": "^0.3.3",
+    "hexo-server": "^0.3.3",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-imsize": "^2.0.1",
+    "markdown-it-ins": "^3.0.0",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-mark": "^3.0.0",
+    "markdown-it-regexp": "^0.4.0",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "markdown-it-toc-and-anchor": "^4.2.0"
+  }
+}
