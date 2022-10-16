@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Linux三剑客之awk的使用 | Sunow&#39;s Club
+      Arch Linux 配置efi STUB启动 | Sunow&#39;s Club
     
   </title>
   <meta name="author" content="sunowsir">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《Linux三剑客之awk的使用》
+			当前文章&nbsp;:&nbsp;《Arch Linux 配置efi STUB启动》
 		
 	</p>
 
@@ -216,6 +216,20 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
 	 
 
 <div class="layout-post">
@@ -223,8 +237,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url">
-		Linux三剑客之awk的使用
+	<a href="/2022/10/16/Arch-Linux-%E9%85%8D%E7%BD%AEefi-STUB%E5%90%AF%E5%8A%A8/" itemprop="url">
+		Arch Linux 配置efi STUB启动
 	</a>
 
 	</div>
@@ -237,9 +251,9 @@
 
 	发布于
 
-	<a href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url">
-		<time datetime="2019-09-02T08:35:47.000Z" itemprop="datePublished">
-	  		2019-09-02
+	<a href="/2022/10/16/Arch-Linux-%E9%85%8D%E7%BD%AEefi-STUB%E5%90%AF%E5%8A%A8/" itemprop="url">
+		<time datetime="2022-10-16T09:10:27.000Z" itemprop="datePublished">
+	  		2022-10-16
 	  </time>
 	</a>
 	&nbsp;
@@ -255,9 +269,9 @@
 
 	更新于
 
-	<a href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url">
-		<time datetime="2019-09-02T08:35:47.000Z" itemprop="dateUpdated">
-	  		2021-11-10
+	<a href="/2022/10/16/Arch-Linux-%E9%85%8D%E7%BD%AEefi-STUB%E5%90%AF%E5%8A%A8/" itemprop="url">
+		<time datetime="2022-10-16T09:10:27.000Z" itemprop="dateUpdated">
+	  		2022-10-16
 	  </time>
 	</a> 
 
@@ -266,13 +280,7 @@
 		</span>
 		<span>
 			<i class="fa fa-tags"></i>
-			
-	
-		<a href="/tags/note/" class=" ">
-			note
-		</a>
-	
-		
+					
 		</span>
 		
 		
@@ -282,176 +290,29 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<blockquote>
-<p>awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易<br> 内置变量与运算符数据来自<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-awk.html">RUNOOB</a></p>
-</blockquote>
+		<h1 id="Arch-Linux-配置efi-STUB启动"><a href="#Arch-Linux-配置efi-STUB启动" class="headerlink" title="Arch Linux 配置efi STUB启动"></a>Arch Linux 配置efi STUB启动</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
+<li>确保是UEFI启动</li>
+<li>软件安装</li>
+<li>关键信息获取</li>
+</ol>
 <ul>
-<li><p>简单用法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">awk [参数] <span class="string">&#x27;awk代码&#x27;</span></span><br><span class="line">awk [参数] -f awk脚本文件 </span><br></pre></td></tr></table></figure></li>
-<li><p>常用参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cat xxx.txt | awk -F <span class="string">&#x27;:&#x27;</span> <span class="string">&#x27;BEGIN&#123;&#125;&#123;printf(&quot;%s %s&quot;, $1, $2);&#125;END&#123;printf(&quot;OK!&quot;);&#125;&#x27;</span></span><br><span class="line"><span class="comment"># -F 参数是指定对每行字符串以什么字符为分割，每个被分割的部分存储在变量：$1, $2, $3...中，整行字符串存储在$0中。</span></span><br><span class="line"><span class="comment"># BEGIN&#123;&#125;中的代码将在文本处理前执行，同样，END&#123;&#125;会文本处理后执行，&#123;&#125;中的代码用来处理每行的文本。</span></span><br><span class="line"></span><br><span class="line">cat xxx.txt | awk -v var1=<span class="variable">$&#123;tmp&#125;</span> <span class="string">&#x27;&#123;printf(&quot;%d\n&quot;, $3/var1);&#125;&#x27;</span></span><br><span class="line"><span class="comment"># -v 参数是引入外部变量，把$&#123;tmp&#125;赋值给var1，在awk内部代码中就可以使用var1了。</span></span><br><span class="line"><span class="comment"># -v参数可以多次引用，也就是说可以引入多个变量。</span></span><br><span class="line"></span><br><span class="line">cat xxx | awk -v var1=<span class="variable">$&#123;tmp&#125;</span> <span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">	if ($1 ~ /eth/) &#123;</span></span><br><span class="line"><span class="string">		print $0;</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br><span class="line"><span class="comment"># 通过这种方式可以使用正则表达式进行字符串匹配。</span></span><br><span class="line"><span class="comment"># awk支持print，使用print末尾自动加上\n。</span></span><br></pre></td></tr></table></figure></li>
-<li><p>内置变量</p>
+<li>cpu的ucode镜像：如果是intel，则是<code>intel-ucode.img</code>，amd则是<code>amd-ucode.img</code></li>
+<li>启动镜像：请查看<code>/boot</code>下的内容，找到类似：<code>vmlinuz-linux</code>的文件</li>
+<li>initramfs镜像：请查看<code>/boot</code>下的内容，找到类似：<code>initramfs-linux.img</code>的文件</li>
+<li>根分区的UUID：<ol>
+<li>执行df -h查看分区的名称，例如<code>/dev/sda3</code></li>
+<li>执行<code>blkid /dev/sda3</code>找到根分区的UUID，其中的<code>/dev/sda3</code>请根据如上第一步获取到的实际情况填写</li>
+</ol>
 </li>
+<li>引导分区（<code>/boot</code>）的名称：执行df -h查看分区的名称，例如<code>/dev/sda3</code>，其中<code>/dev/sda</code>就是磁盘名称，3是序列号</li>
+<li></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$n</td>
-<td>当前记录的第n个字段，字段间由FS分隔</td>
-</tr>
-<tr>
-<td>$0</td>
-<td>完整的输入记录</td>
-</tr>
-<tr>
-<td>ARGC</td>
-<td>命令行参数的数目</td>
-</tr>
-<tr>
-<td>ARGIND</td>
-<td>命令行中当前文件的位置(从0开始算)</td>
-</tr>
-<tr>
-<td>ARGV    包含命令行参数的数组</td>
-<td></td>
-</tr>
-<tr>
-<td>CONVFMT</td>
-<td>数字转换格式(默认值为%.6g)ENVIRON环境变量关联数组</td>
-</tr>
-<tr>
-<td>ERRNO</td>
-<td>最后一个系统错误的描述</td>
-</tr>
-<tr>
-<td>FIELDWIDTHS</td>
-<td>字段宽度列表(用空格键分隔)</td>
-</tr>
-<tr>
-<td>FILENAME</td>
-<td>当前文件名</td>
-</tr>
-<tr>
-<td>FNR</td>
-<td>各文件分别计数的行号</td>
-</tr>
-<tr>
-<td>FS</td>
-<td>字段分隔符(默认是任何空格)</td>
-</tr>
-<tr>
-<td>IGNORECASE</td>
-<td>如果为真，则进行忽略大小写的匹配</td>
-</tr>
-<tr>
-<td>NF</td>
-<td>一条记录的字段的数目</td>
-</tr>
-<tr>
-<td>NR</td>
-<td>已经读出的记录数，就是行号，从1开始</td>
-</tr>
-<tr>
-<td>OFMT</td>
-<td>数字的输出格式(默认值是%.6g)</td>
-</tr>
-<tr>
-<td>OFS</td>
-<td>输出记录分隔符（输出换行符），输出时用指定的符号代替换行符</td>
-</tr>
-<tr>
-<td>ORS</td>
-<td>输出记录分隔符(默认值是一个换行符)</td>
-</tr>
-<tr>
-<td>RLENGTH</td>
-<td>由match函数所匹配的字符串的长度</td>
-</tr>
-<tr>
-<td>RS</td>
-<td>记录分隔符(默认是一个换行符)</td>
-</tr>
-<tr>
-<td>RSTART</td>
-<td>由match函数所匹配的字符串的第一个位置</td>
-</tr>
-<tr>
-<td>SUBSEP</td>
-<td>数组下标分隔符(默认值是/034)</td>
-</tr>
-</tbody></table>
-<ul>
-<li>运算符</li>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li>执行如下命令：<blockquote>
+<p>请按照命令中的<code>$&#123;&#125;</code>中的内容将整个<code>$&#123;&#125;</code>替换掉</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo efibootmgr --disk <span class="variable">$&#123;引导分区所在的磁盘名称&#125;</span> --part <span class="variable">$&#123;引导分区的序列号&#125;</span> \</span><br><span class="line">    --create --label <span class="string">&quot;<span class="variable">$&#123;名称，随便起，例如Arch&#125;</span>&quot;</span> --loader /<span class="variable">$&#123;启动镜像&#125;</span> --unicode \</span><br><span class="line">    <span class="string">&#x27;root=UUID=$&#123;系统根分区的UUID&#125;  rw initrd=\$&#123;initramfs镜像&#125; initrd=\$&#123;cpu的ucode镜像&#125; $&#123;其他内核参数，例如 nowatchdog quiet splash &#125; resume=$&#123;如果想要睡眠到交换分区，则填写交换分区的分区名称，例如/dev/nvme0n1p3，如果不需要则将resume参数全部删掉&#125; &#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>= += -= *= /= %= ^= **=</td>
-<td>赋值</td>
-</tr>
-<tr>
-<td>?:</td>
-<td>C条件表达式</td>
-</tr>
-<tr>
-<td>||</td>
-<td>逻辑或</td>
-</tr>
-<tr>
-<td>&amp;&amp;</td>
-<td>逻辑与</td>
-</tr>
-<tr>
-<td>~ 和 !~</td>
-<td>匹配正则表达式和不匹配正则表达式</td>
-</tr>
-<tr>
-<td>&lt; &lt;= &gt; &gt;= != ==</td>
-<td>关系运算符</td>
-</tr>
-<tr>
-<td>空格</td>
-<td>连接</td>
-</tr>
-<tr>
-<td>+ -</td>
-<td>加，减</td>
-</tr>
-<tr>
-<td>* / %</td>
-<td>乘，除与求余</td>
-</tr>
-<tr>
-<td>+ - !</td>
-<td>一元加，减和逻辑非</td>
-</tr>
-<tr>
-<td>^ ***</td>
-<td>求幂</td>
-</tr>
-<tr>
-<td>++ –</td>
-<td>增加或减少，作为前缀或后缀</td>
-</tr>
-<tr>
-<td>$</td>
-<td>字段引用</td>
-</tr>
-<tr>
-<td>in</td>
-<td>数组成员</td>
-</tr>
-</tbody></table>
 	
 	</div>
 	
@@ -470,12 +331,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/09/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%81%A5%E5%BA%B7%E7%9B%91%E6%8E%A7/" title="服务器健康监控" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用" rel="next">
+			<a href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -493,6 +350,29 @@
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">
+								BASH杂记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 22日, 2020				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="" alt="BASH杂记"/>
+							</a>
+						</div>
+					</li>											
+			
 			
 					<li>
 						<div class="relate-post-text">
@@ -546,216 +426,6 @@ github最基本的使用...
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="进程、线程及共享内存学习笔记">
-								进程、线程及共享内存学习笔记			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								进程、线程及共享内存学习笔记
-系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
-
-
-理论基础：
-
-进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="进程、线程及共享内存学习笔记">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="进程、线程及共享内存学习笔记"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件">
-								Linux常见配置文件			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-转载自CoderZhuang，对CoderZhuang先生的博客进行补充和整理。
-
-
-/etc 配置文件
-/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 
-/etc/group ...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="Linux常见配置文件"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" title="deepin系统使用笔记">
-								deepin系统使用笔记			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-
-如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。
-图形界面相关的东西自行探索。
-
-
-deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" title="deepin系统使用笔记">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="deepin系统使用笔记"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用">
-								linux三剑客之grep的使用			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-部分内容源自网络和grep帮助信息。
-
-用法1grep [参数选项] [模式串] [文件或目录]
-
-
-
-常用参数选项说明
--o只显示与模式串匹配的内容。
-
--E 使用扩展正则表达式。
-栗子：
-1cat index.html | gr...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="linux三剑客之grep的使用"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/" title="MYSQL-笔记1">
-								MYSQL-笔记1			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 2日, 2019				
-							</p>
-							<p class="relate-post-content">
-								
-  在MYSQL中查询操作涉及内容
-
-[TOC]
-function
-  对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
-
-
-  COUNT ： 统计
-  SUM ： 求和
-  AVG ： 平均数
-
-mo...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/" title="MYSQL-笔记1">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="MYSQL-笔记1"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2022/10/16/Arch-Linux-%E9%85%8D%E7%BD%AEefi-STUB%E5%90%AF%E5%8A%A8/" title="Arch Linux 配置efi STUB启动">
-								Arch Linux 配置efi STUB启动			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 16日, 2022				
-							</p>
-							<p class="relate-post-content">
-								Arch Linux 配置efi STUB启动准备工作
-确保是UEFI启动
-软件安装
-关键信息获取
-
-
-cpu的ucode镜像：如果是intel，则是intel-ucode.img，amd则是amd-ucode.img
-启动镜像：请查...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2022/10/16/Arch-Linux-%E9%85%8D%E7%BD%AEefi-STUB%E5%90%AF%E5%8A%A8/" title="Arch Linux 配置efi STUB启动">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="Arch Linux 配置efi STUB启动"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">
-								BASH杂记			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								二月 22日, 2020				
-							</p>
-							<p class="relate-post-content">
-								
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="" alt="BASH杂记"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2019/09/02/HDU-1276/" title="HDU-1276">
 								HDU-1276			
 							</a>
@@ -774,6 +444,168 @@ cpu的ucode镜像：如果是intel，则是intel-ucode.img，amd则是amd-ucode.
 							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">
+								CPU信息获取			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+准备知识
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="CPU信息获取"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/POJ-1979/" title="POJ-1979">
+								POJ-1979			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+原题目：DescriptionThere is a rectangular room, covered with square tiles. Each tile is colored either red or black. A m...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/POJ-1979/" title="POJ-1979">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="POJ-1979"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
+								Codeforces-787a			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+题目思路：拓展欧几里德：$$ax+b=cy+d; &lt;=&gt; ax+cy=d-b;$$
+
+代码：
+12345678910111213141516171819202122232425262728293031323...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="Codeforces-787a"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
+								HDU-1072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="HDU-1072"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/BASH%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E7%B4%A0%E6%95%B0%E7%BA%BF%E6%80%A7%E7%AD%9B/" title="BASH脚本实现素数线性筛">
+								BASH脚本实现素数线性筛			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+知识准备
+for循环12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------12345...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/BASH%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E7%B4%A0%E6%95%B0%E7%BA%BF%E6%80%A7%E7%AD%9B/" title="BASH脚本实现素数线性筛">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="BASH脚本实现素数线性筛"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/%E7%A3%81%E7%9B%98%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="磁盘信息获取">
+								磁盘信息获取			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+知识准备：
+
+df:该工具用来获取文件系统挂载信息。
+
+awk：该工具用来处理 df的数据。
+
+
+
+代码：
+   123456789101112131415161718#!/bin/bashdf -m | grep &quot;^/...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/%E7%A3%81%E7%9B%98%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="磁盘信息获取">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="title.jpg" alt="磁盘信息获取"/>
 							</a>
 						</div>
 					</li>											
