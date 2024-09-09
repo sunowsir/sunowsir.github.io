@@ -1,0 +1,909 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      POJ-1979 | Sunsir&#39;s Club
+    
+  </title>
+  <meta name="author" content="sunsir">
+  <meta name="keywords" content="" />
+  <meta name="description" content="This is Sunsir&#39;s club." />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「POJ-1979」
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2019/09/02/POJ-1979/" itemprop="url">
+		POJ-1979
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	更新于
+
+	<a href="/2019/09/02/POJ-1979/" itemprop="url">
+		<time datetime="2019-09-02T08:49:24.000Z" itemprop="dateUpdated">
+	  		2024-09-10
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+				
+	<i class="icon-price-tags"></i>
+	
+		<a href="/tags/%E9%A2%98%E8%A7%A3/" class=" ">
+			题解
+		</a>
+	
+		<a href="/tags/POJ/" class=" ">
+			POJ
+		</a>
+	
+		
+			</span>
+			
+			
+
+
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<ul>
+<li><p>原题目：<br>Description<br>There is a rectangular room, covered with square tiles. Each tile is colored either red or black. A man is standing on a black tile. From a tile, he can move to one of four adjacent tiles. But he can’t move on red tiles, he can move only on black tiles.<br>Write a program to count the number of black tiles which he can reach by repeating the moves described above.<br>Input<br>The input consists of multiple data sets. A data set starts with a line containing two positive integers W and H; W and H are the numbers of tiles in the x- and y- directions, respectively. W and H are not more than 20.<br>There are H more lines in the data set, each of which includes W characters. Each character represents the color of a tile as follows.<br>‘.’ - a black tile<br>‘#’ - a red tile<br>‘@’ - a man on a black tile(appears exactly once in a data set)<br>The end of the input is indicated by a line consisting of two zeros.<br>Output</p>
+<blockquote>
+<p>For each data set, your program should output a line which contains the number of tiles he can reach from the initial tile (including itself).</p>
+</blockquote>
+<p>Sample Input</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">6 9</span><br><span class="line">....#.</span><br><span class="line">.....#</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">#@...#</span><br><span class="line">.#..#.</span><br><span class="line">11 9</span><br><span class="line">.#.........</span><br><span class="line">.#.#######.</span><br><span class="line">.#.#.....#.</span><br><span class="line">.#.#.###.#.</span><br><span class="line">.#.#..@#.#.</span><br><span class="line">.#.#####.#.</span><br><span class="line">.#.......#.</span><br><span class="line">.#########.</span><br><span class="line">...........</span><br><span class="line">11 6</span><br><span class="line">..#..#..#..</span><br><span class="line">..#..#..#..</span><br><span class="line">..#..#..###</span><br><span class="line">..#..#..#@.</span><br><span class="line">..#..#..#..</span><br><span class="line">..#..#..#..</span><br><span class="line">7 7</span><br><span class="line">..#.#..</span><br><span class="line">..#.#..</span><br><span class="line">###.###</span><br><span class="line">...@...</span><br><span class="line">###.###</span><br><span class="line">..#.#..</span><br><span class="line">..#.#..</span><br><span class="line">0 0</span><br></pre></td></tr></table></figure>
+<p>Sample Output</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">45</span><br><span class="line">59</span><br><span class="line">6</span><br><span class="line">13</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>题目大意：<br>给出一个w列和h行的方阵，方阵中有’.’,’#’和‘@’。其中’.’是可以移动的地方，’#’是红色的砖，是不可以移动的地		方，‘@’是最初人的地点就（图的入口），人可以上下左右移动，以0 0 为结束。<br>要求输出人可以移动的砖的个数。该题利用搜索。</p>
+<blockquote>
+<p>注意：<br>先输入w，然后输入h，但是w是列数，h是行数。</p>
+</blockquote>
+</li>
+<li><p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>;</span><br><span class="line"><span class="type">int</span> w,h,tmp=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> ma[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;h&gt;&gt;w)&#123;</span><br><span class="line">		<span class="keyword">if</span>(w==<span class="number">0</span>&amp;&amp;h==<span class="number">0</span>)  <span class="keyword">break</span>;</span><br><span class="line">		<span class="built_in">memset</span>(ma,<span class="string">&#x27;0&#x27;</span>,<span class="built_in">sizeof</span>(ma));</span><br><span class="line">		<span class="type">int</span> ax,ay;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;w;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;h;j++)&#123;</span><br><span class="line">				cin&gt;&gt;ma[i][j];</span><br><span class="line">				<span class="keyword">if</span>(ma[i][j]==<span class="string">&#x27;@&#x27;</span>)&#123;</span><br><span class="line">					ax=i;</span><br><span class="line">					ay=j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">dfs</span>(ax,ay);</span><br><span class="line">		cout&lt;&lt;tmp&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;</span><br><span class="line">	ma[x][y]=<span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">	tmp++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">		<span class="type">int</span> nx=x+dx[i];</span><br><span class="line">		<span class="type">int</span> ny=y+dy[i];</span><br><span class="line">		<span class="keyword">if</span>(ma[nx][ny]==<span class="string">&#x27;.&#x27;</span>&amp;&amp;nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;w&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;h&amp;&amp;ma[nx][ny]==<span class="string">&#x27;.&#x27;</span>)&#123;</span><br><span class="line">			<span class="built_in">dfs</span>(nx,ny);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">Select Code</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>;</span><br><span class="line"><span class="type">int</span> w,h,tmp=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> ma[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;h&gt;&gt;w)&#123;</span><br><span class="line">		<span class="keyword">if</span>(w==<span class="number">0</span>&amp;&amp;h==<span class="number">0</span>)  <span class="keyword">break</span>;</span><br><span class="line">		<span class="built_in">memset</span>(ma,<span class="string">&#x27;0&#x27;</span>,<span class="built_in">sizeof</span>(ma));</span><br><span class="line">		<span class="type">int</span> ax,ay;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;w;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;h;j++)&#123;</span><br><span class="line">				cin&gt;&gt;ma[i][j];</span><br><span class="line">				<span class="keyword">if</span>(ma[i][j]==<span class="string">&#x27;@&#x27;</span>)&#123;</span><br><span class="line">					ax=i;</span><br><span class="line">					ay=j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">dfs</span>(ax,ay);</span><br><span class="line">		cout&lt;&lt;tmp&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;</span><br><span class="line">	ma[x][y]=<span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">	tmp++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">		<span class="type">int</span> nx=x+dx[i];</span><br><span class="line">		<span class="type">int</span> ny=y+dy[i];</span><br><span class="line">		<span class="keyword">if</span>(ma[nx][ny]==<span class="string">&#x27;.&#x27;</span>&amp;&amp;nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;w&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;h&amp;&amp;ma[nx][ny]==<span class="string">&#x27;.&#x27;</span>)&#123;</span><br><span class="line">			<span class="built_in">dfs</span>(nx,ny);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>POJ上不支持<code>bits/stdc++</code>的头文件，很尴尬。</p>
+</blockquote>
+</li>
+</ul>
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/title.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">相关文章</div>
+					<div>评论</div>
+					<div>分享</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">返回顶部</a>
+		
+			<a href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1276/" title="HDU-1276">
+								HDU-1276			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">
+								Codeforces-787a			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+题目思路：拓展欧几里德：$$ax+b&#x3D;cy+d; &lt;&#x3D;&gt; ax+cy&#x3D;d-b;$$
+
+代码：
+12345678910111213141516171819202122232425...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Codeforces-787a/" title="Codeforces-787a">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="Codeforces-787a"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1072/" title="HDU-1072">
+								HDU-1072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述：首先输入一个N；代表测试数据的个数;然后每个测试数据的开头第一行输入一个n和一个命令（FIFO或FILO&lt;就是先进先出或先进后出&gt;）然后是该测试数据的n行，每行包括“IN”加一个数字（代表入栈或入队）或者一个“...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1072/" title="HDU-1072">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="HDU-1072"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1222/" title="HDU-1222">
+								HDU-1222			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+题目描述:
+There is a hill with n holes around. The holes are signed from 0 to n-1.
+A rabbit must hide in one of t...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1222/" title="HDU-1222">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="HDU-1222"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-2072/" title="HDU - 2072">
+								HDU - 2072			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目传送
+
+
+Sample Input
+1you are my friend #
+
+Sample Output
+14
+
+
+思路：
+利用STL的set,但是需要注意字符串的处理，利用set的特性，建立一个中间字符串变量tmp，把当前单...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-2072/" title="HDU - 2072">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="HDU - 2072"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">
+								BASH杂记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 22日, 2020				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="BASH杂记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+概述直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+适用场景插入排序在对几乎已经排好序的数...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="八大排序算法总结"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/16/hexo%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%8D%9A%E5%AE%A2/" title="hexo低成本搭建静态网页博客">
+								hexo低成本搭建静态网页博客			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+准备知识
+github最基本的使用...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/16/hexo%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%8D%9A%E5%AE%A2/" title="hexo低成本搭建静态网页博客">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="hexo低成本搭建静态网页博客"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">
+								CPU信息获取			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+准备知识
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="CPU信息获取"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/BASH%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E7%B4%A0%E6%95%B0%E7%BA%BF%E6%80%A7%E7%AD%9B/" title="BASH脚本实现素数线性筛">
+								BASH脚本实现素数线性筛			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+知识准备
+for循环12345678910111213141516171819202122232425for i in `seq 1 10`;do	echo $&#123;i&#125;done#执行结果---------12345...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/BASH%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0%E7%B4%A0%E6%95%B0%E7%BA%BF%E6%80%A7%E7%AD%9B/" title="BASH脚本实现素数线性筛">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="BASH脚本实现素数线性筛"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+	
+<script src="/plugin/love/love.js"></script>
+
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>

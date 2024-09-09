@@ -1,0 +1,1030 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      deepin系统使用笔记 | Sunsir&#39;s Club
+    
+  </title>
+  <meta name="author" content="sunsir">
+  <meta name="keywords" content="" />
+  <meta name="description" content="This is Sunsir&#39;s club." />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「deepin系统使用笔记」
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" itemprop="url">
+		deepin系统使用笔记
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	更新于
+
+	<a href="/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" itemprop="url">
+		<time datetime="2019-09-02T08:39:06.000Z" itemprop="dateUpdated">
+	  		2024-09-10
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+				
+	<i class="icon-price-tags"></i>
+	
+		<a href="/tags/note/" class=" ">
+			note
+		</a>
+	
+		
+			</span>
+			
+			
+
+
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<blockquote>
+<ol>
+<li>如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。</li>
+<li>图形界面相关的东西自行探索。</li>
+</ol>
+</blockquote>
+<h2 id="deepin系统安装后推荐配置"><a href="#deepin系统安装后推荐配置" class="headerlink" title="deepin系统安装后推荐配置"></a>deepin系统安装后推荐配置</h2><p><code>sudo apt-get install -y git wget curl openssh-server manpages-* graphviz</code></p>
+<h2 id="zsh配置（linux高级用户推荐）"><a href="#zsh配置（linux高级用户推荐）" class="headerlink" title="zsh配置（linux高级用户推荐）"></a>zsh配置（linux高级用户推荐）</h2><ol>
+<li><p>安装：<code>sudo apt-get install zsh</code></p>
+</li>
+<li><p>设置为默认SHELL(不要加sudo)：<code>chsh -s /bin/zsh</code></p>
+</li>
+<li><p>安装oh-my-zsh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>手动配置oh-my-zsh</p>
+<ol>
+<li>安装自动跳转插件：<br> 1.<code> sudo apt-get install autojump</code><br> 2. 打开~&#x2F;.zshrc，在文件末尾，另起一行添加：<code>source   /usr/share/autojump/autojump.sh</code><ol start="2">
+<li>安装zsh-syntax-highlighting语法高亮插件：</li>
+<li><code>cd ~/ &amp;&amp; git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</code></li>
+<li><code>cd ~/ &amp;&amp;echo &quot;source $&#123;(q-)PWD&#125;/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&quot; &gt;&gt; $&#123;ZDOTDIR:-$HOME&#125;/.zshrc</code></li>
+<li>安装zsh-autosuggestions语法历史记录插件:</li>
+<li><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></li>
+<li>打开~&#x2F;.zshrc，在文件末尾，另起一行添加：<code>source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</code></li>
+</ol>
+</li>
+<li>打开~&#x2F;.zshrc:<ol>
+<li>找到：plugins&#x3D;(git)这个位置，在括号里面添加，每个单词单独一行，如果已经有了，就不用添加了： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git</span><br><span class="line">extract</span><br><span class="line">z</span><br><span class="line">web-search</span><br><span class="line">zsh-autosuggestions</span><br><span class="line">cp</span><br><span class="line">command-not-found</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在文件末尾，另起一行添加： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export EDITOR=vim</span><br><span class="line">setopt HIST_IGNORE_DUPS</span><br><span class="line">setopt no_nomatch</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>自动配置oh-my-zsh</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if [[ $&#123;?&#125; -eq 1 ]];</span><br><span class="line">then</span><br><span class="line">    exit 1;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sudo apt-get install autojump</span><br><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line">git clone git://github.com/zsh-users/zsh-autosuggestions  ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo &#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">########################################</span></span></span><br><span class="line"></span><br><span class="line">alias ls=&quot;ls --color=auto&quot;</span><br><span class="line">alias dir=&quot;dir --color=auto&quot;</span><br><span class="line">alias la=&quot;ls -a --color=auto&quot;</span><br><span class="line">alias ll=&quot;ls -al --color=auto&quot;</span><br><span class="line">alias vdir=&quot;vdir --color=auto&quot;</span><br><span class="line"></span><br><span class="line">alias grep=&quot;grep --color=auto&quot;</span><br><span class="line">alias egrep=&quot;egrep --color=auto&quot;</span><br><span class="line">alias fgrep=&quot;fgrep --color=auto&quot;</span><br><span class="line"></span><br><span class="line">alias cls=&quot;clear&quot;</span><br><span class="line"></span><br><span class="line">export EDITOR=vim</span><br><span class="line">setopt no_nomatch</span><br><span class="line">setopt HIST_IGNORE_DUPS</span><br><span class="line"></span><br><span class="line">source /usr/share/autojump/autojump.sh</span><br><span class="line">source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line"></span><br><span class="line">&#x27; &gt;&gt;  ~/.zshrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sed -i &#x27;s/^plugins=(git)/plugin=\(extract \n  z \n web-search \n  zsh-autosuggestions \n cp \n command-no-found\)/g&#x27; ~/.zshrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><p>通过手动或自动配置，zsh就彻底配置完成。</p>
+<p>​</p>
+</li>
+</ol>
+<h2 id="常见文件"><a href="#常见文件" class="headerlink" title="常见文件"></a>常见文件</h2><ul>
+<li>搜狗输入法皮肤所在路径：~&#x2F;.config&#x2F;sogou-qimpanel&#x2F;skin</li>
+<li>desktop软件图标路径集合：<ul>
+<li>~&#x2F;.local&#x2F;share&#x2F;applications : AppImage应用生成的图标。</li>
+<li>&#x2F;usr&#x2F;share&#x2F;applications&#x2F; :  常用应用图标所在。</li>
+<li>&#x2F;etc&#x2F;xdg&#x2F;autostart&#x2F; : 系统级别自启动应用图标。</li>
+<li>&#x2F;opt&#x2F;deepinwine&#x2F;apps&#x2F; : deepin-wine应用图标。</li>
+<li>&#x2F;var&#x2F;lib&#x2F;flatpak&#x2F;app&#x2F; : flatpak应用图标。<br>以上所给路径仅为常见路径，并非所有。</li>
+</ul>
+</li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="常用命令（linux入门用户推荐）："><a href="#常用命令（linux入门用户推荐）：" class="headerlink" title="常用命令（linux入门用户推荐）："></a>常用命令（linux入门用户推荐）：</h2><ul>
+<li><p>ls : 列出当前路径文件。</p>
+</li>
+<li><p>pwd : 查看当前所在路径（绝对路径）。</p>
+</li>
+<li><p>cd : 路径跳转。</p>
+</li>
+<li><p>mv : 文件及目录移动以及更改名字。</p>
+</li>
+<li><p>cp : 拷贝。</p>
+</li>
+<li><p>mkdir : 创建目录。</p>
+</li>
+<li><p>touch : 创建空白文件。</p>
+</li>
+<li><p>桌面设置壁纸的内置壁纸保存位置：<br>如图：</p>
+<p>这些壁纸保存在：&#x2F;usr&#x2F;share&#x2F;wallpapers&#x2F;deepin下。</p>
+</li>
+<li><p>vim 配置文件：~&#x2F;.vimrc（用户级别配置文件，只针文件所在用户生效，其他用户不生效）</p>
+</li>
+<li><p>bash配置文件：~&#x2F;.bashrc（用户级别配置文件，只针文件所在用户生效，其他用户不生效）</p>
+</li>
+</ul>
+<h2 id="vim-入门操作"><a href="#vim-入门操作" class="headerlink" title="vim 入门操作"></a>vim 入门操作</h2><ul>
+<li>vim配置:<ol>
+<li>vim的配置我们选择ma6174的配置，<br> 终端命令：wget -qO- <a target="_blank" rel="noopener" href="https://raw.github.com/ma6174/vim/master/setup.sh">https://raw.github.com/ma6174/vim/master/setup.sh</a> | sh -x<br> 配置完成后会重新回到终端命令行（建议在网络较好的环境下配置）</li>
+<li>配置完成后打开python文件会发现报错，解决方案：<br>点击这里下载python.zip文件，将压缩包下载到本地解压，得到一个名称为python的文件夹，将其复制（覆盖并替换）到～&#x2F;.vim&#x2F;ftplugin&#x2F;路径下即可。</li>
+</ol>
+</li>
+<li>三种模式：<ul>
+<li><pre><code>插入模式：
+</code></pre>
+<ol>
+<li>普通模式下按i直接进入插入模式。</li>
+<li>普通模式下按I光标前一个位置进入插入模式。</li>
+<li>普通模式下按O光标的下一行进入插入模式。</li>
+<li>普通模式下按o光标的上一行进入插入模式。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>普通模式：<ul>
+<li>在任何模式下按ESC进入普通模式。</li>
+<li>在普通模式下：<ul>
+<li>dd : 剪切当前行（可以当删除用）（只在普通模式和选择模式生效）。</li>
+<li>yy：复制当前行（只在普通模式和选择模式生效）。</li>
+<li>p ： 粘贴（只在普通模式生效）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>选择模式：<ul>
+<li>c : 进入块选择模式。</li>
+<li>C:  进入行选择模式。</li>
+<li>CTRL + c : 进入列选择模式。</li>
+</ul>
+</li>
+</ul>
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/title.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">相关文章</div>
+					<div>评论</div>
+					<div>分享</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">返回顶部</a>
+		
+			<a href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2019/09/02/HDU-1222/" title="HDU-1222" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+概述直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+适用场景插入排序在对几乎已经排好序的数...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="八大排序算法总结"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/16/hexo%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%8D%9A%E5%AE%A2/" title="hexo低成本搭建静态网页博客">
+								hexo低成本搭建静态网页博客			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+准备知识
+github最基本的使用...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/16/hexo%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%8D%9A%E5%AE%A2/" title="hexo低成本搭建静态网页博客">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="hexo低成本搭建静态网页博客"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="进程、线程及共享内存学习笔记">
+								进程、线程及共享内存学习笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								进程、线程及共享内存学习笔记
+系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
+
+
+理论基础：
+
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="进程、线程及共享内存学习笔记">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="进程、线程及共享内存学习笔记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件">
+								Linux常见配置文件			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+转载自CoderZhuang，对CoderZhuang先生的博客进行补充和整理。
+
+
+/etc 配置文件
+/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 
+/etc/group ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="Linux常见配置文件"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Linux三剑客之awk的使用">
+								Linux三剑客之awk的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易 内置变量与运算符数据来自RUNOOB
+
+
+简单用法
+12awk [参数] &#x27;awk代码&#x27;awk [参数] -f awk脚本文件 
+常...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Linux三剑客之awk的使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="Linux三剑客之awk的使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用">
+								linux三剑客之grep的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+部分内容源自网络和grep帮助信息。
+
+用法1grep [参数选项] [模式串] [文件或目录]
+
+
+
+常用参数选项说明
+-o只显示与模式串匹配的内容。
+
+-E 使用扩展正则表达式。
+栗子：
+1cat index.html | gr...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="linux三剑客之grep的使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/" title="MYSQL-笔记1">
+								MYSQL-笔记1			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+  在MYSQL中查询操作涉及内容
+
+[TOC]
+function
+  对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。
+
+
+COUNT ： 统计
+SUM ： 求和
+AVG ： 平均数
+
+more abo...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/" title="MYSQL-笔记1">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="MYSQL-笔记1"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">
+								BASH杂记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 22日, 2020				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="BASH杂记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1276/" title="HDU-1276">
+								HDU-1276			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">
+								CPU信息获取			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+准备知识
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="CPU信息获取"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+	
+<script src="/plugin/love/love.js"></script>
+
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>

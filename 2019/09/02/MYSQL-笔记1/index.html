@@ -1,0 +1,1061 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      MYSQL-笔记1 | Sunsir&#39;s Club
+    
+  </title>
+  <meta name="author" content="sunsir">
+  <meta name="keywords" content="" />
+  <meta name="description" content="This is Sunsir&#39;s club." />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「MYSQL-笔记1」
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/" itemprop="url">
+		MYSQL-笔记1
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	更新于
+
+	<a href="/2019/09/02/MYSQL-%E7%AC%94%E8%AE%B01/" itemprop="url">
+		<time datetime="2019-09-02T08:32:55.000Z" itemprop="dateUpdated">
+	  		2024-09-10
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+				
+	<i class="icon-price-tags"></i>
+	
+		<a href="/tags/note/" class=" ">
+			note
+		</a>
+	
+		
+			</span>
+			
+			
+
+
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<blockquote>
+<p>  在MYSQL中查询操作涉及内容</p>
+</blockquote>
+<p>[TOC]</p>
+<h2 id="function"><a href="#function" class="headerlink" title="function"></a>function</h2><blockquote>
+<p>  对待查询字段在待查找表中出现的若干记录中的函数参数中指定的字段进行某些操作。</p>
+</blockquote>
+<ul>
+<li><code>COUNT</code> ： 统计</li>
+<li><code>SUM</code> ： 求和</li>
+<li><code>AVG</code> ： 平均数</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-functions.html">more about info</a></p>
+<h2 id="sentence"><a href="#sentence" class="headerlink" title="sentence"></a>sentence</h2><blockquote>
+<p>  各个语句执行顺序：select –&gt;where –&gt; group by–&gt; having–&gt;order by。</p>
+</blockquote>
+<h3 id="常用语句"><a href="#常用语句" class="headerlink" title="常用语句"></a>常用语句</h3><ul>
+<li><p><code>limit</code> </p>
+<p> 限定查找记录的条数。</p>
+</li>
+<li><p><code>offset</code></p>
+<p> 查找偏移量，即前n条跳过，从n+1开始查询。</p>
+</li>
+<li><p><code>with rollup</code> </p>
+<p> 进一步得到<code>group by</code>信息的汇总信息。</p>
+</li>
+<li><p><code>having</code> </p>
+<p> 功能类似<code>where</code>，不同的是，<code>where</code>是筛选已存在的数据，<code>having</code>用来对前面的筛选进行进一步筛选。</p>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	name,</span><br><span class="line">	SUM(sign), </span><br><span class="line">	SUM(score) </span><br><span class="line">from </span><br><span class="line">	games </span><br><span class="line">group by </span><br><span class="line">	name </span><br><span class="line">having </span><br><span class="line">	SUM(score) &gt; 80</span><br><span class="line">;</span><br><span class="line">-- SUM(score)在games表中不存在，是待筛数据。</span><br><span class="line">-- 通过having可以对其进行进一步筛选。</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><code>link</code></p>
+<p>常与<code>where配合使用</code>，使用<code>link</code>子句匹配模式串，可以将<code>link</code>看作<code>=</code>。</p>
+<p>可以使用正则表达式中的<code>%</code>来匹配任意字符。</p>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	* </span><br><span class="line">from </span><br><span class="line">	Computer </span><br><span class="line">where </span><br><span class="line">	Model link &#x27;Mac%&#x27;</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 查找Computer表中Model字段中含有&#x27;Mac&#x27;的记录。</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><code>order by</code></p>
+<p>排序子句，给查找出来的记录排序，可以选择按照一个或多个字段为记录排序，</p>
+<p>当然也可以设置升序(asc)还是降序(desc)，默认是升序。</p>
+<p>当然也可以添加<code>where...link...</code>来设置更加复杂的排序规则。</p>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	*</span><br><span class="line">from </span><br><span class="line">	Computer</span><br><span class="line">order by </span><br><span class="line">	Sales_volume</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 按照Sales_volume字段排序输出Computer表。</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><code>select ... into outfile &#39;filename&#39;</code></p>
+<p>导出查询结果到文件。</p>
+</li>
+<li><p><code>union</code></p>
+<p>用来连接多个<code>select</code>语句，将结果合并输出，可选是(all)否(默认删除重复数据)删除重复数据。</p>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	Sales_volume</span><br><span class="line">from </span><br><span class="line">	Computer</span><br><span class="line">union all</span><br><span class="line">select </span><br><span class="line">	Sales_volume</span><br><span class="line">from </span><br><span class="line">	Mobile_Phone</span><br><span class="line">order by </span><br><span class="line">	Sales_volume</span><br><span class="line">;</span><br><span class="line"></span><br><span class="line">-- 查找Computer表和Mobile_Phone表中的Sales_volume字段数据，</span><br><span class="line">-- 按照Sales_volume以默认方式排序，</span><br><span class="line">-- 而且不删除重复数据。</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h3><blockquote>
+<p>  用于连接两个或多个表，从多个表中查询数据。</p>
+<p>  …  tableA [join语句] tableB …  on [条件]</p>
+</blockquote>
+<ul>
+<li><code>inner join</code>：语句两端的两个表的交集。</li>
+<li><code>left join</code>：读取左边表中所有的匹配数据，即使右侧表中无匹配数据。</li>
+<li><code>righe join </code>：与<code>lefr join</code>正好相反。</li>
+</ul>
+<h3 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h3><p>在MYSQL中判断空值使用<code>=</code>和<code>!=</code>是无效的，</p>
+<p><code>NULL</code>与任何其他值的比较结果一定是<code>false</code>，需要使用<code>NULL</code>和<code>IS NULL</code>。</p>
+<p>在创建表的时候使用<code>NULL</code>和<code>NOT NULL</code>来设置完整性约束。</p>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><blockquote>
+<p>  MYSQL也是支持正则表达式匹配的，例如<code>link</code>子句中可以使用<code>%</code>来匹配任意字符。</p>
+</blockquote>
+<p>在MYSQL中使用正则表达式需要使用<code> REGEXP</code>子句来连接待查找字段和模式串。</p>
+<p>常用模式：</p>
+<table>
+<thead>
+<tr>
+<th align="left">模式</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">^</td>
+<td align="left">匹配输入字符串的开始位置。如果设置了 RegExp 对象的 Multiline 属性，^ 也匹配 ‘\n’ 或 ‘\r’ 之后的位置。</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配输入字符串的结束位置。如果设置了RegExp 对象的 Multiline 属性，$ 也匹配 ‘\n’ 或 ‘\r’ 之前的位置。</td>
+</tr>
+<tr>
+<td align="left">.</td>
+<td align="left">匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式。</td>
+</tr>
+<tr>
+<td align="left">[…]</td>
+<td align="left">字符集合。匹配所包含的任意一个字符。例如， ‘[abc]’ 可以匹配 “plain” 中的 ‘a’。</td>
+</tr>
+<tr>
+<td align="left">[^…]</td>
+<td align="left">负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]’ 可以匹配 “plain” 中的’p’。</td>
+</tr>
+<tr>
+<td align="left">p1|p2|p3</td>
+<td align="left">匹配 p1 或 p2 或 p3。例如，’z|food’ 能匹配 “z” 或 “food”。’(z|f)ood’ 则匹配 “zood” 或 “food”。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。* 等价于{0,}。</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td align="left">n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+</tr>
+<tr>
+<td align="left">{n,m}</td>
+<td align="left">m 和 n 均为非负整数，其中n &lt;&#x3D; m。最少匹配 n 次且最多匹配 m 次。</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-regexp.html">上表引自RUNOOB</a></p>
+<h3 id="临时表"><a href="#临时表" class="headerlink" title="临时表"></a>临时表</h3><p>临时表的生命周期与当前账号登陆时间等同，退出登陆时，该表空间释放。</p>
+<p>创建临时表需要使用<code>TEMPORARY</code>子句修饰<code>table</code>。</p>
+<p>手动删除使用<code>drop</code>子句。</p>
+<h3 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h3><p>当需要完全的克隆一个已存在的表，只需要找出建表记录，使用该建表记录创建新表，然后将数据 拷贝拷贝进入即可。</p>
+<ol>
+<li><p>找出建表记录</p>
+<p><code>show create table 表名</code></p>
+</li>
+<li><p>更改表名创建科隆表</p>
+</li>
+<li><p>克隆数据</p>
+<p><code>insert into ... select...</code></p>
+</li>
+</ol>
+<h3 id="重复数据处理"><a href="#重复数据处理" class="headerlink" title="重复数据处理"></a>重复数据处理</h3><ul>
+<li><p>创建表时设置约束</p>
+<p>使用<code>primary key</code>将不可重复字段设置为主键。</p>
+<ol>
+<li>在设置了主键或者唯一索引后使用通常的<code>insert into</code>插入重复数据将会报错</li>
+<li>使用<code>insert ignore into</code>插入重复数据将仅仅是警告，然后忽略重复数据不执行插入。</li>
+<li>使用<code>replace into</code>插入重复数据将使用带插入数据更新旧的数据。</li>
+</ol>
+</li>
+<li><p>筛选</p>
+<ol>
+<li>在<code>select</code>的时候使用<code>distinct</code>筛掉重复数据。</li>
+<li>使用<code>group by</code> 对不需要重复的字段进行读取不重复的字段。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-tutorial.html">RUNOOB.COM</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jiangnan2014/article/details/17229713">CSDN Blog </a>	<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/AinUser/article/details/72803175">CSDN Blog</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/love_xsq/article/details/42417917">CSDN Blog</a></p>
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/title.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">相关文章</div>
+					<div>评论</div>
+					<div>分享</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">返回顶部</a>
+		
+			<a href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2019/09/02/HDU-2072/" title="HDU - 2072" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/27/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="八大排序算法总结">
+								八大排序算法总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								直接插入排序算法
+概述直接插入排序算法在逻辑上将整体数据分为两部分，一部分是已排序部分，另一部分是待排序部分 。排序的过程是：在待排序部分逐步的拿出一个元素，将其插入到已排序部分中合理的位置 。
+适用场景插入排序在对几乎已经排好序的数...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/27/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" title="八大排序算法总结">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="八大排序算法总结"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/16/hexo%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%8D%9A%E5%AE%A2/" title="hexo低成本搭建静态网页博客">
+								hexo低成本搭建静态网页博客			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								引言好多同学有写博客的习惯，也有各大例如csd、简等博客平台。但是这些平台毕竟是盈利平台，无法做到对自己的博客完全掌控，有一丝丝的不爽快。想要DIY一下几乎不可能。在这里推荐同学们自己动手丰衣足食。
+准备知识
+github最基本的使用...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/16/hexo%E4%BD%8E%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%8D%9A%E5%AE%A2/" title="hexo低成本搭建静态网页博客">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="hexo低成本搭建静态网页博客"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="进程、线程及共享内存学习笔记">
+								进程、线程及共享内存学习笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								进程、线程及共享内存学习笔记
+系统环境：deepin Linux，语言环境：Linux C欢迎大家转载，转载请注明出处，谢谢！
+
+
+理论基础：
+
+进程：计算机上每个执行的活动，运行一个可执行程序是一个进程，打开一个软件是一个进程，打开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%8F%8A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="进程、线程及共享内存学习笔记">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="进程、线程及共享内存学习笔记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件">
+								Linux常见配置文件			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+转载自CoderZhuang，对CoderZhuang先生的博客进行补充和整理。
+
+
+/etc 配置文件
+/etc/passwd 用户数据库，其中的域给出了用户名、真实姓名、家目录、加密口令和用户的其他信息 
+/etc/group ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux常见配置文件">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="Linux常见配置文件"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" title="deepin系统使用笔记">
+								deepin系统使用笔记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+
+如果你是小白用户并且没有人在旁边指导，那么建议不要自行更改本文给出的命令。
+图形界面相关的东西自行探索。
+
+
+deepin系统安装后推荐配置sudo apt-get install -y git wget curl openssh...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/deepin%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" title="deepin系统使用笔记">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="deepin系统使用笔记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Linux三剑客之awk的使用">
+								Linux三剑客之awk的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+awk 是一款极其强大的文本处理工具，其语言于c语言的语法极其相似，上手很容易 内置变量与运算符数据来自RUNOOB
+
+
+简单用法
+12awk [参数] &#x27;awk代码&#x27;awk [参数] -f awk脚本文件 
+常...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/Linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bawk%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Linux三剑客之awk的使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="Linux三剑客之awk的使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用">
+								linux三剑客之grep的使用			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+部分内容源自网络和grep帮助信息。
+
+用法1grep [参数选项] [模式串] [文件或目录]
+
+
+
+常用参数选项说明
+-o只显示与模式串匹配的内容。
+
+-E 使用扩展正则表达式。
+栗子：
+1cat index.html | gr...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/linux%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bgrep%E7%9A%84%E4%BD%BF%E7%94%A8/" title="linux三剑客之grep的使用">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="linux三剑客之grep的使用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">
+								BASH杂记			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								二月 22日, 2020				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/02/22/BASH%E6%9D%82%E8%AE%B0/" title="BASH杂记">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="BASH杂记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/HDU-1276/" title="HDU-1276">
+								HDU-1276			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+题目描述
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/HDU-1276/" title="HDU-1276">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="HDU-1276"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">
+								CPU信息获取			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 2日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+准备知识
+
+/proc文件系统是一个伪文件系统，该文件系统中存储着内核控制相关信息，通俗点说就是这个目录是虚拟的，它受内核直接控制，存储与内核控制相关的数据，与其他目录不同的是/proc目录不是真实存储在硬盘中的，它的数据存储在内存...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/02/CPU%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/" title="CPU信息获取">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="title.jpg" alt="CPU信息获取"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+	
+<script src="/plugin/love/love.js"></script>
+
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>
